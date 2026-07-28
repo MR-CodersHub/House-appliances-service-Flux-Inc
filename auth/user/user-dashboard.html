@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — MOTORWORKS</title>
+<link rel="icon" href="../../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../src/css/styles.css">
+</head>
+<body>
+<div class="dashboard-layout">
+  <aside class="dashboard-sidebar">
+    <a href="../../index.html" class="logo" style="margin-bottom:30px;padding:0 24px;"><span class="dot"></span>MW</a>
+    <div class="sidebar-section-label">NAVIGATION</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        My Vehicles
+      </a>
+      <a href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        My Appointments
+      </a>
+      <a href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Service History
+      </a>
+      <a href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Invoices
+      </a>
+      <a href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Profile
+      </a>
+    </nav>
+    <div class="sidebar-section-label" style="margin-top:20px;">ACCOUNT</div>
+    <nav class="sidebar-nav">
+      <a href="../../index.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Back to Site
+      </a>
+    </nav>
+  </aside>
+
+  <main class="dashboard-main">
+    <div class="dashboard-header">
+      <div>
+        <h1>My Dashboard</h1>
+        <p style="color:var(--steel);font-size:14px;">Manage your vehicles and services.</p>
+      </div>
+      <div class="profile-dropdown">
+        <button class="profile-icon" id="profileToggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <div class="dropdown-menu" id="profileDropdown">
+          <a href="../../index.html">Back to Site</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <div class="stat-label">MY VEHICLES</div>
+        <div class="stat-value">3</div>
+        <div class="stat-change">All up to date</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">UPCOMING SERVICES</div>
+        <div class="stat-value">2</div>
+        <div class="stat-change">Next: Jul 28</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">TOTAL SERVICES</div>
+        <div class="stat-value">12</div>
+        <div class="stat-change">Since 2023</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">MEMBER SINCE</div>
+        <div class="stat-value">2023</div>
+        <div class="stat-change">3 years</div>
+      </div>
+    </div>
+
+    <div class="dashboard-grid-2">
+      <div class="dashboard-widget">
+        <h3>My Vehicles</h3>
+        <table class="dashboard-table">
+          <thead><tr><th>Vehicle</th><th>Last Service</th><th>Next Due</th></tr></thead>
+          <tbody>
+            <tr><td>BMW 5 Series</td><td>Oil Change Jul 2026</td><td>Brake Inspection Sep 2026</td></tr>
+            <tr><td>Honda Civic</td><td>Tire Rotation Jun 2026</td><td>Oil Change Sep 2026</td></tr>
+            <tr><td>Ford F-150</td><td>Full Service May 2026</td><td>Inspection Nov 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dashboard-widget">
+        <h3>Upcoming Appointments</h3>
+        <table class="dashboard-table">
+          <thead><tr><th>Date</th><th>Service</th><th>Vehicle</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Jul 28, 2026</td><td>Brake Inspection</td><td>BMW 5 Series</td><td><span class="status-badge pending">Pending</span></td></tr>
+            <tr><td>Aug 15, 2026</td><td>Oil Change</td><td>Honda Civic</td><td><span class="status-badge completed">Confirmed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dashboard-grid-2" style="margin-top:24px;">
+      <div class="dashboard-widget">
+        <h3>Recent Activity</h3>
+        <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Service completed: Oil Change for BMW 5 Series</div><div class="activity-time">3 days ago</div></div></div>
+        <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Appointment scheduled: Brake Inspection</div><div class="activity-time">5 days ago</div></div></div>
+        <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Invoice paid: $139 for Oil Change</div><div class="activity-time">3 days ago</div></div></div>
+        <div class="activity-item"><div class="activity-dot"></div><div><div class="activity-text">Vehicle added: Ford F-150</div><div class="activity-time">2 weeks ago</div></div></div>
+      </div>
+      <div class="dashboard-widget">
+        <h3>Service Progress</h3>
+        <div style="margin-top:16px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:14px;"><span>Oil Change — BMW 5 Series</span><span style="color:var(--steel);">Next in 2,100 mi</span></div>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width:75%"></div></div>
+        </div>
+        <div style="margin-top:20px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:14px;"><span>Brake Inspection — BMW 5 Series</span><span style="color:var(--steel);">Next in 4,500 mi</span></div>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width:45%"></div></div>
+        </div>
+        <div style="margin-top:20px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:14px;"><span>Tire Rotation — Honda Civic</span><span style="color:var(--steel);">Next in 3,000 mi</span></div>
+          <div class="progress-bar"><div class="progress-bar-fill" style="width:60%"></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+<script src="../../src/js/theme.js"></script>
+<script src="../../src/js/data.js"></script>
+<script src="../../src/js/navbar.js"></script>
+<script src="../../src/js/dashboard.js"></script>
+<script src="../../src/js/main.js"></script>
+</body>
+</html>

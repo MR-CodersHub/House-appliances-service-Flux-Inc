@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Our Services — MOTORWORKS</title>
+<link rel="icon" href="../../assets/img/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../src/css/styles.css"></head>
+<body>
+
+
+
+<section style="padding:20px 0 0;">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><span>Services</span></nav>
+  </div>
+</section>
+
+<section class="hero-mini">
+  <div class="wrap">
+    <span class="sec-tag">WHAT WE DO</span>
+    <h1>Our Services</h1>
+    <p>From routine maintenance to complex diagnostics, MOTORWORKS delivers comprehensive automotive care backed by ASE-certified expertise and state-of-the-art equipment. Every service is performed with precision and transparency.</p>
+  </div>
+</section>
+
+<section style="padding:0 0 40px;">
+  <div class="wrap">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <button class="services-filter-btn active" data-filter="all">All</button>
+      <button class="services-filter-btn" data-filter="maintenance">Maintenance</button>
+      <button class="services-filter-btn" data-filter="safety">Safety</button>
+      <button class="services-filter-btn" data-filter="diagnostics">Diagnostics</button>
+      <button class="services-filter-btn" data-filter="cosmetic">Cosmetic</button>
+      <button class="services-filter-btn" data-filter="electrical">Electrical</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 80px;">
+  <div class="wrap">
+    <div class="services-grid" id="servicesPageGrid">
+      <!-- Populated by main.js from window.MotorWorks.services, static fallback below -->
+
+      <div class="svc-card" data-category="maintenance">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 01</span>
+          <a href="service-details.html?id=oil-filter"><img src="../../assets/img/oil.jpg" alt="Oil & Filter Service"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Oil &amp; Filter Service</h3>
+          <p>Full synthetic fluids, 40-point inspection, and OEM filters on every visit.</p>
+          <a href="service-details.html?id=oil-filter" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="svc-card" data-category="safety">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 02</span>
+          <a href="service-details.html?id=brake-suspension"><img src="../../assets/img/suspension.jpg" alt="Brake & Suspension"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Brake &amp; Suspension</h3>
+          <p>Pad, rotor, and suspension diagnostics with lifetime-rated components.</p>
+          <a href="service-details.html?id=brake-suspension" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="svc-card" data-category="maintenance">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 03</span>
+          <a href="service-details.html?id=tyres-alignment"><img src="../../assets/img/tyre.jpg" alt="Tyres & Alignment"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Tyres &amp; Alignment</h3>
+          <p>Laser wheel alignment and balanced fitment for every tyre brand we stock.</p>
+          <a href="service-details.html?id=tyres-alignment" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="svc-card" data-category="diagnostics">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 04</span>
+          <a href="service-details.html?id=computer-diagnostics"><img src="../../assets/img/computer.jpg" alt="Computer Diagnostics"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Computer Diagnostics</h3>
+          <p>Manufacturer-level scan tools that read exactly what your dealer sees.</p>
+          <a href="service-details.html?id=computer-diagnostics" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="svc-card" data-category="cosmetic">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 05</span>
+          <a href="service-details.html?id=detailing-paint"><img src="../../assets/img/paint.jpg" alt="Detailing & Paint Care"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Detailing &amp; Paint Care</h3>
+          <p>Correction, ceramic coating, and interior recon for showroom finish.</p>
+          <a href="service-details.html?id=detailing-paint" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="svc-card" data-category="electrical">
+        <div class="svc-img">
+          <span class="svc-code">SVC / 06</span>
+          <a href="service-details.html?id=battery-electrical"><img src="../../assets/img/battery.jpg" alt="Battery & Electrical"></a>
+        </div>
+        <div class="svc-body">
+          <h3>Battery &amp; Electrical</h3>
+          <p>Load-testing, alternator checks, and EV/hybrid battery diagnostics.</p>
+          <a href="service-details.html?id=battery-electrical" class="svc-link">Learn more →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrap" style="text-align:center;">
+    <h3>Stay in the Loop</h3>
+    <p>Maintenance tips, seasonal reminders, and exclusive offers — straight to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn-solid">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<script src="../../src/js/theme.js"></script>
+<script src="../../src/js/data.js"></script>
+<script src="../../src/js/navbar.js"></script>
+<script src="../../src/js/footer.js"></script>
+<script src="../../src/js/main.js"></script>
+</body>
+</html>

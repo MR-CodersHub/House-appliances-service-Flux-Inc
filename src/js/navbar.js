@@ -42,7 +42,7 @@
     var headerHTML =
       '<header class="site-header">' +
       '<div class="nav">' +
-      '<a href="' + basePath + 'index.html" class="logo"><span class="dot"></span>MOTORWORKS</a>' +
+      '<a href="' + basePath + 'index.html" class="logo"><img src="' + basePath + 'assets/img/logo.png" alt="MOTORWORKS Logo" class="logo-img"><span class="logo-text-group"><span class="logo-brand-title">MOTORWORKS</span></span></a>' +
       '<nav class="navlinks">' +
       '<a href="' + basePath + 'index.html">Home</a>' +
       '<a href="' + basePath + 'public/pages/home-2.html">Home 2</a>' +

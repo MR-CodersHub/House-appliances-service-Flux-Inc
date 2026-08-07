@@ -40,7 +40,7 @@
       category: 'maintenance',
       shortDesc: 'Full synthetic fluids, 40-point inspection, and OEM filters on every visit.',
       description: 'Maintain engine longevity and thermal protection with factory-approved synthetic oils tailored to your engine specifications.',
-      image: 'assets/img/oil.jpg',
+      image: 'assets/img/oil-service.jpg',
       features: ['Full Synthetic Fluid Change', 'OEM Oil Filter Replacement', '40-Point Safety Inspection', 'Fluid Top-Off & Tire Pressure Adjust'],
       pricing: [
         { tier: 'Standard Synthetic', price: '$79', desc: 'Up to 5 Qts Mobil 1' },
@@ -57,7 +57,7 @@
       category: 'safety',
       shortDesc: 'Pad, rotor, and suspension diagnostics with lifetime-rated components.',
       description: 'Complete brake and suspension safety overhaul using OEM or premium ceramic friction materials. Ensures silent, fade-free stopping power and smooth handling.',
-      image: 'assets/img/suspension.jpg',
+      image: 'assets/img/brake-service.jpg',
       features: ['OEM Ceramic/Semi-Metallic Pads', 'Rotor Resurfacing or Replacement', 'High-Temp Fluid Flush', 'Suspension & Bushing Inspection'],
       pricing: [
         { tier: 'Front or Rear Pads', price: '$199', desc: 'Pads replacement & hardware check' },
@@ -74,7 +74,7 @@
       category: 'maintenance',
       shortDesc: 'Laser wheel alignment and balanced fitment for every tyre brand we stock.',
       description: 'Using high-resolution Hunter Hawkeye 3D optical sensors, we adjust your steering geometry to eliminate tire wear and tracking pull.',
-      image: 'assets/img/tyre.jpg',
+      image: 'assets/img/tyre-service.jpg',
       features: ['Hunter 3D Laser Scanning', 'Front & Rear Toe/Camber Adjust', 'High-Speed Wheel Balancing', 'Tire Pressure & Tread Depth Check'],
       pricing: [
         { tier: '2-Wheel Alignment', price: '$99', desc: 'Front axle adjustment' },
@@ -91,7 +91,7 @@
       category: 'diagnostics',
       shortDesc: 'Manufacturer-level scan tools that read exactly what your dealer sees.',
       description: 'Using dealership-grade diagnostic scanners and oscilloscope testing, we pinpoint check engine lights, sensor failures, and electronic glitches with 100% accuracy before any parts are replaced.',
-      image: 'assets/img/computer.jpg',
+      image: 'assets/img/diagnostics-service.jpg',
       features: ['Full ECU Fault Code Scan', 'Live Data Stream Analysis', 'Ignition & Fuel System Test', 'Printed Technical Report'],
       pricing: [
         { tier: 'Basic Diagnostic', price: '$89', desc: 'Scan code read & quick report' },
@@ -108,7 +108,7 @@
       category: 'cosmetic',
       shortDesc: 'Correction, ceramic coating, and interior recon for showroom finish.',
       description: 'Professional paint correction, multi-stage polishing, ceramic coating, and deep interior extraction to restore your vehicle to showroom condition.',
-      image: 'assets/img/paint.jpg',
+      image: 'assets/img/detailing-service.jpg',
       features: ['Multi-Stage Paint Correction', '3-Year Ceramic Coating', 'Interior Deep Clean & Leather Care', 'Wheel & Engine Bay Detailing'],
       pricing: [
         { tier: 'Full Interior & Exterior Detail', price: '$249', desc: 'Complete deep cleaning' },
@@ -125,7 +125,7 @@
       category: 'electrical',
       shortDesc: 'Load-testing, alternator checks, and EV/hybrid battery diagnostics.',
       description: 'High-voltage and 12V system testing, alternator output measurement, starter motor diagnosis, and EV/hybrid battery health reports.',
-      image: 'assets/img/battery.jpg',
+      image: 'assets/img/battery-service.jpg',
       features: ['12V & EV Battery Health Test', 'Alternator & Starter Diagnosis', 'Parasitic Draw Detection', 'OEM Battery Replacement'],
       pricing: [
         { tier: 'Battery & Charging Test', price: '$49', desc: 'Full system health scan' },

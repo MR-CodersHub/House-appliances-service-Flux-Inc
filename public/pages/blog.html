@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — MOTORWORKS</title>
-<link rel="icon" href="../../assets/img/logo.png">
+    <title>Automotive Knowledge Hub &amp; Insights — MOTORWORKS</title>
+    <link rel="icon" href="../../assets/img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/styles.css">
 </head>
 <body>
 
-
-
 <main>
 
     <!-- Breadcrumb -->
-    <section class="breadcrumb-section">
+    <section class="breadcrumb-section" style="padding: 20px 0 0;">
         <div class="wrap">
             <nav class="breadcrumb">
                 <a href="../../index.html">Home</a>
-                <span class="breadcrumb-sep">/</span>
-                <span class="breadcrumb-current">Blog</span>
+                <span class="sep">/</span>
+                <span>Knowledge Hub &amp; Blog</span>
             </nav>
         </div>
     </section>
@@ -29,60 +27,55 @@
     <!-- Hero Mini -->
     <section class="hero-mini">
         <div class="wrap">
-            <span class="tag">KNOWLEDGE HUB</span>
-            <h1>Our Blog</h1>
-            <p>Expert automotive knowledge — maintenance tips, tool reviews, safety guides, and seasonal advice to keep your vehicle performing at its best.</p>
+            <span class="sec-tag">KNOWLEDGE HUB</span>
+            <h1 style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; margin: 12px 0 18px; line-height: 1.05;">Automotive Insights &amp; Maintenance Guides</h1>
+            <p style="font-size: 18px; line-height: 1.65; color: var(--steel); max-width: 780px;">Expert automotive knowledge written by ASE-certified master technicians — brake safety guides, synthetic oil viscosity breakdowns, seasonal checklists, and proactive maintenance advice.</p>
         </div>
     </section>
 
-    <!-- Search Bar -->
-    <section class="blog-search-section">
+    <!-- Search & Filters Container -->
+    <section style="padding: 40px 0 30px;">
         <div class="wrap">
-            <div class="blog-search-bar">
-                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input type="text" id="blogSearch" placeholder="Search articles..." autocomplete="off">
-            </div>
-        </div>
-    </section>
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons" style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+                    <button class="filter-btn" data-filter="education">Technical Education</button>
+                    <button class="filter-btn" data-filter="tips">Pro Tips &amp; Safety</button>
+                </div>
 
-    <!-- Filter Buttons -->
-    <section class="blog-filter-section">
-        <div class="wrap">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
-                <button class="filter-btn" data-filter="education">Education</button>
-                <button class="filter-btn" data-filter="tips">Tips</button>
+                <!-- Search Input -->
+                <div class="blog-search-bar" style="width: 320px; max-width: 100%;">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="blogSearch" placeholder="Search technical guides..." autocomplete="off">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Blog Grid -->
-    <section class="blog-grid-section">
+    <section class="blog-grid-section" style="padding: 0 0 100px;">
         <div class="wrap">
             <div id="blogGrid" class="blog-grid"></div>
-            <div class="blog-empty" id="blogEmpty" style="display:none;">
+            <div class="blog-empty" id="blogEmpty" style="display:none; text-align:center; padding: 60px 0; color: var(--steel);">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                <h3>No articles found</h3>
-                <p>Try adjusting your search or filter criteria.</p>
+                <h3 style="margin-top:16px; font-size:22px; color:var(--bone);">No articles found</h3>
+                <p>Try adjusting your search query or category filter.</p>
             </div>
         </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="wrap">
-            <div class="newsletter-card">
-                <div class="newsletter-content">
-                    <span class="tag">NEWSLETTER</span>
-                    <h2>Stay Updated</h2>
-                    <p>Get the latest automotive tips, service alerts, and exclusive offers delivered to your inbox.</p>
-                </div>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-solid">Subscribe</button>
-                </form>
-            </div>
+    <section class="newsletter" style="margin:0;border-top:1px solid var(--line);">
+        <div class="wrap" style="text-align:center;">
+            <h3>Stay Updated with Master Tech Advice</h3>
+            <p>Get quarterly car care checklists, technical service alerts, and exclusive maintenance offers.</p>
+            <form class="newsletter-form" data-type="newsletter">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-solid">Subscribe</button>
+            </form>
         </div>
     </section>
 

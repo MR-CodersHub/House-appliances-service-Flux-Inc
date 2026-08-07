@@ -1,8 +1,15 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Our Services — MOTORWORKS</title>
-<link rel="icon" href="../../assets/img/logo.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../src/css/styles.css"></head>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services — MOTORWORKS Vehicle Care</title>
+<link rel="icon" href="../../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../src/css/styles.css">
+</head>
 <body>
-
-
 
 <section style="padding:20px 0 0;">
   <div class="wrap">
@@ -13,20 +20,20 @@
 <section class="hero-mini">
   <div class="wrap">
     <span class="sec-tag">WHAT WE DO</span>
-    <h1>Our Services</h1>
-    <p>From routine maintenance to complex diagnostics, MOTORWORKS delivers comprehensive automotive care backed by ASE-certified expertise and state-of-the-art equipment. Every service is performed with precision and transparency.</p>
+    <h1 style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; margin: 12px 0 18px; line-height: 1.05;">Comprehensive Automotive Services &amp; Diagnostics</h1>
+    <p style="font-size: 18px; line-height: 1.65; color: var(--steel); max-width: 780px;">From routine synthetic maintenance to dealership-level ECU diagnostics, MOTORWORKS delivers complete vehicle care backed by ASE Master Certification and state-of-the-art diagnostic equipment. Every job is signed off with total transparency.</p>
   </div>
 </section>
 
-<section style="padding:0 0 40px;">
+<section style="padding:40px 0 40px;">
   <div class="wrap">
-    <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <button class="services-filter-btn active" data-filter="all">All</button>
-      <button class="services-filter-btn" data-filter="maintenance">Maintenance</button>
-      <button class="services-filter-btn" data-filter="safety">Safety</button>
-      <button class="services-filter-btn" data-filter="diagnostics">Diagnostics</button>
-      <button class="services-filter-btn" data-filter="cosmetic">Cosmetic</button>
-      <button class="services-filter-btn" data-filter="electrical">Electrical</button>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <button class="services-filter-btn filter-btn active" data-filter="all">All Services</button>
+      <button class="services-filter-btn filter-btn" data-filter="maintenance">Maintenance</button>
+      <button class="services-filter-btn filter-btn" data-filter="safety">Safety &amp; Brakes</button>
+      <button class="services-filter-btn filter-btn" data-filter="diagnostics">ECU Diagnostics</button>
+      <button class="services-filter-btn filter-btn" data-filter="cosmetic">Detailing &amp; Paint</button>
+      <button class="services-filter-btn filter-btn" data-filter="electrical">Battery &amp; EV</button>
     </div>
   </div>
 </section>
@@ -34,12 +41,12 @@
 <section style="padding:0 0 80px;">
   <div class="wrap">
     <div class="services-grid" id="servicesPageGrid">
-      <!-- Populated by main.js from window.MotorWorks.services, static fallback below -->
+      <!-- Populated dynamically by main.js from window.MotorWorks.services, static fallback below -->
 
       <div class="svc-card" data-category="maintenance">
         <div class="svc-img">
           <span class="svc-code">SVC / 01</span>
-          <a href="service-details.html?id=oil-filter"><img src="../../assets/img/oil.jpg" alt="Oil & Filter Service"></a>
+          <a href="service-details.html?id=oil-filter"><img src="../../assets/img/oil-service.jpg" alt="Oil & Filter Service"></a>
         </div>
         <div class="svc-body">
           <h3>Oil &amp; Filter Service</h3>
@@ -51,7 +58,7 @@
       <div class="svc-card" data-category="safety">
         <div class="svc-img">
           <span class="svc-code">SVC / 02</span>
-          <a href="service-details.html?id=brake-suspension"><img src="../../assets/img/suspension.jpg" alt="Brake & Suspension"></a>
+          <a href="service-details.html?id=brake-suspension"><img src="../../assets/img/brake-service.jpg" alt="Brake & Suspension"></a>
         </div>
         <div class="svc-body">
           <h3>Brake &amp; Suspension</h3>
@@ -63,7 +70,7 @@
       <div class="svc-card" data-category="maintenance">
         <div class="svc-img">
           <span class="svc-code">SVC / 03</span>
-          <a href="service-details.html?id=tyres-alignment"><img src="../../assets/img/tyre.jpg" alt="Tyres & Alignment"></a>
+          <a href="service-details.html?id=tyres-alignment"><img src="../../assets/img/tyre-service.jpg" alt="Tyres & Alignment"></a>
         </div>
         <div class="svc-body">
           <h3>Tyres &amp; Alignment</h3>
@@ -75,7 +82,7 @@
       <div class="svc-card" data-category="diagnostics">
         <div class="svc-img">
           <span class="svc-code">SVC / 04</span>
-          <a href="service-details.html?id=computer-diagnostics"><img src="../../assets/img/computer.jpg" alt="Computer Diagnostics"></a>
+          <a href="service-details.html?id=computer-diagnostics"><img src="../../assets/img/diagnostics-service.jpg" alt="Computer Diagnostics"></a>
         </div>
         <div class="svc-body">
           <h3>Computer Diagnostics</h3>
@@ -87,7 +94,7 @@
       <div class="svc-card" data-category="cosmetic">
         <div class="svc-img">
           <span class="svc-code">SVC / 05</span>
-          <a href="service-details.html?id=detailing-paint"><img src="../../assets/img/paint.jpg" alt="Detailing & Paint Care"></a>
+          <a href="service-details.html?id=detailing-paint"><img src="../../assets/img/detailing-service.jpg" alt="Detailing & Paint Care"></a>
         </div>
         <div class="svc-body">
           <h3>Detailing &amp; Paint Care</h3>
@@ -99,7 +106,7 @@
       <div class="svc-card" data-category="electrical">
         <div class="svc-img">
           <span class="svc-code">SVC / 06</span>
-          <a href="service-details.html?id=battery-electrical"><img src="../../assets/img/battery.jpg" alt="Battery & Electrical"></a>
+          <a href="service-details.html?id=battery-electrical"><img src="../../assets/img/battery-service.jpg" alt="Battery & Electrical"></a>
         </div>
         <div class="svc-body">
           <h3>Battery &amp; Electrical</h3>

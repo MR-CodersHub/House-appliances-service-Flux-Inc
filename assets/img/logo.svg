@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70" fill="none">
+  <g class="logo-mark">
+    <!-- Emblem Shield / Gear Ring -->
+    <path d="M22 6 L44 14 V32 C44 47 33 58 22 64 C11 58 0 47 0 32 V14 L22 6 Z" fill="url(#brandGrad)" />
+    <!-- Inner Crosshair & Piston V -->
+    <path d="M22 14 L34 26 L22 52 L10 26 Z" fill="#0b0c0e" opacity="0.25"/>
+    <path d="M22 18 L30 26 L22 46 L14 26 Z" fill="#ffffff"/>
+    <circle cx="22" cy="28" r="4" fill="#d9622b"/>
+    <!-- Outer Precision Ring -->
+    <circle cx="22" cy="35" r="28" stroke="#d9622b" stroke-width="2" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
+  <!-- Typography -->
+  <g class="logo-text">
+    <text x="64" y="38" font-family="'Big Shoulders Display', 'Inter', sans-serif" font-size="32" font-weight="800" letter-spacing="1.5" fill="currentColor">MOTORWORKS</text>
+    <text x="65" y="54" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" letter-spacing="3" fill="#d9622b">PRECISION AUTO CARE</text>
+  </g>
+  <defs>
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="44" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f27036"/>
+      <stop offset="1" stop-color="#b34718"/>
+    </linearGradient>
+  </defs>
+</svg>

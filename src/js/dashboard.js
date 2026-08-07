@@ -334,7 +334,7 @@
           '<div><h1>My Vehicles Garage</h1><p style="color:var(--steel);font-size:14px;">Manage your registered vehicles, track odometer readings, and schedule service.</p></div>' +
           '<button class="btn btn-solid" id="btnAddVehicleModal">+ Add New Vehicle</button>' +
         '</div>' +
-        '<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:24px;">' +
+        '<div class="vehicle-cards-grid">' +
         data.userVehicles.map(function(v) {
           return '<div class="dashboard-widget" style="border-top:3px solid var(--amber);">' +
             '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
@@ -474,7 +474,7 @@
         '</div>' +
         '<div class="dashboard-widget" style="max-width:680px;">' +
           '<form id="userProfileForm">' +
-            '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">' +
+            '<div class="profile-form-grid">' +
               '<div><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">FIRST NAME</label><input type="text" value="Daniel" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
               '<div><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">LAST NAME</label><input type="text" value="Richardson" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
             '</div>' +

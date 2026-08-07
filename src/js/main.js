@@ -103,7 +103,7 @@
             '<a href="' + basePath + 'public/pages/booking.html" class="btn btn-solid">Book This Service</a>' +
           '</div>' +
         '</div>' +
-        '<div style="margin-top:80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;">' +
+        '<div class="detail-features-grid" style="margin-top:80px;">' +
           '<div>' +
             '<span class="sec-tag">FEATURES</span>' +
             '<h2 style="font-size:28px;margin-bottom:24px;">What\'s Included</h2>' +

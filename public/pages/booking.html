@@ -47,7 +47,7 @@
   </section>
 
   <!-- Booking Main Section -->
-  <section style="padding: 0 0 120px;" id="bookingFormSection">
+  <section style="padding: 50px 0 120px;" id="bookingFormSection">
     <div class="wrap">
       <div class="booking-layout">
         
@@ -85,32 +85,32 @@
                   <h2>Vehicle Details</h2>
                   <p>Tell us about the vehicle requiring service.</p>
                 </div>
-                <div class="form-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="form-grid form-grid-3">
                   <div class="form-group">
                     <label for="vehYear">Year <span class="req">*</span></label>
-                    <input type="text" id="vehYear" placeholder="e.g. 2021" required>
+                    <input type="text" class="form-input" id="vehYear" placeholder="e.g. 2021" required>
                     <span class="form-error"></span>
                   </div>
                   <div class="form-group">
                     <label for="vehMake">Make <span class="req">*</span></label>
-                    <input type="text" id="vehMake" placeholder="e.g. BMW / Honda" required>
+                    <input type="text" class="form-input" id="vehMake" placeholder="e.g. BMW / Honda" required>
                     <span class="form-error"></span>
                   </div>
                   <div class="form-group">
                     <label for="vehModel">Model <span class="req">*</span></label>
-                    <input type="text" id="vehModel" placeholder="e.g. M3 / Civic" required>
+                    <input type="text" class="form-input" id="vehModel" placeholder="e.g. M3 / Civic" required>
                     <span class="form-error"></span>
                   </div>
                 </div>
-                <div class="form-grid" style="grid-template-columns: 1fr 1fr; margin-top: 20px;">
+                <div class="form-grid form-grid-2" style="margin-top: 20px;">
                   <div class="form-group">
                     <label for="vehMileage">Approx. Mileage (Optional)</label>
-                    <input type="text" id="vehMileage" placeholder="e.g. 45,000 mi">
+                    <input type="text" class="form-input" id="vehMileage" placeholder="e.g. 45,000 mi">
                     <span class="form-error"></span>
                   </div>
                   <div class="form-group">
                     <label for="vehVin">VIN / License Plate (Optional)</label>
-                    <input type="text" id="vehVin" placeholder="17-digit VIN or Plate #">
+                    <input type="text" class="form-input" id="vehVin" placeholder="17-digit VIN or Plate #">
                     <span class="form-error"></span>
                   </div>
                 </div>
@@ -128,14 +128,14 @@
                 </div>
                 <div class="form-group">
                   <label for="bookingService">Service Package <span class="req">*</span></label>
-                  <select id="bookingService" required>
+                  <select id="bookingService" class="form-input" required>
                     <option value="">Loading available services...</option>
                   </select>
                   <span class="form-error"></span>
                 </div>
                 <div class="form-group" style="margin-top: 20px;">
                   <label for="serviceNotes">Describe Symptoms or Specific Issues</label>
-                  <textarea id="serviceNotes" rows="4" placeholder="Mention any check engine codes, unusual sounds, vibration speeds, or special requests..."></textarea>
+                  <textarea id="serviceNotes" class="form-input" rows="4" placeholder="Mention any check engine codes, unusual sounds, vibration speeds, or special requests..."></textarea>
                   <span class="form-error"></span>
                 </div>
                 <div class="step-actions">
@@ -153,7 +153,7 @@
                 </div>
                 <div class="form-group">
                   <label for="bookingDate">Preferred Date <span class="req">*</span></label>
-                  <input type="date" id="bookingDate" required>
+                  <input type="date" class="form-input" id="bookingDate" required>
                   <span class="form-error"></span>
                 </div>
                 <div class="form-group" id="timeSlotGroup" style="margin-top: 24px;">
@@ -181,21 +181,21 @@
                   <h2>Customer Information</h2>
                   <p>Provide your contact info to confirm your appointment.</p>
                 </div>
-                <div class="form-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="form-grid form-grid-2">
                   <div class="form-group">
                     <label for="custName">Full Name <span class="req">*</span></label>
-                    <input type="text" id="custName" placeholder="John Doe" required>
+                    <input type="text" class="form-input" id="custName" placeholder="John Doe" required>
                     <span class="form-error"></span>
                   </div>
                   <div class="form-group">
                     <label for="custPhone">Phone Number <span class="req">*</span></label>
-                    <input type="tel" id="custPhone" placeholder="+1 (312) 555-0148" required>
+                    <input type="tel" class="form-input" id="custPhone" placeholder="+1 (312) 555-0148" required>
                     <span class="form-error"></span>
                   </div>
                 </div>
                 <div class="form-group" style="margin-top: 20px;">
                   <label for="custEmail">Email Address <span class="req">*</span></label>
-                  <input type="email" id="custEmail" placeholder="john@example.com" required>
+                  <input type="email" class="form-input" id="custEmail" placeholder="john@example.com" required>
                   <span class="form-error"></span>
                 </div>
                 <div class="step-actions">
@@ -235,7 +235,7 @@
                 <strong id="confDateTime" style="color: var(--amber);">-</strong>
               </div>
             </div>
-            <div style="display: flex; gap: 16px; justify-content: center;">
+            <div class="booking-success-actions" style="display: flex; gap: 16px; justify-content: center;">
               <a href="../../index.html" class="btn">Return to Home</a>
               <a href="services.html" class="btn btn-solid">View Services</a>
             </div>

@@ -1589,8 +1589,15 @@ input, select, textarea {
   margin-bottom: 10px;
 }
 
-.form-input {
-  width: 100%;
+.form-input,
+.form-group input,
+.form-group select,
+.form-group textarea,
+.booking-form-card input,
+.booking-form-card select,
+.booking-form-card textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
   padding: 14px 18px;
   background: var(--panel-2);
   border: 1px solid var(--line);
@@ -1598,11 +1605,20 @@ input, select, textarea {
   font-size: 14px;
   font-family: 'Inter', sans-serif;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: 2px;
+  display: block;
 }
 
-.form-input:focus {
-  border-color: var(--amber);
+.form-input:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.booking-form-card input:focus,
+.booking-form-card select:focus,
+.booking-form-card textarea:focus {
+  border-color: var(--amber) !important;
+  box-shadow: 0 0 0 2px var(--amber-glow);
 }
 
 .form-input::placeholder {
@@ -1638,10 +1654,28 @@ select.form-input {
   display: block;
 }
 
+.form-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.form-grid-3 {
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+}
+
+.form-grid-2,
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .form-grid-3,
+  .form-grid-2,
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ── 26. Map Placeholder ────────────────────────────────── */
@@ -5483,5 +5517,258 @@ select.form-input {
 [data-theme="light"] .cta-band .cta-content p,
 [data-theme="light"] .hero-sub {
   color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* ============================================================
+   49. COMPREHENSIVE MOBILE RESPONSIVENESS — ALL PAGES
+   ============================================================ */
+
+html,
+body {
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* Fixed-grid helpers (previously set via inline styles) */
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.testi-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.detail-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vehicle-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* ── Tablet (max-width: 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+  .booking-summary-card {
+    position: static;
+  }
+
+  /* Dashboards: turn the sidebar into a scrollable horizontal nav */
+  .dashboard-sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .dashboard-sidebar .logo,
+  .dashboard-sidebar .sidebar-section-label {
+    display: none;
+  }
+
+  .dashboard-sidebar nav.sidebar-nav {
+    display: flex;
+  }
+
+  .dashboard-sidebar nav:not(:first-of-type) {
+    display: none;
+  }
+
+  .dashboard-sidebar .sidebar-nav a {
+    padding: 10px 14px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .dashboard-sidebar .sidebar-nav a:hover,
+  .dashboard-sidebar .sidebar-nav a.active {
+    border-left: none;
+    border-bottom-color: var(--amber);
+  }
+
+  .dashboard-sidebar .sidebar-nav a svg {
+    display: none;
+  }
+
+  /* Dashboards: tables scroll horizontally inside widgets */
+  .dashboard-widget {
+    overflow-x: auto;
+  }
+
+  .dashboard-table {
+    min-width: 560px;
+  }
+}
+
+/* ── Mobile (max-width: 768px) ──────────────────────────── */
+@media (max-width: 768px) {
+  .about-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .testi-grid-two {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .detail-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  .time-slot-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-detail-img img {
+    height: 240px !important;
+  }
+
+  .dashboard-header {
+    flex-wrap: wrap;
+  }
+
+  #userSearchInput {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .auth-card {
+    padding: 28px 20px;
+  }
+
+  .pricing-card {
+    padding: 28px 20px;
+  }
+}
+
+/* ── Extra Small Mobile (max-width: 480px) ──────────────── */
+@media (max-width: 480px) {
+  .time-slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-indicator-item .step-title {
+    display: none;
+  }
+
+  .step-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .step-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .booking-success-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-success-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bays-media-frame {
+    height: 240px;
+  }
+
+  .vtype-card {
+    padding: 18px 12px;
+  }
+
+  .ba-card {
+    padding: 20px;
+  }
+
+  .ba-bar-wrap {
+    gap: 8px;
+  }
+
+  .countdown-num {
+    font-size: 32px;
+  }
+
+  .toast-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .dashboard-main {
+    padding: 16px;
+  }
+
+  .dashboard-widget {
+    padding: 16px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .contact-form-wrapper {
+    padding: 20px 16px;
+  }
+
+  .auth-page {
+    padding: 40px 16px;
+  }
+
+  .blog-search-bar {
+    width: 100%;
+  }
+
+  .vehicle-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 

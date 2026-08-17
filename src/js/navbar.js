@@ -42,7 +42,7 @@
     var headerHTML =
       '<header class="site-header">' +
       '<div class="nav">' +
-      '<a href="' + basePath + 'index.html" class="logo"><img src="' + basePath + 'assets/img/logo.png" alt="MOTORWORKS Logo" class="logo-img"><span class="logo-text-group"><span class="logo-brand-title">MOTORWORKS</span></span></a>' +
+      '<a href="' + basePath + 'index.html" class="logo" aria-label="Riderz Home"><img src="' + basePath + 'assets/img/logo.png" alt="Riderz Logo" class="logo-img"><span class="logo-text-group"><span class="logo-brand-title">Riderz</span></span></a>' +
       '<nav class="navlinks">' +
       '<a href="' + basePath + 'index.html">Home</a>' +
       '<a href="' + basePath + 'public/pages/home-2.html">Home 2</a>' +
@@ -57,18 +57,6 @@
       '<button class="toggle-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">' + themeSvg + '</button>' +
       '<button class="toggle-btn" id="rtlToggle" title="Toggle RTL" aria-label="Toggle RTL">' + rtlSvg + '</button>' +
       '</div>' +
-      '<div class="profile-dropdown">' +
-      '<button class="profile-icon" id="profileToggle" aria-label="Profile menu">' +
-      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>' +
-      '</button>' +
-      '<div class="dropdown-menu" id="profileDropdown">' +
-      '<a href="' + basePath + 'public/auth/login.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Login</a>' +
-      '<a href="' + basePath + 'public/auth/signup.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Sign Up</a>' +
-      '<div class="dropdown-divider"></div>' +
-      '<a href="' + basePath + 'auth/admin/admin-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Admin Dashboard</a>' +
-      '<a href="' + basePath + 'auth/user/user-dashboard.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> User Dashboard</a>' +
-      '</div>' +
-      '</div>' +
       '<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>' +
       '</div>' +
       '</div>' +
@@ -80,9 +68,9 @@
       '<a href="' + basePath + 'public/pages/home-2.html">Home 2</a>' +
       '<a href="' + basePath + 'public/pages/about.html">About</a>' +
       '<a href="' + basePath + 'public/pages/services.html">Services</a>' +
-      '<a href="' + basePath + 'public/pages/booking.html">Book Service</a>' +
       '<a href="' + basePath + 'public/pages/blog.html">Blog</a>' +
       '<a href="' + basePath + 'public/pages/contact.html">Contact</a>' +
+      '<a href="' + basePath + 'public/pages/booking.html">Book Service</a>' +
       '</div>';
 
     if (existingHeader) {

@@ -15,28 +15,28 @@
       { id: 6, name: 'Amanda Sterling', email: 'amanda.s@example.com', role: 'Customer', vehicles: 2, joined: 'May 2026', status: 'Active' }
     ],
     appointments: [
-      { id: 'APT-101', customer: 'Daniel Richardson', vehicle: 'Audi A6', service: 'Full Computer Diagnostics', date: '2026-07-25', time: '09:00 AM', status: 'Active', tech: 'Marcus Vance' },
-      { id: 'APT-102', customer: 'Priya Sharma', vehicle: 'Volvo XC60', service: 'Brake & Suspension', date: '2026-07-28', time: '11:30 AM', status: 'Pending', tech: 'James Thorne' },
-      { id: 'APT-103', customer: 'Marcus Vance', vehicle: 'Ford Mustang', service: 'Detailing & Paint Care', date: '2026-07-22', time: '02:00 PM', status: 'Completed', tech: 'Elena Rostova' },
-      { id: 'APT-104', customer: 'Jennifer Kim', vehicle: 'Toyota Highlander', service: 'Oil & Filter Service', date: '2026-07-20', time: '10:00 AM', status: 'Completed', tech: 'David Miller' },
-      { id: 'APT-105', customer: 'Robert Lawson', vehicle: 'BMW 5 Series', service: 'Tyres & Alignment', date: '2026-07-29', time: '01:30 PM', status: 'Active', tech: 'James Thorne' }
+      { id: 'APT-101', customer: 'Daniel Richardson', vehicle: 'Ducati Panigale V4', service: 'ECU & Dyno Diagnostics', date: '2026-07-25', time: '09:00 AM', status: 'Active', tech: 'Marcus Vance' },
+      { id: 'APT-102', customer: 'Priya Sharma', vehicle: 'BMW R 1250 GS', service: 'Brakes & Fork Tuning', date: '2026-07-28', time: '11:30 AM', status: 'Pending', tech: 'James Thorne' },
+      { id: 'APT-103', customer: 'Marcus Vance', vehicle: 'Kawasaki Ninja ZX-10R', service: 'Ceramic Shield & Detailing', date: '2026-07-22', time: '02:00 PM', status: 'Completed', tech: 'Elena Rostova' },
+      { id: 'APT-104', customer: 'Jennifer Kim', vehicle: 'Yamaha YZF-R1', service: '4T Synthetic Oil & Filter', date: '2026-07-20', time: '10:00 AM', status: 'Completed', tech: 'David Miller' },
+      { id: 'APT-105', customer: 'Robert Lawson', vehicle: 'Triumph Bonneville T120', service: 'Chain & Sprockets Drive Care', date: '2026-07-29', time: '01:30 PM', status: 'Active', tech: 'James Thorne' }
     ],
     invoices: [
-      { id: 'INV-4091', customer: 'Marcus Vance', service: 'Detailing & Paint Care', amount: '$349.00', date: 'Jul 22, 2026', status: 'Paid', method: 'Credit Card' },
-      { id: 'INV-4092', customer: 'Jennifer Kim', service: 'Oil & Filter Service', amount: '$139.00', date: 'Jul 20, 2026', status: 'Paid', method: 'Apple Pay' },
-      { id: 'INV-4093', customer: 'Daniel Richardson', service: 'Full Computer Diagnostics', amount: '$149.00', date: 'Jul 18, 2026', status: 'Paid', method: 'Credit Card' },
-      { id: 'INV-4094', customer: 'Priya Sharma', service: 'Brake & Suspension', amount: '$389.00', date: 'Jul 28, 2026', status: 'Pending', method: 'Pending' },
-      { id: 'INV-4095', customer: 'Robert Lawson', service: 'Tyres & Alignment', amount: '$149.00', date: 'Jul 29, 2026', status: 'Pending', method: 'Pending' }
+      { id: 'INV-4091', customer: 'Marcus Vance', service: 'Ceramic Shield & Detailing', amount: '$449.00', date: 'Jul 22, 2026', status: 'Paid', method: 'Credit Card' },
+      { id: 'INV-4092', customer: 'Jennifer Kim', service: '4T Synthetic Oil Service', amount: '$109.00', date: 'Jul 20, 2026', status: 'Paid', method: 'Apple Pay' },
+      { id: 'INV-4093', customer: 'Daniel Richardson', service: 'ECU & Dyno Diagnostics', amount: '$159.00', date: 'Jul 18, 2026', status: 'Paid', method: 'Credit Card' },
+      { id: 'INV-4094', customer: 'Priya Sharma', service: 'Brakes & Fork Tuning', amount: '$299.00', date: 'Jul 28, 2026', status: 'Pending', method: 'Pending' },
+      { id: 'INV-4095', customer: 'Robert Lawson', service: 'Chain & Sprockets Drive Kit', amount: '$229.00', date: 'Jul 29, 2026', status: 'Pending', method: 'Pending' }
     ],
     userVehicles: [
-      { id: 'VEH-01', make: 'BMW', model: '5 Series', year: '2022', vin: 'WBA53BJ08NFP12948', plate: '7XYZ89', mileage: '34,200 mi', lastService: 'Oil & Filter (Jul 2026)', nextService: 'Brake Inspection (Sep 2026)' },
-      { id: 'VEH-02', make: 'Honda', model: 'Civic Hatchback', year: '2021', vin: '1HGCR2F83MA049182', plate: '4ABC12', mileage: '42,100 mi', lastService: 'Tire Alignment (Jun 2026)', nextService: 'Oil Change (Sep 2026)' },
-      { id: 'VEH-03', make: 'Ford', model: 'F-150 Lariat', year: '2023', vin: '1FTFW1ED8PFB93021', plate: '9LMN45', mileage: '18,500 mi', lastService: 'Full Safety Check (May 2026)', nextService: 'Inspection (Nov 2026)' }
+      { id: 'VEH-01', make: 'Ducati', model: 'Panigale V4 S', year: '2023', vin: 'ZDM12AWN7PB019284', plate: 'MOTO-99', mileage: '6,400 mi', lastService: '4T Motul Oil & Filter (Jul 2026)', nextService: 'Desmo Valve Check (Oct 2026)' },
+      { id: 'VEH-02', make: 'BMW Motorrad', model: 'R 1250 GS Adventure', year: '2022', vin: 'WB10J9106NZA18492', plate: 'ADV-42', mileage: '18,300 mi', lastService: 'Fork Oil & Shaft Inspection (Jun 2026)', nextService: '4T Synthetic Oil (Sep 2026)' },
+      { id: 'VEH-03', make: 'Triumph', model: 'Street Triple 765 RS', year: '2023', vin: 'SMTT40854PB891042', plate: 'TRP-76', mileage: '4,800 mi', lastService: 'Quickshifter & ECU Scan (May 2026)', nextService: 'Chain & Sprockets (Nov 2026)' }
     ],
     userHistory: [
-      { date: 'Jul 20, 2026', vehicle: 'BMW 5 Series', service: 'Oil & Filter Service', mileage: '34,150 mi', cost: '$139.00', status: 'Completed', tech: 'David Miller' },
-      { date: 'Jun 14, 2026', vehicle: 'Honda Civic', service: 'Tyres & Alignment', mileage: '41,800 mi', cost: '$149.00', status: 'Completed', tech: 'James Thorne' },
-      { date: 'May 02, 2026', vehicle: 'Ford F-150', service: 'Full Computer Diagnostics', mileage: '17,900 mi', cost: '$149.00', status: 'Completed', tech: 'Elena Rostova' }
+      { date: 'Jul 20, 2026', vehicle: 'Ducati Panigale V4 S', service: '4T Synthetic Oil & Filter', mileage: '6,350 mi', cost: '$109.00', status: 'Completed', tech: 'David Miller' },
+      { date: 'Jun 14, 2026', vehicle: 'BMW R 1250 GS', service: 'Fork Seal Rebuild & Sag Setup', mileage: '17,900 mi', cost: '$299.00', status: 'Completed', tech: 'James Thorne' },
+      { date: 'May 02, 2026', vehicle: 'Triumph Street Triple 765', service: 'ECU & Dyno Diagnostic Scan', mileage: '4,500 mi', cost: '$159.00', status: 'Completed', tech: 'Elena Rostova' }
     ]
   };
 
@@ -271,10 +271,10 @@
         '</div>' +
         '<div class="dashboard-widget" style="max-width:680px;">' +
           '<form id="adminSettingsForm">' +
-            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">WORKSHOP DISPLAY NAME</label><input type="text" value="MOTORWORKS Precision Car Service" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
-            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">DISPATCH CONTACT PHONE</label><input type="text" value="+1 (312) 555-0148" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
-            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">AUTOMATED SMS/EMAIL APPOINTMENT REMINDERS</label><select style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"><option value="enabled" selected>Enabled (24 Hours Prior)</option><option value="disabled">Disabled</option></select></div>' +
-            '<div style="margin-bottom:24px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">DEFAULT TAX RATE (%)</label><input type="text" value="8.5%" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">WORKSHOP DISPLAY NAME</label><input type="text" value="Riderz Precision Motorcycle Service &amp; Tuning" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">DISPATCH CONTACT PHONE</label><input type="text" value="+1 (312) 555-0148" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">AUTOMATED SMS/EMAIL APPOINTMENT REMINDERS</label><select style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"><option value="enabled" selected>Enabled (24 Hours Prior)</option><option value="disabled">Disabled</option></select></div>' +
+            '<div style="margin-bottom:24px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">DEFAULT TAX RATE (%)</label><input type="text" value="8.5%" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
             '<button type="submit" class="btn btn-solid">Save System Settings</button>' +
           '</form>' +
         '</div>';
@@ -339,7 +339,7 @@
           return '<div class="dashboard-widget" style="border-top:3px solid var(--amber);">' +
             '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
               '<h3 style="margin:0;">' + v.year + ' ' + v.make + ' ' + v.model + '</h3>' +
-              '<span style="font-family:\'IBM Plex Mono\',monospace;font-size:11px;background:var(--panel-2);padding:4px 8px;color:var(--amber);">' + v.plate + '</span>' +
+              '<span style="font-family:\'Raleway\',monospace;font-size:11px;background:var(--panel-2);padding:4px 8px;color:var(--amber);">' + v.plate + '</span>' +
             '</div>' +
             '<div style="font-size:13px;color:var(--steel);line-height:1.7;margin-bottom:20px;">' +
               '<div><strong>VIN:</strong> ' + v.vin + '</div>' +
@@ -368,25 +368,25 @@
       var btnAddVeh = document.getElementById('btnAddVehicleModal');
       if (btnAddVeh) {
         btnAddVeh.addEventListener('click', function() {
-          var make = prompt('Enter Vehicle Make (e.g. Porsche):');
+          var make = prompt('Enter Motorcycle Make (e.g. Ducati, BMW, Kawasaki):');
           if (!make || !make.trim()) return;
-          var model = prompt('Enter Vehicle Model (e.g. 911 Carrera):');
+          var model = prompt('Enter Motorcycle Model (e.g. Panigale V4, R1250 GS, Ninja ZX-10R):');
           if (!model || !model.trim()) return;
-          var year = prompt('Enter Vehicle Year (e.g. 2024):') || '2024';
+          var year = prompt('Enter Motorcycle Year (e.g. 2024):') || '2024';
           data.userVehicles.push({
             id: 'VEH-' + Date.now(),
             make: make.trim(),
             model: model.trim(),
             year: year.trim(),
-            vin: 'WBA' + Math.random().toString(36).substring(2, 10).toUpperCase(),
-            plate: '9PR' + Math.floor(100 + Math.random() * 900),
-            mileage: '12,000 mi',
+            vin: 'ZDM' + Math.random().toString(36).substring(2, 10).toUpperCase(),
+            plate: 'MOTO-' + Math.floor(100 + Math.random() * 900),
+            mileage: '4,500 mi',
             lastService: 'Initial Registration',
-            nextService: 'First Oil Service (6 Mos)'
+            nextService: 'First 4T Oil Service (6 Mos)'
           });
           saveData(data);
           renderUserDashboard(container, 'vehicles', data);
-          if (window.MotorWorks.showToast) window.MotorWorks.showToast('New vehicle registered to garage!', 'success');
+          if (window.MotorWorks.showToast) window.MotorWorks.showToast('Motorcycle added to your garage!', 'success');
         });
       }
     } else if (section === 'appointments') {
@@ -475,12 +475,12 @@
         '<div class="dashboard-widget" style="max-width:680px;">' +
           '<form id="userProfileForm">' +
             '<div class="profile-form-grid">' +
-              '<div><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">FIRST NAME</label><input type="text" value="Daniel" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
-              '<div><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">LAST NAME</label><input type="text" value="Richardson" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+              '<div><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">FIRST NAME</label><input type="text" value="Daniel" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+              '<div><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">LAST NAME</label><input type="text" value="Richardson" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
             '</div>' +
-            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">EMAIL ADDRESS</label><input type="email" value="daniel.r@example.com" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
-            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">PHONE NUMBER</label><input type="tel" value="+1 (312) 555-0199" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
-            '<div style="margin-bottom:24px;"><label style="display:block;font-size:12px;font-family:\'IBM Plex Mono\',monospace;color:var(--steel);margin-bottom:8px;">NEW PASSWORD (LEAVE BLANK TO KEEP CURRENT)</label><input type="password" placeholder="••••••••" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">EMAIL ADDRESS</label><input type="email" value="daniel.r@example.com" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:20px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">PHONE NUMBER</label><input type="tel" value="+1 (312) 555-0199" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
+            '<div style="margin-bottom:24px;"><label style="display:block;font-size:12px;font-family:\'Raleway\',monospace;color:var(--steel);margin-bottom:8px;">NEW PASSWORD (LEAVE BLANK TO KEEP CURRENT)</label><input type="password" placeholder="••••••••" style="width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--bone);padding:10px 14px;font-size:14px;outline:none;"></div>' +
             '<button type="submit" class="btn btn-solid">Save Profile Changes</button>' +
           '</form>' +
         '</div>';

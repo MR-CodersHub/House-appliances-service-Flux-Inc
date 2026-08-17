@@ -85,7 +85,7 @@
     var services = window.MotorWorks.services;
     var service = services.find(function(s) { return s.id === serviceId; }) || services[0];
     var basePath = getBasePath();
-    document.title = service.title + ' — MOTORWORKS';
+    document.title = service.title + ' — Riderz';
 
     container.innerHTML =
       '<div class="wrap section-padding">' +
@@ -142,7 +142,7 @@
     }) || posts[0];
 
     var basePath = getBasePath();
-    document.title = post.title + ' — MOTORWORKS';
+    document.title = post.title + ' — Riderz';
 
     var imgUrl = (post.image.indexOf('http') === 0 || post.image.indexOf('/') === 0) ? post.image : (basePath + post.image);
 
@@ -285,9 +285,9 @@
           notice.style.color = 'var(--success)';
           notice.style.fontSize = '13px';
           notice.style.marginTop = '10px';
-          notice.style.fontFamily = "'IBM Plex Mono', monospace";
+          notice.style.fontFamily = "'Raleway', monospace";
           notice.style.textAlign = 'center';
-          notice.innerHTML = '✓ You are subscribed! Welcome to MotorWorks updates.';
+          notice.innerHTML = '✓ You are subscribed! Welcome to Riderz updates.';
           form.parentNode.appendChild(notice);
 
           setTimeout(function() {
@@ -373,7 +373,249 @@
     }).join('');
   }
 
+  function initHeroSlider() {
+    var slider = document.getElementById('heroSlider');
+    if (!slider) return;
+
+    var prevBtn = document.getElementById('heroPrevBtn');
+    var nextBtn = document.getElementById('heroNextBtn');
+    var slideImg = document.getElementById('heroSlideImg');
+    var slideTitle = document.getElementById('heroSlideTitle');
+    var slideDesc = document.getElementById('heroSlideDesc');
+    var slideBtn = document.getElementById('heroSlideBtn');
+
+    var slides = [
+      {
+        boldTitle: 'PASSION MEETS',
+        lightTitle: 'PERFORMANCE',
+        desc: 'A dedicated motorcycle service and superbike tuning division. Engineered for riders who demand precision valve clearances, ECU dyno mapping, and track-ready suspension overhauls.',
+        btnText: 'EXPLORE',
+        btnLink: './public/pages/services.html',
+        image: './assets/img/hero-bike.jpg'
+      },
+      {
+        boldTitle: 'PRECISION DRIVEN',
+        lightTitle: 'TRACK READY',
+        desc: 'Factory-trained superbike technicians equipped with dealership-grade motorcycle diagnostic scan tools. From Öhlins fork rebuilds to Brembo brake overhauls, zero compromise on two wheels.',
+        btnText: 'VIEW SERVICES',
+        btnLink: './public/pages/services.html',
+        image: './assets/img/bays-occupancy.jpg'
+      },
+      {
+        boldTitle: 'DYNO TUNED',
+        lightTitle: 'SUPREMACY',
+        desc: 'Extract maximum horsepower and razor-sharp throttle response with real-time AFR wideband telemetry, quickshifter calibration, and trackday pre-ride inspections.',
+        btnText: 'BOOK A TUNE',
+        btnLink: './public/pages/booking.html',
+        image: './assets/img/hero-bg.jpg'
+      }
+    ];
+
+    var currentIndex = 0;
+
+    function renderSlide(index) {
+      var slide = slides[index];
+      if (!slide) return;
+
+      if (slideImg) {
+        slideImg.style.opacity = '0.3';
+        setTimeout(function() {
+          slideImg.src = slide.image;
+          slideImg.style.opacity = '1';
+        }, 180);
+      }
+
+      if (slideTitle) {
+        slideTitle.innerHTML = '<span class="hero-title-bold">' + slide.boldTitle + '</span><span class="hero-title-light">' + slide.lightTitle + '</span>';
+      }
+      if (slideDesc) {
+        slideDesc.textContent = slide.desc;
+      }
+      if (slideBtn) {
+        slideBtn.textContent = slide.btnText;
+        slideBtn.href = slide.btnLink;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        renderSlide(currentIndex);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        renderSlide(currentIndex);
+      });
+    }
+  }
+
+  function initCapabilitiesHub() {
+    var hub = document.getElementById('capabilitiesHub');
+    if (!hub) return;
+
+    var navButtons = hub.querySelectorAll('.cap-nav-item');
+    var badgeEl = document.getElementById('capBadgeFloating');
+    var imgEl = document.getElementById('capDisplayImg');
+    var specStripEl = document.getElementById('capMediaSpecStrip');
+    var stageTagEl = document.getElementById('capStageTag');
+    var titleEl = document.getElementById('capDisplayTitle');
+    var descEl = document.getElementById('capDisplayDesc');
+    var featureListEl = document.getElementById('capFeatureList');
+    var priceEl = document.getElementById('capMetaPrice');
+    var detailsBtn = document.getElementById('capDetailsBtn');
+    var bookBtn = document.getElementById('capBookBtn');
+
+    var disciplines = [
+      {
+        stage: 'ENGINE & FLUID DYNAMICS',
+        code: 'SVC / 01 · ROUTINE SPEC',
+        title: '4T Synthetic Oil & Filter Service',
+        desc: 'Protect your engine, transmission, and wet clutch with factory-approved JASO MA2 high-performance 4T synthetic oils tailored to high-revving motorcycle engines.',
+        image: './assets/img/service1.jpg',
+        specs: ['Est. 45 Mins', 'Factory Warranty Intact', 'Motul 300V / Liqui Moly'],
+        features: [
+          'Motul 300V / Liqui Moly 4T Synthetic Racing Fluid',
+          'OEM Oil Filter & Crush Washer Replacement',
+          'Clutch & Throttle Cable Free-Play Calibration',
+          'Chain Slack Check, Lube & 30-Point Safety Docket'
+        ],
+        price: '$69',
+        priceNote: 'Starting price / street spec',
+        detailsLink: './public/pages/service-details.html?id=oil-filter'
+      },
+      {
+        stage: 'BRAKING & CHASSIS DAMPING',
+        code: 'SVC / 02 · SAFETY SPEC',
+        title: 'Brembo Brakes & Fork Tuning',
+        desc: 'Comprehensive brake and suspension servicing for track and street bikes. Ensures razor-sharp stopping power, zero brake fade, and supple chassis damping.',
+        image: './assets/img/service2.jpg',
+        specs: ['Est. 60-90 Mins', 'Brembo Authorized Techs', 'Laser Sag Measured'],
+        features: [
+          'Brembo Sintered / Organic Brake Pads Overhaul',
+          'High-Temp DOT 5.1 / 4 Hydraulic Fluid Flush',
+          'Fork Oil, Seals & Bushing Inspection & Rebuild',
+          'Front & Rear Rider Sag, Preload & Rebound Tuning'
+        ],
+        price: '$129',
+        priceNote: 'Starting price / flush & pads',
+        detailsLink: './public/pages/service-details.html?id=brake-suspension'
+      },
+      {
+        stage: 'ELECTRONICS & TELEMETRY',
+        code: 'SVC / 04 · DIAGNOSTIC SPEC',
+        title: 'ECU Dyno & Computer Diagnostics',
+        desc: 'Using dedicated motorcycle diagnostic scanners and digital vacuum gauges, we scan fault codes, calibrate ride-by-wire throttles, and optimize fuel mapping across all cylinders.',
+        image: './assets/img/service4.jpg',
+        specs: ['Est. 45 Mins', 'Dealership-Grade OBD-II', 'Full System Health Report'],
+        features: [
+          'Motorcycle OBD Fault Code Scan & Service Light Reset',
+          'Digital Throttle Body Vacuum Synchronization',
+          'Quickshifter, Traction Control & ABS Sensor Calibration',
+          'Live Air-Fuel Ratio (AFR) & Lambda Sensor Telemetry'
+        ],
+        price: '$79',
+        priceNote: 'Starting price / health scan',
+        detailsLink: './public/pages/service-details.html?id=computer-diagnostics'
+      },
+      {
+        stage: 'DRIVETRAIN & AXLE PRECISION',
+        code: 'SVC / 03 · DRIVELINE SPEC',
+        title: 'Laser Chain & Sprockets Drive Care',
+        desc: 'Keep your motorcycle drivetrain silky smooth and quiet with precision laser alignment, ultrasonic chain cleaning, high-adhesion lubrication, and heavy-duty X-ring chain replacement.',
+        image: './assets/img/service3.jpg',
+        specs: ['Est. 30-60 Mins', 'Laser 0.01mm Alignment', 'DID / RK Gold Kits In Stock'],
+        features: [
+          'Laser Alignment of Rear Axle & Sprocket Carrier',
+          'Deep Ultrasonic Degreasing & Solvent Tank Wash',
+          'DID / RK Gold X-Ring Heavy Duty Chain Installation',
+          'Hardened Steel or Lightweight CNC Alloy Sprockets'
+        ],
+        price: '$49',
+        priceNote: 'Starting price / clean & lube',
+        detailsLink: './public/pages/service-details.html?id=chain-sprocket'
+      },
+      {
+        stage: 'COSMETIC & CERAMIC ARMOR',
+        code: 'SVC / 05 · PRESERVATION SPEC',
+        title: 'Ceramic Shield & Race Detailing',
+        desc: 'Multi-stage paint correction, fairing removal, engine bay degrease, and hydrophobic 9H ceramic coating to protect your finish from UV rays, road salt, and chain splatter.',
+        image: './assets/img/service5.jpg',
+        specs: ['Same Day Turnaround', '9H Hydrophobic Armor', 'Full Fairing Teardown'],
+        features: [
+          'Complete Fairing & Tank Teardown For Deep Cleaning',
+          'High-Pressure Engine Bay & Swingarm Degreasing',
+          'Multi-Stage Paint Correction & Swirl Removal',
+          '9H Ceramic Coating on Tank, Fairings & Wheels'
+        ],
+        price: '$149',
+        priceNote: 'Starting price / express ceramic',
+        detailsLink: './public/pages/service-details.html?id=detailing-paint'
+      }
+    ];
+
+    function activateDiscipline(idx) {
+      var item = disciplines[idx];
+      if (!item) return;
+
+      navButtons.forEach(function(btn, i) {
+        if (i === idx) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+        } else {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      if (imgEl) {
+        imgEl.style.opacity = '0.3';
+        imgEl.style.transform = 'scale(0.98)';
+        setTimeout(function() {
+          imgEl.src = item.image;
+          imgEl.style.opacity = '1';
+          imgEl.style.transform = 'scale(1)';
+        }, 120);
+      }
+
+      if (badgeEl) badgeEl.textContent = item.code;
+      if (stageTagEl) stageTagEl.textContent = item.stage;
+      if (titleEl) titleEl.textContent = item.title;
+      if (descEl) descEl.textContent = item.desc;
+      if (priceEl) priceEl.innerHTML = item.price + ' <span>' + item.priceNote + '</span>';
+      if (detailsBtn) detailsBtn.href = item.detailsLink;
+
+      if (specStripEl) {
+        specStripEl.innerHTML = item.specs.map(function(s) {
+          return '<span class="cap-media-chip">' + s + '</span>';
+        }).join('');
+      }
+
+      if (featureListEl) {
+        featureListEl.innerHTML = item.features.map(function(f) {
+          return '<div class="cap-feature-item">' +
+            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>' +
+            '<span>' + f + '</span>' +
+          '</div>';
+        }).join('');
+      }
+    }
+
+    navButtons.forEach(function(btn, i) {
+      btn.addEventListener('click', function() {
+        activateDiscipline(i);
+      });
+      btn.addEventListener('mouseenter', function() {
+        // Subtle hover responsiveness
+      });
+    });
+  }
+
   function initAll() {
+    initHeroSlider();
+    initCapabilitiesHub();
     initFAQ();
     initPricing();
     initCountdown();

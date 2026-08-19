@@ -77,17 +77,13 @@
 
     var mobileHTML =
       '<div class="mobile-menu" id="mobileMenu">' +
+      '<button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>' +
       '<a href="' + basePath + 'index.html">Home</a>' +
       '<a href="' + basePath + 'public/pages/home-2.html">Home 2</a>' +
       '<a href="' + basePath + 'public/pages/about.html">About</a>' +
       '<a href="' + basePath + 'public/pages/services.html">Services</a>' +
       '<a href="' + basePath + 'public/pages/blog.html">Blog</a>' +
       '<a href="' + basePath + 'public/pages/contact.html">Contact</a>' +
-      '<div class="dropdown-divider" style="margin: 10px 0;"></div>' +
-      '<a href="' + basePath + 'public/pages/user-dashboard.html" style="color:var(--amber);">Customer Dashboard</a>' +
-      '<a href="' + basePath + 'public/pages/admin-dashboard.html" style="color:var(--amber);">Admin Dashboard</a>' +
-      '<a href="' + basePath + 'public/auth/login.html">Login</a>' +
-      '<a href="' + basePath + 'public/auth/signup.html">Sign up</a>' +
       '</div>';
 
     if (existingHeader) {

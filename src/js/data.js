@@ -5,134 +5,136 @@
     {
       id: 'marcus-vance',
       name: 'Marcus Vance',
-      role: 'Master Superbike Tech & Shop Lead',
-      bio: 'Factory certified with 16+ years experience in European and Japanese superbikes, Dynojet tuning, and engine overhauls.',
+      role: 'Master HVAC & Dual-Inverter AC Specialist',
+      bio: 'EPA Section 608 certified with 15+ years experience in inverter AC diagnostics, PCB board micro-soldering, and zero-leak R32/R410A refrigeration systems.',
       image: 'assets/img/men3.jpg'
     },
     {
       id: 'elena-rostova',
       name: 'Elena Rostova',
-      role: 'ECU & Motorcycle Electronics Specialist',
-      bio: 'Expert in quickshifters, electronic suspension, ABS modulators, ride-by-wire calibration, and stator charging systems.',
+      role: 'Lead Refrigerator & Smart Cooling Engineer',
+      bio: 'Specialist in Samsung, LG, and Whirlpool smart French-door refrigerators, linear inverter compressors, defrost sensors, and electronic ice maker units.',
       image: 'assets/img/woman1.jpg'
     },
     {
       id: 'david-miller',
       name: 'David Miller',
-      role: 'Workshop Operations Manager',
-      bio: 'Oversees service bay workflow, rider consultations, genuine OEM parts sourcing, and rigorous safety road testing.',
+      role: 'Washing Machine & Drive Motor Technician',
+      bio: 'Certified expert in Bosch, IFB, and Whirlpool front-load & top-load washing machines, direct-drive brushless motors, drum spider bearings, and drain valves.',
       image: 'assets/img/men2.jpg'
     },
     {
-      id: 'james-thorne',
-      name: 'James Thorne',
-      role: 'Chassis, Suspension & Track Setup Specialist',
-      bio: 'Former club racer specializing in Öhlins and Showa fork rebuilding, custom monoshock valving, and high-speed wheel balancing.',
+      id: 'sarah-jenkins',
+      name: 'Sarah Jenkins',
+      role: 'On-Demand Dispatch & Quality Assurance Lead',
+      bio: 'Oversees real-time technician telemetry routing, emergency 45-minute breakdown dispatches, genuine OEM spare verification, and 90-day warranty compliance.',
       image: 'assets/img/woman2.jpg'
     }
   ];
 
   window.MotorWorks.services = [
     {
-      id: 'oil-filter',
-      code: 'SVC / 01',
-      title: '4T Synthetic Oil & Filter Service',
+      id: 'washing-machine',
+      code: 'APP / 01',
+      title: 'Washing Machine Repair & Diagnostics',
       category: 'maintenance',
-      shortDesc: 'JASO MA2 synthetic fluids, OEM filter, clutch slack adjust, and 30-point safety check.',
-      description: 'Protect your engine, transmission, and wet clutch with factory-approved JASO MA2 high-performance 4T synthetic oils tailored to high-revving motorcycle engines.',
+      shortDesc: 'Front-load, top-load & washer-dryers. Drum bearings, drain pump, PCB board & motor repairs.',
+      description: 'Comprehensive diagnostic and on-site repair for front-load, top-load, and semi-automatic washing machines. We fix error codes, excessive vibration, water leakage, spinning failure, and faulty drive motors using factory OEM spares.',
       image: 'assets/img/service1.jpg',
-      features: ['Motul 300V / Liqui Moly 4T Synthetic Oil', 'OEM Oil Filter & Crush Washer Replacement', 'Clutch & Throttle Free-Play Adjustment', 'Chain Tension, Lube & 30-Point Safety Check'],
+      features: ['Drive Motor & Belt Replacement', 'Drum Spider Arm & Bearing Overhaul', 'PCB Logic Board Micro-Repair & Error Reset', 'Drain Pump, Water Inlet Valve & Door Gasket Fix'],
       pricing: [
-        { tier: 'Street Spec 4T', price: '$69', desc: 'Up to 3.5L Full Synthetic 10W-40/15W-50' },
-        { tier: 'Factory Race Spec', price: '$109', desc: 'Motul 300V Ester Core Factory Formula' }
+        { tier: 'Standard Diagnostic & Minor Fix', price: '$29', desc: 'Inspection, filter cleaning, hose check & quote' },
+        { tier: 'Comprehensive Component Overhaul', price: '$89', desc: 'PCB, motor, drum bearing or drain pump replacement' }
       ],
       faqs: [
-        { q: 'How often should motorcycle oil be changed?', a: 'For modern high-performance motorcycles, we recommend changing engine oil every 3,000 to 5,000 miles or at the start of every riding season.' }
+        { q: 'Why is my washing machine shaking violently during the spin cycle?', a: 'Violent shaking is usually caused by worn shock absorbers, broken suspension springs, an unbalanced drum load, or damaged rear drum spider bearings. Our technician can replace dampers on-site.' },
+        { q: 'Do you provide genuine OEM replacement parts?', a: 'Yes! Flux Inc uses 100% genuine factory-certified OEM replacement parts backed by our standard 90-day parts warranty.' }
       ]
     },
     {
-      id: 'brake-suspension',
-      code: 'SVC / 02',
-      title: 'Brakes, Monoshock & Fork Tuning',
-      category: 'safety',
-      shortDesc: 'Brembo pad overhaul, fork seals, high-temp fluid flush, and rider sag setup.',
-      description: 'Comprehensive brake and suspension servicing for track and street bikes. Ensures razor-sharp stopping power, zero brake fade, and supple chassis damping.',
-      image: 'assets/img/service2.jpg',
-      features: ['Brembo Sintered / Organic Brake Pads', 'High-Temp DOT 5.1 / 4 Brake Fluid Flush', 'Fork Oil & Seal Inspection / Rebuild', 'Front & Rear Rider Sag & Preload Adjustment'],
+      id: 'refrigerator',
+      code: 'APP / 02',
+      title: 'Refrigerator & Inverter Cooling Care',
+      category: 'cooling',
+      shortDesc: 'Single, double-door & side-by-side. Inverter compressor, gas leak, defrost timer & thermostat.',
+      description: 'Expert troubleshooting for single-door, double-door, side-by-side, and smart French-door refrigerators. We resolve cooling loss, unusual compressor clicking, gas leaks, ice buildup, and faulty temperature sensors.',
+      image: 'assets/img/step3.jpg',
+      features: ['Inverter Linear Compressor Diagnostics & Swap', 'Refrigerant R600a / R134a Leak Fix & Gas Recharge', 'Defrost Heater, Bi-Metal Sensor & Timer Repair', 'Magnetic Door Gasket Seal & Thermostat Replacement'],
       pricing: [
-        { tier: 'Front & Rear Brake Flush', price: '$129', desc: 'Pads inspection, caliper clean & fresh fluid' },
-        { tier: 'Complete Fork Rebuild & Setup', price: '$299', desc: 'New seals, bushings, synthetic fork oil & sag tune' }
+        { tier: 'Cooling Diagnostic & Sensor Service', price: '$39', desc: 'Thermostat, fan motor, defrost check & sensor repair' },
+        { tier: 'Compressor & Full Gas Charging', price: '$129', desc: 'Includes leak detection, vacuuming & R600a refill' }
       ],
       faqs: [
-        { q: 'How often should motorcycle fork oil be replaced?', a: 'Fork oil should be refreshed every 12,000 to 15,000 miles or every 2 years to maintain consistent damping and seal life.' }
+        { q: 'Why is my refrigerator running but not cooling properly?', a: 'Common causes include low refrigerant gas due to a micro-leak, a faulty evaporator fan motor, frosted cooling coils from a failed defrost sensor, or a defective compressor start relay.' },
+        { q: 'How long does an on-site refrigerator repair take?', a: 'Most common repairs—including sensor swaps, fan replacement, and thermostat tuning—are completed within 45 to 60 minutes during the first visit.' }
       ]
     },
     {
-      id: 'chain-sprocket',
-      code: 'SVC / 03',
-      title: 'Chain, Sprockets & Drive Care',
-      category: 'maintenance',
-      shortDesc: 'Laser chain alignment, ultrasonic degreasing, tensioning, and sprocket replacement.',
-      description: 'Keep your motorcycle drivetrain smooth and quiet with precision laser alignment, ultrasonic chain cleaning, high-adhesion lubrication, and heavy-duty X-ring chain replacement.',
+      id: 'ac-service',
+      code: 'APP / 03',
+      title: 'Split & Window AC Foam Jet Service',
+      category: 'cooling',
+      shortDesc: 'Deep foam jet wash, R32/R410A gas refill, PCB circuit repair, and copper pipe leak fix.',
+      description: 'Restore ice-cold cooling efficiency and clean indoor air with our high-pressure deep foam jet service. We clean indoor cooling coils, outdoor condenser units, test electrical capacitance, and refill eco-friendly refrigerant gas.',
       image: 'assets/img/service3.jpg',
-      features: ['Laser Alignment of Rear Axle & Sprocket', 'Deep Ultrasonic Cleaning & Off-Road Degrease', 'DID / RK Gold X-Ring Chain Installation', 'Hardened Steel or Lightweight Alloy Sprockets'],
+      features: ['High-Pressure Foam Jet Indoor & Outdoor Coil Wash', 'Eco-Friendly R32 / R410A / R22 Refrigerant Gas Refill', 'Indoor Blower Fan & Outdoor Condenser Motor Repair', 'PCB Circuit Board & Remote Sensor Calibration'],
       pricing: [
-        { tier: 'Chain Clean, Lube & Tension', price: '$49', desc: 'Ultrasonic deep clean, alignment & adjust' },
-        { tier: 'Full Chain & Sprocket Kit', price: '$229', desc: 'New front/rear sprockets + DID X-Ring chain' }
+        { tier: 'Deep Foam Jet Service', price: '$49', desc: '2x deeper cooling wash for indoor & outdoor units' },
+        { tier: 'Gas Refill & Leak Solder Repair', price: '$99', desc: 'Nitrogen pressure testing, brazing & full gas recharge' }
       ],
       faqs: [
-        { q: 'How often should a motorcycle chain be lubed and adjusted?', a: 'Lube your chain every 300–500 miles (or immediately after riding in rain) and inspect slack every 1,000 miles.' }
+        { q: 'How is a Foam Jet wash different from normal water servicing?', a: 'Foam Jet cleaning uses specialized antibacterial foaming agents with a 2-in-1 high-pressure spray that dissolves stubborn deep-set grime, mold, and grease from the evaporator fins without damaging the delicate aluminum.' }
       ]
     },
     {
-      id: 'computer-diagnostics',
-      code: 'SVC / 04',
-      title: 'ECU & Dyno Diagnostics',
-      category: 'diagnostics',
-      shortDesc: 'Dealership-level bike scanners, throttle sync, ABS calibration, and fueling maps.',
-      description: 'Using dedicated motorcycle diagnostic scanners and digital throttle body synchronizers, we scan fault codes, calibrate ride-by-wire throttles, and optimize fuel mapping across all cylinders.',
+      id: 'dryer',
+      code: 'APP / 04',
+      title: 'Washer-Dryer & Clothes Dryer Repair',
+      category: 'maintenance',
+      shortDesc: 'Heating elements, thermal cutoffs, moisture sensors, and drum drive rollers.',
+      description: 'Dedicated service for vented, condenser, and heat pump dryers. We repair heating element coils, thermal fuses, drive belts, moisture detection sensors, and exhaust airflow blockages to eliminate fire risks and drying delays.',
       image: 'assets/img/service4.jpg',
-      features: ['Motorcycle OBD Fault Code Scan', 'Digital Throttle Body Vacuum Synchronization', 'Quickshifter, Traction Control & ABS Reset', 'Live Sensor Data & Air-Fuel Ratio Analysis'],
+      features: ['Heating Coil & Thermal Limiter Replacement', 'Drive Belt, Tensioner Idler & Roller Replacement', 'Digital Moisture Sensor & Lint Duct Clearance', 'Quiet Drum Alignment & Motor Bearing Overhaul'],
       pricing: [
-        { tier: 'Quick Scan & Health Report', price: '$79', desc: 'Full diagnostic scan & service light reset' },
-        { tier: 'Advanced ECU Diagnostic & Sync', price: '$159', desc: 'Throttle sync, live sensor sweep & map check' }
+        { tier: 'Inspection & Thermal Fuse Fix', price: '$35', desc: 'Lint clearance, safety sensors & heating check' },
+        { tier: 'Heating Element & Motor Rebuild', price: '$85', desc: 'Full internal overhaul and high-temp component renewal' }
       ],
       faqs: [
-        { q: 'Can you read error codes on European and Japanese bikes?', a: 'Yes, our diagnostic tools support BMW Motorrad, Ducati, KTM, Aprilia, Triumph, Yamaha, Honda, Kawasaki, Suzuki, and Harley-Davidson.' }
+        { q: 'Why does my dryer spin but produce zero heat?', a: 'A blown thermal cutoff fuse or a burnt heating element coil is the most common reason. Our technician tests both with a digital multimeter and replaces them on the spot.' }
       ]
     },
     {
-      id: 'detailing-paint',
-      code: 'SVC / 05',
-      title: 'Ceramic Shield & Bike Detailing',
-      category: 'cosmetic',
-      shortDesc: 'Full fairing removal, engine degrease, paint correction, and ceramic protection.',
-      description: 'Restore deep gloss and protect your motorcycle from road grime, chain fling, and UV damage with multi-stage paint correction and hydrophobic 9H ceramic coating.',
-      image: 'assets/img/service5.jpg',
-      features: ['Full Fairing & Tank Paint Correction', 'High-Temp Exhaust & Engine Header Polish', '3-Year Hydrophobic 9H Ceramic Shield', 'Chain Fling & Wheel Deep Degrease'],
-      pricing: [
-        { tier: 'Signature Motorcycle Detail', price: '$179', desc: 'Full wash, degrease, polish & sealant' },
-        { tier: 'Ceramic Pro Bike Shield', price: '$449', desc: 'Full correction + 3-year ceramic protection' }
-      ],
-      faqs: [
-        { q: 'Can ceramic coating be applied to matte motorcycle paint?', a: 'Yes, we use specialized matte ceramic coatings that protect without adding unwanted gloss.' }
-      ]
-    },
-    {
-      id: 'battery-electrical',
-      code: 'SVC / 06',
-      title: 'Stator, Regulator & Battery Care',
+      id: 'microwave',
+      code: 'APP / 05',
+      title: 'Microwave & Convection Oven Care',
       category: 'electrical',
-      shortDesc: 'Charging system diagnosis, stator load test, and lithium-ion upgrades.',
-      description: 'Ensure reliable starts every time. We test stator AC voltage output, diagnose regulator-rectifier heat dissipation, find parasitic battery drain, and install lightweight lithium batteries.',
-      image: 'assets/img/service6.jpg',
-      features: ['Stator Output & Regulator-Rectifier Test', 'Parasitic Current Draw Detection', 'Lightweight Lithium-Ion Battery Upgrades', 'Auxiliary Lighting & Harness Wiring'],
+      shortDesc: 'Magnetron replacement, high-voltage diode, touch panel, and turntable motors.',
+      description: 'Safe, certified high-voltage repairs for solo, grill, and convection microwaves. We troubleshoot no-heat symptoms, sparking inside cavity, faulty door micro-switches, and unresponsive touch membrane panels.',
+      image: 'assets/img/service5.jpg',
+      features: ['Magnetron & High-Voltage Capacitor Replacement', 'Mica Waveguide Cover & Cavity Spark Suppression', 'Touch Panel Membrane & Micro-Switch Repair', 'Turntable Motor & Drive Coupler Replacement'],
       pricing: [
-        { tier: 'Charging System Health Check', price: '$49', desc: 'Stator, RR & battery load test' },
-        { tier: 'Lithium Battery & Install', price: '$179', desc: 'Includes lightweight battery & setup' }
+        { tier: 'General Repair & Safety Check', price: '$29', desc: 'Door switch, cavity spark fix & diode test' },
+        { tier: 'Magnetron & Power Overhaul', price: '$69', desc: 'Includes genuine OEM magnetron & calibration' }
       ],
       faqs: [
-        { q: 'Why do motorcycle batteries fail quickly?', a: 'Infrequent riding and parasitic draw from immobilizers can drain small motorcycle batteries. A smart battery tender is strongly recommended.' }
+        { q: 'Is it worth repairing an expensive convection microwave?', a: 'Yes! Replacing a magnetron or micro-switch typically costs less than 25% of the price of buying a new premium convection microwave oven.' }
+      ]
+    },
+    {
+      id: 'dishwasher',
+      code: 'APP / 06',
+      title: 'Dishwasher Diagnostics & Overhaul',
+      category: 'maintenance',
+      shortDesc: 'Circulation pump, water inlet valve, heating element, and drain clog clearance.',
+      description: 'Keep your tableware spotless and sanitized. We resolve standing water in dishwashers, weak wash spray pressure, faulty detergent dispensers, heating element errors, and noisy circulation pumps.',
+      image: 'assets/img/service6.jpg',
+      features: ['Wash Circulation Pump & Impeller Overhaul', 'Water Inlet Solenoid Valve & Flow Meter Repair', 'High-Temp Heating Element & Thermistor Tuning', 'Drain Impeller Clearance & Anti-Flood Float Fix'],
+      pricing: [
+        { tier: 'Drainage & Filter Deep Clean', price: '$35', desc: 'Unclogging, valve check & sanitization cycle' },
+        { tier: 'Pump Motor & PCB Board Repair', price: '$89', desc: 'Circulation pump, heater element or board fix' }
+      ],
+      faqs: [
+        { q: 'Why is water left standing in the bottom of my dishwasher?', a: 'This is usually caused by a blocked drain hose, clogged food waste macerator, or a jammed drain pump impeller. We can clear and service the pump in under 30 minutes.' }
       ]
     }
   ];
@@ -140,59 +142,59 @@
   window.MotorWorks.pricingPlans = {
     monthly: [
       {
-        name: 'Rider Essentials',
+        name: 'Home Essentials',
         price: '$29',
         period: '/mo',
         save: null,
-        description: 'Essential peace-of-mind maintenance for daily commuters and weekend riders.',
-        features: ['1 Free 4T Synthetic Oil Service / Year', 'Free Computer Fault Scan Anytime', 'Free Chain Clean, Lube & Tension (Quarterly)', '10% Off Workshop Labor Rates', 'Priority Bay Scheduling'],
+        description: 'Essential preventive care and free diagnostic visits for 2 major home appliances.',
+        features: ['1 Free AC Deep Foam Jet Service / Year', '1 Free Washing Machine Descaling Cycle', 'Zero Diagnostic Fees on All Repair Visits', '10% Discount on Genuine OEM Spare Parts', 'Standard Same-Day Scheduling'],
         featured: false
       },
       {
-        name: 'Pro Track & Tourer',
+        name: 'Complete Home AMC',
         price: '$59',
         period: '/mo',
         save: 'Save $120/yr',
-        description: 'Our most popular plan for enthusiastic riders, touring bikes & trackday pilots.',
-        features: ['2 Free 4T Synthetic Oil Services / Year', 'Unlimited Chain Adjustments & Cleanings', 'Free Annual Brake Fluid & Fork Inspection', 'Free Pre-Ride & Pre-Track Safety Checks', '15% Off All OEM Parts & Labor'],
+        description: 'Our most popular plan covering Washing Machines, Refrigerators, and AC units.',
+        features: ['2 Free AC Foam Jet Cleanings / Year', 'Free Refrigerator Condenser & Defrost Check', 'Free Washing Machine Drum & Valve Tune-Up', '15% Off All Replacement Spare Parts', 'Priority 45-Min Emergency Dispatch'],
         featured: true
       },
       {
-        name: 'Superbike Club',
+        name: 'Smart Villa VIP',
         price: '$99',
         period: '/mo',
         save: null,
-        description: 'Comprehensive VIP coverage for superbikes, custom builds & multi-bike garages.',
-        features: ['Unlimited 4T Synthetic Oil Changes', '2 Free Throttle Sync & ECU Scans / Year', '20% Off All Repairs & Suspension Overhauls', 'Complimentary Trackday Transport / Towing (25 mi)', 'Dedicated Master Technician Advisor'],
+        description: 'All-inclusive coverage for all household appliances, multiple ACs & luxury smart models.',
+        features: ['Unlimited Free AC Servicing & Cleaning', 'Free Annual AC Refrigerant Gas Top-Up', '20% Off Major Compressor & Motor Overhauls', 'Dedicated Senior Master Technician Assigned', '24/7 Priority Hotline & Instant Dispatch'],
         featured: false
       }
     ],
     annual: [
       {
-        name: 'Rider Essentials',
+        name: 'Home Essentials',
         price: '$290',
         period: '/yr',
         save: '2 Months Free',
-        description: 'Essential peace-of-mind maintenance for daily commuters and weekend riders.',
-        features: ['1 Free 4T Synthetic Oil Service / Year', 'Free Computer Fault Scan Anytime', 'Free Chain Clean, Lube & Tension (Quarterly)', '10% Off Workshop Labor Rates', 'Priority Bay Scheduling'],
+        description: 'Essential preventive care and free diagnostic visits for 2 major home appliances.',
+        features: ['1 Free AC Deep Foam Jet Service / Year', '1 Free Washing Machine Descaling Cycle', 'Zero Diagnostic Fees on All Repair Visits', '10% Discount on Genuine OEM Spare Parts', 'Standard Same-Day Scheduling'],
         featured: false
       },
       {
-        name: 'Pro Track & Tourer',
+        name: 'Complete Home AMC',
         price: '$590',
         period: '/yr',
         save: 'Save $240/yr',
-        description: 'Our most popular plan for enthusiastic riders, touring bikes & trackday pilots.',
-        features: ['2 Free 4T Synthetic Oil Services / Year', 'Unlimited Chain Adjustments & Cleanings', 'Free Annual Brake Fluid & Fork Inspection', 'Free Pre-Ride & Pre-Track Safety Checks', '15% Off All OEM Parts & Labor'],
+        description: 'Our most popular plan covering Washing Machines, Refrigerators, and AC units.',
+        features: ['2 Free AC Foam Jet Cleanings / Year', 'Free Refrigerator Condenser & Defrost Check', 'Free Washing Machine Drum & Valve Tune-Up', '15% Off All Replacement Spare Parts', 'Priority 45-Min Emergency Dispatch'],
         featured: true
       },
       {
-        name: 'Superbike Club',
+        name: 'Smart Villa VIP',
         price: '$990',
         period: '/yr',
         save: 'Save $390/yr',
-        description: 'Comprehensive VIP coverage for superbikes, custom builds & multi-bike garages.',
-        features: ['Unlimited 4T Synthetic Oil Changes', '2 Free Throttle Sync & ECU Scans / Year', '20% Off All Repairs & Suspension Overhauls', 'Complimentary Trackday Transport / Towing (25 mi)', 'Dedicated Master Technician Advisor'],
+        description: 'All-inclusive coverage for all household appliances, multiple ACs & luxury smart models.',
+        features: ['Unlimited Free AC Servicing & Cleaning', 'Free Annual AC Refrigerant Gas Top-Up', '20% Off Major Compressor & Motor Overhauls', 'Dedicated Senior Master Technician Assigned', '24/7 Priority Hotline & Instant Dispatch'],
         featured: false
       }
     ]
@@ -200,65 +202,63 @@
 
   window.MotorWorks.blogPosts = [
     {
-      id: 'motorcycle-chain-maintenance-guide',
-      title: 'The Master Guide to Motorcycle Chain Cleaning, Tensioning & Alignment',
-      category: 'Maintenance',
+      id: 'washing-machine-loud-banging-noise',
+      title: 'Why Is Your Washing Machine Making Loud Banging Noises During Spin?',
+      category: 'Washing Machines',
       date: 'May 14, 2026',
       readTime: '5 min read',
-      excerpt: 'Learn the exact method for checking chain slack, using laser alignment tools, and preventing premature sprocket wear on high-torque motorcycles.',
-      image: 'assets/img/blog1.jpg',
-      content: '<p>Your motorcycle drive chain transfers massive horsepower and torque directly from the gearbox countershaft to the rear wheel. Proper chain slack and lubrication prevent snap failures and ensure smooth power delivery.</p>' +
-        '<h3>1. Measuring Correct Chain Slack</h3>' +
-        '<p>Always check chain tension at the midway point of the lower run with the bike on its side stand (or as specified in your owner\'s manual). Most street and sport bikes require between 25mm to 35mm of vertical movement. An overly tight chain binds suspension travel and destroys countershaft bearings, while a loose chain can derail.</p>' +
-        '<h3>2. Deep Cleaning Without Harming O-Rings</h3>' +
-        '<p>Never use gasoline, wire brushes, or harsh chlorinated solvents on modern O-ring or X-ring chains. Use dedicated motorcycle chain degreasers and soft three-sided grunge brushes to remove grit without drying out the factory internal grease seals.</p>' +
-        '<h3>3. Precision Rear Axle Laser Alignment</h3>' +
-        '<p>Swingarm alignment tick marks are frequently inaccurate. Using a laser chain alignment tool clamped to the rear sprocket ensures the chain runs in a 100% straight line, cutting friction losses and doubling sprocket lifespan.</p>' +
-        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);padding:20px;margin:30px 0;">' +
-        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">PRO TIP FROM OUR MASTER TECHS:</strong>' +
-        '<p style="margin:0;font-size:14px;color:var(--steel);">Lube your chain immediately after a ride while the metal links are warm. The heat draws the lubricant into the rollers and allows the solvent carrier to evaporate, preventing messy chain fling on your wheels.</p>' +
+      excerpt: 'Learn the difference between an unlevel machine, worn shock absorbers, and damaged rear drum bearings—and how to fix it before motor burn.',
+      image: 'assets/img/service4.jpg',
+      content: '<p>A noisy washing machine is one of the most common home appliance emergencies. Ignoring excessive thumping during high-speed spin cycles can destroy the outer tub, rip the drive belt, or short-circuit the electronic motor control module.</p>' +
+        '<h3>1. Unbalanced Load vs. Damaged Shock Absorbers</h3>' +
+        '<p>Front-load washing machines rely on 2 to 4 heavy-duty hydraulic shock absorbers connected to the steel chassis. When the internal damper fluid degrades, the tub violently slams against the cabinet during the 1200+ RPM spin cycle. If your machine rocks when empty, the shock dampers need replacement.</p>' +
+        '<h3>2. How to Test for Failed Drum Spider Bearings</h3>' +
+        '<p>With the machine turned off, reach inside and lift the stainless steel drum vertically relative to the outer tub. If you feel vertical play or hear a metallic grinding noise when spinning the drum by hand, the rear bearings and aluminum spider bracket are corroded and need urgent overhaul.</p>' +
+        '<h3>3. Leveling Feet & Anti-Vibration Pads</h3>' +
+        '<p>Ensure all four leveling feet touch the floor firmly and the locknuts are tightened against the frame. Anti-vibration rubber pads can also absorb floor resonance in apartment laundry closets.</p>' +
+        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);border-radius:12px;padding:20px;margin:30px 0;">' +
+        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">PRO TIP FROM FLUX INC TECHNICIANS:</strong>' +
+        '<p style="margin:0;font-size:14px;color:var(--steel);">Never overload your washer with bulky bedding mixed with small garments. Uneven distribution creates massive centrifugal forces that wear out bearings 3x faster.</p>' +
         '</div>'
     },
     {
-      id: 'understanding-4t-synthetic-oil',
-      title: 'Motorcycle 4T Synthetic Oil vs Car Oil: Why JASO MA2 Matters',
-      category: 'Education',
+      id: 'signs-refrigerator-needs-gas-refill',
+      title: 'Top 5 Signs Your Refrigerator Needs Gas Refill or Defrost Sensor Repair',
+      category: 'Refrigerators',
       date: 'April 28, 2026',
       readTime: '6 min read',
-      excerpt: 'Discover why automotive engine oils can ruin your motorcycle wet clutch, and how high-shear synthetic formulas protect high-RPM bike engines.',
-      image: 'assets/img/blog2.jpg',
-      content: '<p>Unlike automobiles where engine oil and transmission fluid are in separate chambers, most 4-stroke motorcycles share the exact same oil sump for the engine, gearbox gears, and wet clutch assembly.</p>' +
-        '<h3>The Danger of Automotive Friction Modifiers</h3>' +
-        '<p>Car engine oils contain moly and energy-conserving friction modifiers designed for low friction. In a motorcycle, these additives penetrate clutch friction plates and cause catastrophic clutch slipping under acceleration. Always look for the JASO MA or JASO MA2 certification.</p>' +
-        '<h3>Gearbox Shear Stability at 14,000 RPM</h3>' +
-        '<p>Motorcycle transmission gears act like miniature blenders, shearing molecular oil polymers under extreme contact pressure. High-spec 4T synthetics use ester-based synthetic basestocks that resist mechanical shear and maintain stable viscosity under brutal track conditions.</p>' +
-        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);padding:20px;margin:30px 0;">' +
-        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">RECOMMENDED INTERVAL:</strong>' +
-        '<p style="margin:0;font-size:14px;color:var(--steel);">We recommend full synthetic 4T oil changes every 3,000 to 5,000 miles or annually, along with a genuine OEM filter and magnetic drain plug inspection.</p>' +
+      excerpt: 'Discover why your freezer may stay freezing cold while the fresh food compartment turns warm, and how modern R600a refrigerant is recharged safely.',
+      image: 'assets/img/step3.jpg',
+      content: '<p>Modern dual-inverter refrigerators are designed to operate sealed for decades. However, copper corrosion or vibration cracks can lead to slow refrigerant leaks, causing food spoilage and excessive compressor heat.</p>' +
+        '<h3>1. Freezer Cold, but Refrigerator Section Warm</h3>' +
+        '<p>In 90% of frost-free refrigerators, cold air is produced in the freezer and directed to the lower fridge compartment via an automated damper door. If the defrost sensor or heating element fails, thick frost blocks the airflow channels, leaving the lower compartment at room temperature.</p>' +
+        '<h3>2. Compressor Running Non-Stop with Hissing Sounds</h3>' +
+        '<p>When refrigerant gas levels drop, the compressor must run continuously at maximum frequency to achieve the thermostat setpoint. If you hear a faint gurgling or hissing noise from the back coils, a refrigerant leak is present.</p>' +
+        '<h3>3. Oil Stains on Copper Joints</h3>' +
+        '<p>Refrigerant gas carries lubricating compressor oil. Inspecting the condenser joints for oily residue often reveals the exact pinpoint location of the leak.</p>' +
+        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);border-radius:12px;padding:20px;margin:30px 0;">' +
+        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">SAFETY WARNING:</strong>' +
+        '<p style="margin:0;font-size:14px;color:var(--steel);">Modern eco-friendly refrigerators use R600a (isobutane), which is flammable. Recharging must always be performed by an EPA-certified technician using nitrogen pressure testing and flameless pinch-off crimping.</p>' +
         '</div>'
     },
     {
-      id: 'pre-ride-safety-inspection',
-      title: 'The T-CLOCS Pre-Ride Safety Checklist Every Rider Should Follow',
-      category: 'Tips',
+      id: 'split-ac-foam-jet-vs-water-cleaning',
+      title: 'How Often Should You Service Your Split AC? (Foam Jet vs Normal Water Wash)',
+      category: 'Air Conditioners',
       date: 'June 02, 2026',
       readTime: '5 min read',
-      excerpt: 'A 5-minute pre-ride inspection can save your life. Follow the industry standard T-CLOCS guide for worry-free weekend canyon carving and track sessions.',
-      image: 'assets/img/blog3.jpg',
-      content: '<p>Unlike cars, a single component failure on a motorcycle—like a flat tire, seized brake caliper, or stuck throttle—can lead to an immediate loss of control. A quick pre-ride walkaround prevents roadside breakdowns.</p>' +
-        '<h3>1. Tires & Wheels (T)</h3>' +
-        '<p>Check cold tire pressures with an accurate digital gauge. Inspect for embedded nails, sidewall cracks, and uneven center wear. Spin wheels to check for bent rim lips or loose spokes.</p>' +
-        '<h3>2. Controls & Cables (C)</h3>' +
-        '<p>Ensure front brake and clutch levers operate smoothly without binding. Verify throttle snap-back at both full left and right handlebar lock.</p>' +
-        '<h3>3. Lights & Electrics (L)</h3>' +
-        '<p>Test high/low beam headlights, turn indicators, horn, and ensure both front lever and rear foot brake activate the brake lamp.</p>' +
-        '<h3>4. Oil & Fluids (O)</h3>' +
-        '<p>Inspect engine oil sight glass with bike held upright. Check front and rear brake fluid reservoir sight glasses for clear amber color and correct level.</p>' +
-        '<h3>5. Chassis & Stand (C & S)</h3>' +
-        '<p>Check side stand spring return and side stand cutoff switch. Inspect front fork stanchions for telltale oil rings that indicate blown fork seals.</p>' +
-        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);padding:20px;margin:30px 0;">' +
-        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">BEFORE YOUR TRIP:</strong>' +
-        '<p style="margin:0;font-size:14px;color:var(--steel);">Drop by our workshop for a complimentary 30-point rider safety check before your long-distance tours or track days.</p>' +
+      excerpt: 'Learn why deep foam jet cleaning increases cooling speed by 40%, cuts electricity bills, and eliminates musty AC odors and mold buildup.',
+      image: 'assets/img/service3.jpg',
+      content: '<p>Indoor air conditioner coils act like giant air filters, pulling in dust, pet dander, and kitchen grease over months of operation. Clogged cooling fins reduce thermal transfer and force the compressor to draw higher electrical amperage.</p>' +
+        '<h3>1. The Difference with Deep Foam Jet Sanitization</h3>' +
+        '<p>Traditional water servicing only rinses the surface dust. Flux Inc Foam Jet cleaning uses a non-corrosive foaming agent that penetrates 3 inches into the micro-fins, expanding to lift deeply embedded mold, bacteria, and grime into a catch-bag system.</p>' +
+        '<h3>2. Preventing Water Leakage from Indoor AC Unit</h3>' +
+        '<p>Algae and slime frequently clog the indoor condensate drain tray. During our service, we flush the drain line with high-pressure water to prevent overflow leaks down your walls.</p>' +
+        '<h3>3. Annual Pre-Summer Diagnostic Check</h3>' +
+        '<p>Always test your AC compressor capacitor, PCB board operating voltage, and refrigerant pressure at the start of summer to prevent sudden mid-heatwave breakdowns.</p>' +
+        '<div style="background:var(--panel-2);border-left:4px solid var(--amber);border-radius:12px;padding:20px;margin:30px 0;">' +
+        '<strong style="color:var(--amber);display:block;margin-bottom:6px;">RECOMMENDED INTERVAL:</strong>' +
+        '<p style="margin:0;font-size:14px;color:var(--steel);">We recommend booking a Foam Jet service every 6 months for residential split ACs, and cleaning the mesh air filters every 3 weeks during peak season.</p>' +
         '</div>'
     }
   ];

@@ -90,7 +90,7 @@
 
       setTimeout(function () {
         if (window.MotorWorks && window.MotorWorks.showToast) {
-          window.MotorWorks.showToast('Service appointment confirmed! A confirmation email has been sent.', 'success');
+          window.MotorWorks.showToast('Technician visit confirmed! Tracking link generated.', 'success');
         }
 
         // Show confirmation screen
@@ -102,11 +102,15 @@
           successContainer.style.display = 'block';
 
           // Populate success details
-          var confRef = 'MW-' + Math.floor(100000 + Math.random() * 900000);
-          document.getElementById('confRefNum').textContent = confRef;
-          document.getElementById('confService').textContent = getSelectedServiceTitle();
-          document.getElementById('confDateTime').textContent = (dateInput ? dateInput.value : '') + ' at ' + selectedTimeSlot;
-          document.getElementById('confVehicle').textContent = getVehicleString();
+          var confRef = 'FLUX-' + Math.floor(100000 + Math.random() * 900000);
+          var refEl = document.getElementById('confRefNum');
+          if (refEl) refEl.textContent = confRef;
+          var servEl = document.getElementById('confService');
+          if (servEl) servEl.textContent = getSelectedServiceTitle();
+          var dtEl = document.getElementById('confDateTime');
+          if (dtEl) dtEl.textContent = (dateInput ? dateInput.value : '') + ' at ' + selectedTimeSlot;
+          var appEl = document.getElementById('confVehicle') || document.getElementById('confAppliance');
+          if (appEl) appEl.textContent = getApplianceString();
         }
       }, 1000);
     });
@@ -183,7 +187,10 @@
       }
     });
 
-    window.scrollTo({ top: document.getElementById('bookingFormSection').offsetTop - 80, behavior: 'smooth' });
+    var bookingSection = document.getElementById('bookingFormSection');
+    if (bookingSection) {
+      window.scrollTo({ top: bookingSection.offsetTop - 80, behavior: 'smooth' });
+    }
     updateSummary();
   }
 
@@ -194,23 +201,23 @@
     return opt ? opt.text : select.value;
   }
 
-  function getVehicleString() {
-    var year = (document.getElementById('vehYear') || {}).value || '';
-    var make = (document.getElementById('vehMake') || {}).value || '';
-    var model = (document.getElementById('vehModel') || {}).value || '';
-    if (!year && !make && !model) return 'Not specified';
-    return (year + ' ' + make + ' ' + model).trim();
+  function getApplianceString() {
+    var type = (document.getElementById('applianceType') || document.getElementById('vehYear') || {}).value || '';
+    var brand = (document.getElementById('applianceBrand') || document.getElementById('vehMake') || {}).value || '';
+    var issue = (document.getElementById('applianceIssue') || document.getElementById('vehModel') || {}).value || '';
+    if (!type && !brand && !issue) return 'Home Appliance (Standard Diagnostic)';
+    return (type + ' ' + brand + (issue ? ' — ' + issue : '')).trim();
   }
 
   function updateSummary() {
     var sumService = document.getElementById('summaryService');
-    var sumVehicle = document.getElementById('summaryVehicle');
+    var sumAppliance = document.getElementById('summaryAppliance') || document.getElementById('summaryVehicle');
     var sumDate = document.getElementById('summaryDate');
     var sumTime = document.getElementById('summaryTime');
     var dateVal = (document.getElementById('bookingDate') || {}).value;
 
     if (sumService) sumService.textContent = getSelectedServiceTitle();
-    if (sumVehicle) sumVehicle.textContent = getVehicleString();
+    if (sumAppliance) sumAppliance.textContent = getApplianceString();
     if (sumDate) sumDate.textContent = dateVal || 'Not selected';
     if (sumTime) sumTime.textContent = selectedTimeSlot || 'Not selected';
   }

@@ -17,41 +17,42 @@
         '<div class="wrap">' +
           '<div class="foot-top">' +
             '<div class="foot-brand">' +
-              '<a href="' + basePath + 'index.html" class="logo" aria-label="Riderz Home"><img src="' + basePath + 'assets/img/logo.png" alt="Riderz Logo" class="logo-img"><span class="logo-text-group"><span class="logo-brand-title">Riderz</span></span></a>' +
-              '<p>Precision motorcycle service, superbike dyno tuning, fork suspension rebuilds, and ECU diagnostics for all major brands.</p>' +
+              '<a href="' + basePath + 'index.html" class="logo" aria-label="Flux Inc Home"><img src="' + basePath + 'assets/img/logo.png" alt="Flux Inc Logo" class="logo-img"><span class="logo-text-group"><span class="logo-brand-title">Flux Inc</span></span></a>' +
+              '<p>On-demand precision repair and maintenance for washing machines, refrigerators, and air conditioners.</p>' +
               '<div class="foot-emergency-box">' +
-                '<span class="foot-emergency-label">24/7 ROADSIDE &amp; BREAKDOWN ASSIST:</span>' +
-                '<a href="tel:+13125550148" class="foot-emergency-phone">+1 (312) 555-0148</a>' +
+                '<span class="foot-emergency-label">24/7 ON-DEMAND APPLIANCE HOTLINE:</span>' +
+                '<a href="tel:+18005550199" class="foot-emergency-phone">+1 (800) 555-0199</a>' +
               '</div>' +
             '</div>' +
             '<div class="foot-col">' +
-              '<h5>Services</h5>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=oil-filter">4T Synthetic Oil Care</a>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=brake-suspension">Brakes &amp; Fork Tuning</a>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=chain-sprocket">Chain &amp; Sprocket Drive</a>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=computer-diagnostics">ECU &amp; Dyno Diagnostics</a>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=detailing-paint">Ceramic Shield &amp; Detailing</a>' +
-              '<a href="' + basePath + 'public/pages/service-details.html?id=battery-electrical">Stator &amp; Battery Health</a>' +
+              '<h5>Appliance Repairs</h5>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=washing-machine">Washing Machine Repair</a>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=refrigerator">Refrigerator &amp; Freezer</a>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=ac-service">Split &amp; Window AC Service</a>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=microwave">Microwave &amp; Oven Repair</a>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=dishwasher">Dishwasher Diagnostics</a>' +
+              '<a href="' + basePath + 'public/pages/service-details.html?id=dryer">Washer-Dryer Overhaul</a>' +
             '</div>' +
             '<div class="foot-col">' +
-              '<h5>Rider Hub &amp; Booking</h5>' +
-              '<a href="' + basePath + 'public/pages/booking.html">Book Service Slot</a>' +
-              '<a href="' + basePath + 'public/pages/about.html">About Workshop</a>' +
-              '<a href="' + basePath + 'public/pages/blog.html">Rider Knowledge Hub</a>' +
-              '<a href="' + basePath + 'public/pages/pricing.html">Maintenance Plans</a>' +
-              '<a href="' + basePath + 'public/pages/faq.html">FAQs</a>' +
+              '<h5>Company</h5>' +
+              '<a href="' + basePath + 'index.html">Home</a>' +
+              '<a href="' + basePath + 'public/pages/home-2.html">Home 2</a>' +
+              '<a href="' + basePath + 'public/pages/about.html">About Flux Inc</a>' +
+              '<a href="' + basePath + 'public/pages/blog.html">Our Blog</a>' +
+              '<a href="' + basePath + 'public/pages/pricing.html">Standard Pricing</a>' +
+              '<a href="' + basePath + 'public/pages/faq.html">FAQs &amp; Warranty</a>' +
             '</div>' +
             '<div class="foot-col">' +
-              '<h5>Hours &amp; Location</h5>' +
-              '<p style="color:var(--steel);font-size:13px;margin-bottom:8px;"><strong>Mon - Fri:</strong> 8:00 AM – 6:30 PM</p>' +
-              '<p style="color:var(--steel);font-size:13px;margin-bottom:8px;"><strong>Sat:</strong> 8:00 AM – 5:00 PM</p>' +
-              '<p style="color:var(--steel);font-size:13px;margin-bottom:12px;"><strong>Sun:</strong> Track Support &amp; Emergency Only</p>' +
-              '<p style="color:var(--steel);font-size:12px;line-height:1.5;">2847 W. Industrial Blvd, Chicago, IL</p>' +
+              '<h5>Coverage &amp; Hours</h5>' +
+              '<p style="color:var(--steel);font-size:13px;margin-bottom:8px;"><strong>Daily Visits:</strong> 7:00 AM – 9:00 PM</p>' +
+              '<p style="color:var(--steel);font-size:13px;margin-bottom:8px;"><strong>Emergency Dispatch:</strong> 24/7 Available</p>' +
+              '<p style="color:var(--steel);font-size:13px;margin-bottom:12px;"><strong>Avg Response Time:</strong> Under 45 Minutes</p>' +
+              '<p style="color:var(--steel);font-size:12px;line-height:1.5;">Serving Greater Metropolitan &amp; Suburban Areas</p>' +
             '</div>' +
           '</div>' +
           '<div class="foot-bottom">' +
-            '<span>&copy; 2026 RIDERZ PRECISION MOTORCYCLE SERVICE &amp; TUNING. ALL RIGHTS RESERVED.</span>' +
-            '<span>Certified Master Bike Technicians &nbsp;&bull;&nbsp; Factory OEM Parts Guaranteed</span>' +
+            '<span>&copy; 2026 FLUX INC. ON-DEMAND HOME APPLIANCE REPAIR. ALL RIGHTS RESERVED.</span>' +
+            '<span><span><a href="privacy-policy.html">Privacy Policy</a></span>&nbsp;&bull;&nbsp;<span><a href="terms-of-service.html">Terms &amp; Conditions</a></span></span>' +
           '</div>' +
         '</div>' +
       '</footer>';

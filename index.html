@@ -3,341 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riderz — Precision Motorcycle Service &amp; Diagnostics</title>
+<title>Flux Inc — On-Demand Home Appliance Repair &amp; Live Job Tracking</title>
 <link rel="icon" href="./assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
 
-<!-- HERO SECTION (PASSION MEETS PERFORMANCE) -->
-<section class="hero" id="heroSlider">
-  <div class="hero-media">
-    <img id="heroSlideImg" src="./assets/img/hero-bike.jpg" alt="Riderz Precision Superbike &amp; Motorcycle Workshop">
-  </div>
-  <div class="hero-wedge"></div>
-  
-
-  <div class="hero-inner">
-    <div class="hero-content">
-      <h1 class="hero-title" id="heroSlideTitle">
-        <span class="hero-title-bold">PASSION MEETS</span>
-        <span class="hero-title-light">PERFORMANCE</span>
-      </h1>
-      <p class="hero-sub" id="heroSlideDesc">
-        A dedicated motorcycle service and superbike tuning division. Engineered for riders who demand precision valve clearances, ECU dyno mapping, and track-ready suspension overhauls.
-      </p>
-      <a href="./public/pages/services.html" class="btn-hero-explore" id="heroSlideBtn">EXPLORE</a>
-    </div>
-  </div>
-
-</section>
-
-<!-- SUPPORTED MOTORCYCLE CATEGORIES -->
-<section class="trust tight" style="padding: 60px 0;">
-  <div class="wrap">
-    <div style=" margin-bottom: 20px;">
-      <span class="sec-tag">EXPERT CARE FOR ALL MOTORCYCLES</span>
-      <h2 style="font-size: 32px; margin-top: 8px;">Supported Motorcycle Categories</h2>
-    </div>
-    <div class="vehicle-types-grid">
-      <div class="vtype-card">
-        <div class="vtype-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M5 14l4-8h4l2 4h4M9 6h4l-3 8H5"/></svg>
+<!-- HERO SECTION — MODERN EDITORIAL SPLIT LAYOUT -->
+<section class="hero-furnizen-style" id="heroSection">
+  <div class="wrap hero-wrap">
+    
+    <!-- Top Main Split Row -->
+    <div class="hero-main-row">
+      <!-- Left Column: Copy & Actions -->
+      <div class="hero-left-col">
+        <h1 class="hero-editorial-title">
+          On-Demand Home Appliance Repair at Your Doorstep
+        </h1>
+        <p class="hero-editorial-desc">
+          Certified master technicians for washing machines, refrigerators, and air conditioners. Book a visit in 60 seconds, track your technician in real time, and enjoy a guaranteed 90-day warranty on all genuine OEM parts.
+        </p>
+        <div class="hero-editorial-actions">
+          <a href="./public/pages/booking.html" class="btn-pill-primary">
+            <span>Book Technician</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a href="./public/auth/login.html" class="btn-text-explore">
+            <span>Track Active Job</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </a>
         </div>
-        <h4>Superbikes &amp; Track</h4>
-        <p>Ducati, Yamaha R1, BMW S1000RR, Ninja ZX-10R</p>
-      </div>
-      <div class="vtype-card">
-        <div class="vtype-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M12 9l3 5H9l3-5zm-7 5h4l3-8h2l3 8h4"/></svg>
-        </div>
-        <h4>Adventure &amp; Dual-Sport</h4>
-        <p>BMW GS, KTM Adventure, Triumph Tiger, Africa Twin</p>
-      </div>
-      <div class="vtype-card">
-        <div class="vtype-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M5 14h5l4-5h3l2 5h0M10 14l2-5"/></svg>
-        </div>
-        <h4>Cruisers &amp; Tourers</h4>
-        <p>Harley-Davidson, Indian, Triumph Rocket, Rebel</p>
-      </div>
-      <div class="vtype-card">
-        <div class="vtype-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M5 14h14M9 9l3 5-3 0M16 6l-4 8"/></svg>
-        </div>
-        <h4>Naked &amp; Streetfighters</h4>
-        <p>KTM Duke, Street Triple, Yamaha MT, Z900, Monster</p>
-      </div>
-      <div class="vtype-card">
-        <div class="vtype-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/><path d="M6 16h3l3-7h3l3 7h0M12 9v7"/></svg>
-        </div>
-        <h4>Classics &amp; Commuters</h4>
-        <p>Royal Enfield, Triumph Bonneville, CB350, Scooters</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES & CAPABILITIES SHOWCASE -->
-<section id="services" class="cap-section">
-  <div class="wrap">
-    <div class="cap-head-row">
-      <div class="cap-head-info">
-        <span class="sec-tag">01 — WORKSHOP DISCIPLINES</span>
-        <h2>Master-Level Motorcycle Engineering &amp; Care.</h2>
-      </div>
-      <div class="cap-head-action">
-        <a href="./public/pages/services.html" class="btn">View Full Service Catalog (12+) →</a>
-      </div>
-    </div>
-
-    <!-- Split Bento Interactive Capabilities Hub -->
-    <div class="cap-hub" id="capabilitiesHub">
-      <!-- Left: Interactive Discipline Selectors -->
-      <div class="cap-nav-list" role="tablist" aria-label="Workshop Disciplines">
-        
-        <button class="cap-nav-item active" role="tab" aria-selected="true" data-index="0" data-service-id="oil-filter">
-          <div class="cap-nav-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 0l-3-3m3 3l3-3"/><path d="M19 13v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"/><path d="M5 13a7 7 0 0 1 14 0"/></svg>
-          </div>
-          <div class="cap-nav-content">
-            <div class="cap-nav-top">
-              <span class="cap-nav-title">4T Synthetic Oil &amp; Fluid</span>
-              <span class="cap-nav-price">From $69</span>
-            </div>
-            <div class="cap-nav-tags">
-              <span class="cap-nav-tag">JASO MA2</span>
-              <span class="cap-nav-tag">OEM Filter</span>
-              <span class="cap-nav-tag">30-Pt Check</span>
-            </div>
-          </div>
-        </button>
-
-        <button class="cap-nav-item" role="tab" aria-selected="false" data-index="1" data-service-id="brake-suspension">
-          <div class="cap-nav-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3m0 12v3M3 12h3m12 0h3"/></svg>
-          </div>
-          <div class="cap-nav-content">
-            <div class="cap-nav-top">
-              <span class="cap-nav-title">Brembo Brakes &amp; Fork Tuning</span>
-              <span class="cap-nav-price">From $129</span>
-            </div>
-            <div class="cap-nav-tags">
-              <span class="cap-nav-tag">DOT 5.1 Flush</span>
-              <span class="cap-nav-tag">Öhlins Sag</span>
-              <span class="cap-nav-tag">Fork Seals</span>
-            </div>
-          </div>
-        </button>
-
-        <button class="cap-nav-item" role="tab" aria-selected="false" data-index="2" data-service-id="computer-diagnostics">
-          <div class="cap-nav-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-          </div>
-          <div class="cap-nav-content">
-            <div class="cap-nav-top">
-              <span class="cap-nav-title">ECU Dyno &amp; Diagnostics</span>
-              <span class="cap-nav-price">From $79</span>
-            </div>
-            <div class="cap-nav-tags">
-              <span class="cap-nav-tag">OBD-II Scan</span>
-              <span class="cap-nav-tag">Throttle Sync</span>
-              <span class="cap-nav-tag">AFR Telemetry</span>
-            </div>
-          </div>
-        </button>
-
-        <button class="cap-nav-item" role="tab" aria-selected="false" data-index="3" data-service-id="chain-sprocket">
-          <div class="cap-nav-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="12" r="3"/><line x1="6" y1="9" x2="18" y2="9"/><line x1="6" y1="15" x2="18" y2="15"/></svg>
-          </div>
-          <div class="cap-nav-content">
-            <div class="cap-nav-top">
-              <span class="cap-nav-title">Laser Chain &amp; Drive Care</span>
-              <span class="cap-nav-price">From $49</span>
-            </div>
-            <div class="cap-nav-tags">
-              <span class="cap-nav-tag">Laser Align</span>
-              <span class="cap-nav-tag">Ultrasonic Clean</span>
-              <span class="cap-nav-tag">X-Ring Kit</span>
-            </div>
-          </div>
-        </button>
-
-        <button class="cap-nav-item" role="tab" aria-selected="false" data-index="4" data-service-id="detailing-paint">
-          <div class="cap-nav-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div class="cap-nav-content">
-            <div class="cap-nav-top">
-              <span class="cap-nav-title">Ceramic Shield &amp; Detailing</span>
-              <span class="cap-nav-price">From $149</span>
-            </div>
-            <div class="cap-nav-tags">
-              <span class="cap-nav-tag">9H Ceramic</span>
-              <span class="cap-nav-tag">Fairing Removal</span>
-              <span class="cap-nav-tag">Engine Degrease</span>
-            </div>
-          </div>
-        </button>
-
       </div>
 
-      <!-- Right: Live Featured Showcase Panel -->
-      <div class="cap-display-panel" id="capDisplayPanel">
-        <div class="cap-display-media">
-          <span class="cap-badge-floating" id="capBadgeFloating">SVC / 01 · ROUTINE SPEC</span>
-          <img id="capDisplayImg" src="./assets/img/service1.jpg" alt="Motorcycle Service Deliverable">
-          <div class="cap-display-overlay"></div>
-          <div class="cap-media-spec-strip" id="capMediaSpecStrip">
-            <span class="cap-media-chip">Est. 45 Mins</span>
-            <span class="cap-media-chip">Factory Warranty Intact</span>
-            <span class="cap-media-chip">Motul 300V / Liqui Moly</span>
-          </div>
-        </div>
-
-        <div class="cap-display-body">
-          <div>
-            <div class="cap-body-header">
-              <span class="cap-stage-tag" id="capStageTag">ENGINE &amp; FLUID DYNAMICS</span>
-              <h3 class="cap-display-title" id="capDisplayTitle">4T Synthetic Oil &amp; Filter Service</h3>
-              <p class="cap-display-desc" id="capDisplayDesc">
-                Protect your engine, transmission, and wet clutch with factory-approved JASO MA2 high-performance 4T synthetic oils tailored to high-revving motorcycle engines.
-              </p>
-            </div>
-
-            <div class="cap-feature-list" id="capFeatureList">
-              <div class="cap-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Motul 300V / Liqui Moly 4T Synthetic Racing Fluid</span>
-              </div>
-              <div class="cap-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>OEM Oil Filter &amp; Crush Washer Replacement</span>
-              </div>
-              <div class="cap-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Clutch &amp; Throttle Cable Free-Play Calibration</span>
-              </div>
-              <div class="cap-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Chain Slack Check, Lube &amp; 30-Point Safety Docket</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cap-meta-row">
-            <div class="cap-meta-price" id="capMetaPrice">
-              $69 <span>Starting price / street spec</span>
-            </div>
-            <div class="cap-actions">
-              <a href="./public/pages/booking.html" class="btn btn-solid" id="capBookBtn">Book Service Bay</a>
-              <a href="./public/pages/service-details.html?id=oil-filter" class="btn" id="capDetailsBtn">Tech Specs →</a>
-            </div>
-          </div>
+      <!-- Right Column: Large Rounded Photo Container -->
+      <div class="hero-right-col">
+        <div class="hero-image-card">
+          <img src="./assets/img/hero1.jpg" alt="Flux Inc Certified Home Appliance Repair Technician" class="hero-card-img" id="heroCardImg">
         </div>
       </div>
     </div>
 
-    <!-- Bottom Engineering Benchmarks Strip -->
-    <div class="cap-benchmarks">
-      <div class="cap-benchmark-card">
-        <div class="cap-benchmark-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+    <!-- Bottom Feature Bento Strip -->
+    <div class="hero-feature-strip">
+      <!-- Feature Card 1 -->
+      <div class="feature-strip-card">
+        <div class="feature-strip-item">
+          <div class="feature-strip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="feature-strip-text">
+            <h4>Genuine OEM Spares</h4>
+            <p>100% authentic factory parts with a 90-day replacement warranty.</p>
+          </div>
         </div>
-        <div class="cap-benchmark-text">
-          <h4>Digital Torque Docket</h4>
-          <p>Every single axle, caliper bolt, and pinch bolt is torqued to exact OEM Newton-meter specs and digitally logged.</p>
+        <div class="feature-strip-item">
+          <div class="feature-strip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="feature-strip-text">
+            <h4>45-Min Fast Dispatch</h4>
+            <p>On-demand scheduling with live technician GPS tracking.</p>
+          </div>
         </div>
       </div>
 
-      <div class="cap-benchmark-card">
-        <div class="cap-benchmark-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <!-- Feature Card 2 -->
+      <div class="feature-strip-card">
+        <div class="feature-strip-item">
+          <div class="feature-strip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <div class="feature-strip-text">
+            <h4>Certified Master Techs</h4>
+            <p>Background-verified experts specialized in major appliance brands.</p>
+          </div>
         </div>
-        <div class="cap-benchmark-text">
-          <h4>Dealership OBD-II Diagnostics</h4>
-          <p>High-end Texa and dealership diagnostic tools for live sensor telemetries, ABS resets, and electronic throttle synchronization.</p>
+        <div class="feature-strip-item">
+          <div class="feature-strip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <div class="feature-strip-text">
+            <h4>Transparent Pricing</h4>
+            <p>Fixed diagnostic visit rates with upfront digital repair quotes.</p>
+          </div>
         </div>
       </div>
 
-      <div class="cap-benchmark-card">
-        <div class="cap-benchmark-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="cap-benchmark-text">
-          <h4>Certified Fluids &amp; Genuine Spares</h4>
-          <p>We stock only factory-authorized JASO MA2 synthetic lubricants, Brembo sintered pads, and OEM filtration units.</p>
-        </div>
-      </div>
+      <!-- Arrow Action Card 3 -->
+      <a href="./public/pages/booking.html" class="feature-arrow-card" aria-label="Book your technician appointment today">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+      </a>
     </div>
 
   </div>
 </section>
-
 <!-- SPECIFICATIONS STRIP -->
 <section class="specstrip" style="padding: 50px 0; background: var(--panel-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="wrap">
-    <div class="spec-item"><div class="spec-num">18+</div><div class="spec-lbl">YEARS IN OPERATION</div></div>
-    <div class="spec-item"><div class="spec-num">25K+</div><div class="spec-lbl">MOTORCYCLES SERVICED</div></div>
-    <div class="spec-item"><div class="spec-num">12</div><div class="spec-lbl">MASTER BIKE TECHS</div></div>
-    <div class="spec-item"><div class="spec-num">4.9/5</div><div class="spec-lbl">AVG. RIDER RATING</div></div>
+    <div class="spec-item"><div class="spec-num">45 Mins</div><div class="spec-lbl">AVG ON-DEMAND RESPONSE</div></div>
+    <div class="spec-item"><div class="spec-num">50K+</div><div class="spec-lbl">HOME APPLIANCES REPAIRED</div></div>
+    <div class="spec-item"><div class="spec-num">98.6%</div><div class="spec-lbl">FIRST-VISIT RESOLUTION RATE</div></div>
+    <div class="spec-item"><div class="spec-num">4.9/5</div><div class="spec-lbl">CUSTOMER SATISFACTION</div></div>
   </div>
 </section>
 
-<!-- LIVE WORKSHOP LIFT BAYS STATUS -->
-<section id="bays-occupancy" style="padding: 80px 0;">
+<!-- 02. METROPOLITAN LIVE DISPATCH & RADAR TELEMETRY -->
+<section id="dispatch-radar" class="radar-section">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-tag">LIVE WORKSHOP STATUS</span>
-        <h2>Lift Bays Filling Rapidly For This Week</h2>
+        <span class="sec-tag">LIVE METROPOLITAN RADAR</span>
+        <h2>Technician Telemetry &amp; Instant Dispatch Hub</h2>
       </div>
     </div>
 
-    <div class="bays-occupancy-card">
-      <div>
-        <div class="bays-header-badge">
-          <span class="dot green" style="width:8px;height:8px;border-radius:50%;background:var(--success);display:inline-block;"></span> 
-          LIVE LIFT BAY STATUS &nbsp;·&nbsp; WEEK 32
+    <!-- Radar Command Card -->
+    <div class="radar-main-card">
+      <!-- Live Fleet Stats Bar -->
+      <div class="radar-top-telemetry">
+        <div class="radar-live-indicator">
+          <span class="radar-live-dot"></span>
+          <span>LIVE GPS FLEET DISPATCH &bull; 18 / 20 SPECIALISTS ACTIVE</span>
         </div>
-        <h3 style="font-size: 28px; margin-bottom: 12px;">Reserve Your Service Lift Slot</h3>
-        <p style="color: var(--steel); font-size: 15px; line-height: 1.6;">
-          Our motorcycle workshop runs at controlled capacity to ensure each master technician has dedicated time for thorough safety inspection, road testing, and digital torque docket verification.
-        </p>
-
-        <div class="bays-progress-box">
-          <div class="bays-progress-header">
-            <span>WEEKLY CAPACITY</span>
-            <span style="color: var(--amber);">85% FULL (17 / 20 SLOTS TAKEN)</span>
-          </div>
-          <div class="bays-progress-bar">
-            <div class="bays-progress-fill"></div>
-          </div>
-          <div style="font-size: 12px; color: var(--steel); margin-top: 8px;">
-            Only <strong>3 Open Bays</strong> remain for express diagnostics and routine maintenance this week.
-          </div>
-        </div>
-
-        <div class="bays-slot-grid">
-          <div class="bay-slot"><span class="bay-name"><span class="status-dot"></span> Bay 1: Dyno &amp; ECU Tuning</span> <span class="bay-tag occ">OCCUPIED</span></div>
-          <div class="bay-slot"><span class="bay-name"><span class="status-dot"></span> Bay 2: Fork &amp; Brake Overhaul</span> <span class="bay-tag occ">OCCUPIED</span></div>
-          <div class="bay-slot"><span class="bay-name"><span class="status-dot"></span> Bay 3: Chain &amp; Sprockets</span> <span class="bay-tag occ">OCCUPIED</span></div>
-          <div class="bay-slot open-slot"><span class="bay-name"><span class="status-dot"></span> Bay 4: Express 4T Service</span> <span class="bay-tag avail">AVAILABLE</span></div>
-        </div>
-
-        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
-          <a href="./public/pages/booking.html" class="btn btn-solid">Reserve Open Bay Now</a>
-          <a href="tel:+13125550148" class="btn">Call Workshop Desk</a>
+        <div class="radar-stats-quick">
+          <div>AVERAGE ARRIVAL: <span>38 MINS</span></div>
+          <div>OEM STOCK ACCURACY: <span>99.2%</span></div>
+          <div>ZONE STATUS: <span style="color:var(--success);">NORMAL DISPATCH</span></div>
         </div>
       </div>
 
-      <div class="bays-media-frame">
-        <span class="bays-media-badge">MAIN LIFT BAY 04</span>
-        <img src="./assets/img/bays-occupancy.jpg" alt="Active motorcycle service bays with superbikes on hydraulic lifts">
+      <!-- Zone Selector Buttons -->
+      <div class="radar-zones-bar">
+        <button class="radar-zone-btn active" data-zone="downtown">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
+          Downtown &amp; Loop Hub (12 Mins)
+        </button>
+        <button class="radar-zone-btn" data-zone="north">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
+          North Side &amp; Lincoln Park (15 Mins)
+        </button>
+        <button class="radar-zone-btn" data-zone="west">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
+          West Loop &amp; River North (14 Mins)
+        </button>
+        <button class="radar-zone-btn" data-zone="south">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 19 21 12 17 5 21 12 2"/></svg>
+          South Loop &amp; Oak Park (22 Mins)
+        </button>
+      </div>
+
+      <!-- Split Dispatch Content -->
+      <div class="radar-content-grid">
+        <!-- Left: Technician & Vehicle Telemetry Card -->
+        <div class="radar-tech-card">
+          <div class="radar-tech-header">
+            <div class="radar-tech-avatar" id="radarTechAvatar">DM</div>
+            <div>
+              <h3 class="radar-tech-name" id="radarTechName">David Miller</h3>
+              <div class="radar-tech-cert" id="radarTechCert">EPA Universal Master Lead &bull; 4.96 ★ (540+ Repairs)</div>
+            </div>
+          </div>
+
+          <div class="radar-van-inventory">
+            <span class="radar-inv-label">MOBILE VAN TOOLKIT &amp; OEM INVENTORY:</span>
+            <div class="radar-inv-tags" id="radarInvTags">
+              <span class="radar-inv-tag">Washing Machine Drain Pumps</span>
+              <span class="radar-inv-tag">Inverter Compressors</span>
+              <span class="radar-inv-tag">R32 / R410A Refrigerant</span>
+              <span class="radar-inv-tag">Electronic PCB Testers</span>
+            </div>
+          </div>
+
+          <div class="radar-live-ticker" id="radarLiveTicker">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span id="radarTickerText"><strong>Job FLUX-7492:</strong> Samsung Washer repaired in 38 mins at 742 Evergreen Terr.</span>
+          </div>
+
+          <div class="radar-actions">
+            <a href="./public/pages/booking.html" class="btn btn-solid" style="padding:12px 24px;">
+              <span>Dispatch to My Address ↗</span>
+            </a>
+            <a href="tel:+18005550199" class="btn" style="padding:12px 20px;">
+              <span>Call 24/7 Hotline</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Radar Map & Telemetry Frame -->
+        <div class="radar-map-display">
+          <img id="radarMapImg" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80" alt="Flux Inc Master technician ready for doorstep dispatch">
+          
+          <div class="radar-eta-chip">
+            <div>
+              <div class="radar-eta-label">DOORSTEP ARRIVAL ESTIMATE</div>
+              <div class="radar-eta-val" id="radarEtaVal">12 – 16 MINS</div>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:11px;font-family:'Raleway',sans-serif;background:rgba(0,130,251,0.25);border:1px solid var(--amber);padding:4px 10px;border-radius:999px;color:#fff;font-weight:700;">VAN ON STANDBY</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -348,8 +215,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-tag">VISIT &amp; CONTACT</span>
-        <h2>Essential Workshop Information</h2>
+        <span class="sec-tag">COVERAGE &amp; CONTACT</span>
+        <h2>Flux Inc Service Hubs &amp; Contact Info</h2>
       </div>
     </div>
 
@@ -359,10 +226,10 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div>
-          <h4>Workshop Operating Hours</h4>
-          <p><strong>Monday – Friday:</strong> 8:00 AM – 6:30 PM</p>
-          <p><strong>Saturday:</strong> 8:00 AM – 5:00 PM</p>
-          <p><strong>Sunday:</strong> Track Support &amp; Emergency Breakdown Only</p>
+          <h4>Operating &amp; Visit Hours</h4>
+          <p><strong>Monday – Saturday:</strong> 7:00 AM – 9:00 PM</p>
+          <p><strong>Sunday:</strong> 8:00 AM – 6:00 PM</p>
+          <p><strong>Emergency Breakdowns:</strong> 24/7 Priority Dispatch</p>
         </div>
       </div>
 
@@ -371,10 +238,10 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
-          <h4>Service Centers &amp; Hubs</h4>
-          <p><strong>Main Workshop:</strong> 2847 W. Industrial Blvd, Chicago</p>
-          <p><strong>Northside Dyno Hub:</strong> 1420 N. Ashland Ave, Chicago</p>
-          <p><strong>Trackside Express:</strong> 880 W. Fulton Market, Chicago</p>
+          <h4>Metropolitan Service Hubs</h4>
+          <p><strong>Downtown Central Hub:</strong> 500 Grand Ave, Suite 100</p>
+          <p><strong>Northside Logistics &amp; Spares:</strong> 1240 N. Park Blvd</p>
+          <p><strong>Southside Rapid Dispatch:</strong> 780 Industrial Pkwy</p>
         </div>
       </div>
 
@@ -383,10 +250,10 @@
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </div>
         <div>
-          <h4>24/7 Breakdown &amp; Transport</h4>
-          <p><strong>Emergency Hotline:</strong> +1 (312) 555-0148</p>
-          <p><strong>Service Desk Email:</strong> service@motorcycleshop.com</p>
-          <p><strong>WhatsApp Support:</strong> Instant Rider Chat Available</p>
+          <h4>24/7 Appliance Helpline</h4>
+          <p><strong>Toll-Free Hotline:</strong> +1 (800) 555-0199</p>
+          <p><strong>Customer Support:</strong> support@fluxrepair.com</p>
+          <p><strong>WhatsApp Support:</strong> Instant Live Chat Available</p>
         </div>
       </div>
     </div>
@@ -399,44 +266,44 @@
     <div class="sec-head">
       <div>
         <span class="sec-tag">02 — HOW IT WORKS</span>
-        <h2>Three Stages, One High-Precision Workshop.</h2>
+        <h2>Three Simple Steps to Flawless Appliances.</h2>
       </div>
     </div>
     <div class="process">
       <div class="step-card">
         <div class="step-img">
           <span class="step-num-badge">01</span>
-          <img src="./assets/img/service4.jpg" alt="Booking a motorcycle service appointment online">
+          <img src="./assets/img/step1.jpg" alt="Booking an appliance repair appointment online">
         </div>
         <div class="step-body">
           <span class="step-stage">STAGE 01 — BOOK</span>
-          <h3>Reserve A Lift Slot</h3>
-          <p>Pick your bike model, preferred date, and required service online or by phone for instant confirmation.</p>
-          <a href="./public/pages/booking.html" class="step-link">Book Now →</a>
+          <h3>Book in 60 Seconds</h3>
+          <p>Select your appliance type (Washing Machine, Refrigerator, AC), choose your symptom, and pick a preferred time slot.</p>
+          <a href="./public/pages/booking.html" class="step-link">Book Visit →</a>
         </div>
       </div>
       <div class="step-card">
         <div class="step-img">
           <span class="step-num-badge">02</span>
-          <img src="./assets/img/about.jpg" alt="Dropping off motorcycle at service workshop">
+          <img src="./assets/img/step2.jpg" alt="Technician arriving at doorstep with diagnostic equipment">
         </div>
         <div class="step-body">
-          <span class="step-stage">STAGE 02 — DROP OFF</span>
-          <h3>Hand Over The Keys</h3>
-          <p>A certified bike tech logs odometer, tire tread, chain slack, and rider concerns on your digital service docket.</p>
-          <span class="step-status"><span class="dot"></span> Digital Docket Logged</span>
+          <span class="step-stage">STAGE 02 — TRACK</span>
+          <h3>Live Telemetry &amp; Arrival</h3>
+          <p>Track your background-verified master technician's arrival in real-time and review diagnostic findings upfront.</p>
+          <span class="step-status"><span class="dot"></span> Real-Time GPS Tracking</span>
         </div>
       </div>
       <div class="step-card">
         <div class="step-img">
           <span class="step-num-badge">03</span>
-          <img src="./assets/img/service2.jpg" alt="Technician performing precision motorcycle maintenance">
+          <img src="./assets/img/step3.jpg" alt="Technician completing appliance repair with genuine OEM parts">
         </div>
         <div class="step-body">
-          <span class="step-stage">STAGE 03 — SERVICE</span>
-          <h3>Work Done Right</h3>
-          <p>Every torque spec, fluid change, and repair step is verified by a master bike technician before pickup.</p>
-          <span class="step-status"><span class="dot green"></span> Quality Verified</span>
+          <span class="step-stage">STAGE 03 — REPAIR</span>
+          <h3>Fixed with 10-Day Warranty</h3>
+          <p>Repairs completed on the spot using genuine OEM spare parts, backed by a 90-day warranty and digital invoice.</p>
+          <span class="step-status"><span class="dot green"></span> 90-Day Warranty Backed</span>
         </div>
       </div>
     </div>
@@ -448,33 +315,33 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-tag">04 — RIDER EXPERIENCES</span>
-        <h2>What Riders Say After Pickup.</h2>
+        <span class="sec-tag">04 — CUSTOMER EXPERIENCES</span>
+        <h2>What Homeowners Say About Flux Inc.</h2>
       </div>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <span class="testi-mark">RATING — 5/5</span>
-        <p class="testi-quote">Dropped off a rough running engine on my Ducati Panigale and got a full throttle body sync and ECU diagnostic within two hours. Transparent pricing from start to finish.</p>
+        <p class="testi-quote">Our Samsung French-door refrigerator stopped cooling on a Sunday morning. Flux Inc dispatched a technician within 40 minutes who diagnosed a faulty defrost sensor and fixed it on the spot!</p>
         <div class="testi-person">
           <div class="testi-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Daniel R."></div>
-          <div><div class="testi-name">Daniel R.</div><div class="testi-role">Ducati Panigale V4 Rider</div></div>
+          <div><div class="testi-name">Daniel R.</div><div class="testi-role">Samsung Smart Refrigerator Owner</div></div>
         </div>
       </div>
       <div class="testi-card">
         <span class="testi-mark">RATING — 5/5</span>
-        <p class="testi-quote">First shop that laser-aligned my chain and measured fork sag specifically for my riding weight. Clear communication and honest master techs.</p>
+        <p class="testi-quote">My Bosch front-load washer was banging violently on high spin. The technician replaced the shock dampers and cleaned the drum bearings in under an hour. Runs whisper-quiet now!</p>
         <div class="testi-person">
           <div class="testi-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya M."></div>
-          <div><div class="testi-name">Priya M.</div><div class="testi-role">BMW R 1250 GS Adventure Rider</div></div>
+          <div><div class="testi-name">Priya M.</div><div class="testi-role">Bosch Front-Load Washer Owner</div></div>
         </div>
       </div>
       <div class="testi-card">
         <span class="testi-mark">RATING — 5/5</span>
-        <p class="testi-quote">Booked a pre-trackday slot for Brembo brake overhaul and Motul 300V oil service. Bike handles razor-sharp and braking is rock solid.</p>
+        <p class="testi-quote">Booked an AC deep foam jet service before summer. The cooling performance improved drastically and our monthly electricity bill dropped by 20%. Highly recommended.</p>
         <div class="testi-person">
           <div class="testi-avatar"><img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Marcus T."></div>
-          <div><div class="testi-name">Marcus T.</div><div class="testi-role">Kawasaki Ninja ZX-10R Rider</div></div>
+          <div><div class="testi-name">Marcus T.</div><div class="testi-role">Daikin Inverter Split AC Owner</div></div>
         </div>
       </div>
     </div>
@@ -483,14 +350,14 @@
 
 <!-- CALL TO ACTION BANNER -->
 <section class="cta-band">
-  <div class="cta-media"><img src="./assets/img/bays-occupancy.jpg" alt="Modern motorcycle workshop and lift bays"></div>
+  <div class="cta-media"><img src="./assets/img/newsletter.jpg" alt="Flux Inc on-demand appliance repair service banner"></div>
   <div class="cta-content">
-    <span class="eyebrow" style="justify-content:center; color: var(--amber);">LIFT BAYS FILLING FOR THIS WEEK</span>
-    <h2>Get Your Motorcycle Seen By Technicians Who Actually Ride.</h2>
-    <p>Book a diagnostic or maintenance slot online today and receive an itemised upfront quote before work begins.</p>
+    <span class="eyebrow" style="justify-content:center; color: var(--amber);">ON-DEMAND TECHNICIANS AVAILABLE NOW</span>
+    <h2>Get Your Home Appliances Fixed Fast By Certified Master Techs.</h2>
+    <p>Book a diagnostic visit online today and receive an upfront digital estimate before any repair begins.</p>
     <div class="cta-actions">
-      <a href="./public/pages/booking.html" class="btn btn-solid">Book Your Slot</a>
-      <a href="tel:+13125550148" class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">Call (312) 555-0148</a>
+      <a href="./public/pages/booking.html" class="btn btn-solid">Book Technician Visit</a>
+      <a href="tel:+18005550199" class="btn btn-outline" style="border-color: #ffffff; color: #ffffff;">Call (800) 555-0199</a>
     </div>
   </div>
 </section>
@@ -498,8 +365,8 @@
 <!-- NEWSLETTER -->
 <section class="newsletter" style="margin:0;border:0;border-radius:0;">
   <div class="wrap">
-    <h3>Stay In The Loop</h3>
-    <p>Get seasonal riding tips, maintenance reminders, and exclusive trackday packages delivered to your inbox.</p>
+    <h3>Stay In The Loop with Flux Inc</h3>
+    <p>Get seasonal appliance maintenance checklists, energy-saving tips, and exclusive annual AMC maintenance discounts delivered to your inbox.</p>
     <form class="newsletter-form" data-type="newsletter">
       <input type="email" placeholder="Enter your email address" required>
       <button type="submit" class="btn btn-solid">Subscribe</button>

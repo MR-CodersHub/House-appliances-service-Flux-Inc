@@ -85,22 +85,17 @@
     var services = window.MotorWorks.services;
     var service = services.find(function(s) { return s.id === serviceId; }) || services[0];
     var basePath = getBasePath();
-    document.title = service.title + ' — Riderz';
+    document.title = service.title + ' — Flux Inc';
 
     container.innerHTML =
       '<div class="wrap section-padding">' +
-        '<div class="breadcrumb">' +
-          '<a href="' + basePath + 'index.html">Home</a> <span class="sep">/</span> ' +
-          '<a href="' + basePath + 'public/pages/services.html">Services</a> <span class="sep">/</span> ' +
-          '<span>' + service.title + '</span>' +
-        '</div>' +
         '<div class="service-detail-hero">' +
           '<div class="service-detail-img"><img src="' + ((service.image.indexOf('http') === 0 || service.image.indexOf('/') === 0) ? service.image : (basePath + service.image)) + '" alt="' + service.title + '"></div>' +
           '<div>' +
             '<span class="sec-tag">' + service.code + '</span>' +
             '<h1 style="font-size:clamp(32px,4vw,48px);margin-bottom:20px;">' + service.title + '</h1>' +
             '<p style="color:var(--steel);font-size:16px;line-height:1.7;margin-bottom:30px;">' + service.description + '</p>' +
-            '<a href="' + basePath + 'public/pages/booking.html" class="btn btn-solid">Book This Service</a>' +
+            '<a href="' + basePath + 'public/pages/booking.html" class="btn btn-solid">Book Technician Visit</a>' +
           '</div>' +
         '</div>' +
         '<div class="detail-features-grid" style="margin-top:80px;">' +
@@ -142,24 +137,19 @@
     }) || posts[0];
 
     var basePath = getBasePath();
-    document.title = post.title + ' — Riderz';
+    document.title = post.title + ' — Flux Inc';
 
     var imgUrl = (post.image.indexOf('http') === 0 || post.image.indexOf('/') === 0) ? post.image : (basePath + post.image);
 
     container.innerHTML =
       '<div class="wrap section-padding">' +
-        '<div class="breadcrumb">' +
-          '<a href="' + basePath + 'index.html">Home</a> <span class="sep">/</span> ' +
-          '<a href="' + basePath + 'public/pages/blog.html">Blog</a> <span class="sep">/</span> ' +
-          '<span>' + post.title + '</span>' +
-        '</div>' +
         '<div class="blog-layout">' +
           '<div class="blog-main">' +
             '<div class="blog-detail-header">' +
               '<span class="blog-tag" style="display:inline-block;margin-bottom:16px;">' + post.category + '</span>' +
               '<h1>' + post.title + '</h1>' +
               '<div class="blog-detail-meta"><span>Published ' + post.date + '</span> &bull; <span>' + post.readTime + '</span></div>' +
-              '<div class="blog-detail-img" style="margin:24px 0 40px;border:1px solid var(--line);overflow:hidden;">' +
+              '<div class="blog-detail-img" style="margin:24px 0 40px;border:1px solid var(--line);overflow:hidden;border-radius:20px;">' +
                 '<img src="' + imgUrl + '" alt="' + post.title + '" style="width:100%;height:380px;object-fit:cover;display:block;">' +
               '</div>' +
             '</div>' +
@@ -171,7 +161,7 @@
             '</div>' +
           '</div>' +
           '<aside class="blog-sidebar">' +
-            '<div class="sidebar-widget"><h4>Categories</h4><div class="sidebar-categories">' +
+            '<div class="sidebar-widget"><h4>Appliance Categories</h4><div class="sidebar-categories">' +
             (function() {
               var cats = [];
               posts.forEach(function(p) { if (cats.indexOf(p.category) === -1) cats.push(p.category); });
@@ -180,7 +170,7 @@
               }).join('');
             })() +
             '</div></div>' +
-            '<div class="sidebar-widget"><h4>Recent Posts</h4>' +
+            '<div class="sidebar-widget"><h4>Recent Guides</h4>' +
             posts.filter(function(p) { return p.id !== post.id; }).slice(0, 3).map(function(p) {
               return '<div style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line);"><a href="blog-details.html?id=' + p.id + '" style="font-size:14px;font-weight:600;display:block;margin-bottom:6px;">' + p.title + '</a><span style="font-size:12px;color:var(--steel);">' + p.date + '</span></div>';
             }).join('') +
@@ -251,7 +241,7 @@
         }
 
         if (subscribers.indexOf(email.toLowerCase()) !== -1) {
-          window.MotorWorks.showToast('This email is already subscribed to our newsletter!', 'success');
+          window.MotorWorks.showToast('This email is already subscribed to Flux Inc updates!', 'success');
           return;
         }
 
@@ -285,9 +275,9 @@
           notice.style.color = 'var(--success)';
           notice.style.fontSize = '13px';
           notice.style.marginTop = '10px';
-          notice.style.fontFamily = "'Raleway', monospace";
+          notice.style.fontFamily = "'Raleway', sans-serif";
           notice.style.textAlign = 'center';
-          notice.innerHTML = '✓ You are subscribed! Welcome to Riderz updates.';
+          notice.innerHTML = '✓ You are subscribed! Welcome to Flux Inc Appliance Care.';
           form.parentNode.appendChild(notice);
 
           setTimeout(function() {
@@ -328,7 +318,7 @@
       var filtered = filter === 'all' ? services : services.filter(function(s) { return s.category === filter; });
 
       if (filtered.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--steel);border:1px solid var(--line);background:var(--panel);">No services found in this category.</div>';
+        grid.innerHTML = '<div style="grid-column:1/-1;padding:40px;text-align:center;color:var(--steel);border:1px solid var(--line);background:var(--panel);border-radius:20px;">No appliance repair services found in this category.</div>';
         grid.style.gridTemplateColumns = '1fr';
         return;
       }
@@ -341,7 +331,7 @@
 
       grid.innerHTML = filtered.map(function(s) {
         var imgUrl = (s.image.indexOf('http') === 0 || s.image.indexOf('/') === 0) ? s.image : (basePath + s.image);
-        return '<div class="svc-card"><div class="svc-img"><span class="svc-code">' + s.code + '</span><a href="' + basePath + 'public/pages/service-details.html?id=' + s.id + '"><img src="' + imgUrl + '" alt="' + s.title + '"></a></div><div class="svc-body"><h3>' + s.title + '</h3><p>' + s.shortDesc + '</p><a href="' + basePath + 'public/pages/service-details.html?id=' + s.id + '" class="svc-link">Learn more →</a></div></div>';
+        return '<div class="svc-card"><div class="svc-img"><span class="svc-code">' + s.code + '</span><a href="' + basePath + 'public/pages/service-details.html?id=' + s.id + '"><img src="' + imgUrl + '" alt="' + s.title + '"></a></div><div class="svc-body"><h3>' + s.title + '</h3><p>' + s.shortDesc + '</p><a href="' + basePath + 'public/pages/service-details.html?id=' + s.id + '" class="svc-link">Book Diagnostic →</a></div></div>';
       }).join('');
     }
 
@@ -386,28 +376,28 @@
 
     var slides = [
       {
-        boldTitle: 'PASSION MEETS',
-        lightTitle: 'PERFORMANCE',
-        desc: 'A dedicated motorcycle service and superbike tuning division. Engineered for riders who demand precision valve clearances, ECU dyno mapping, and track-ready suspension overhauls.',
-        btnText: 'EXPLORE',
-        btnLink: './public/pages/services.html',
-        image: './assets/img/hero-bike.jpg'
+        boldTitle: 'ON-DEMAND APPLIANCE',
+        lightTitle: 'REPAIR SERVICE',
+        desc: 'Fast doorstep diagnostics and repair for washing machines, refrigerators, and air conditioners. Background-verified master technicians with genuine OEM parts and a 90-day warranty.',
+        btnText: 'BOOK TECHNICIAN',
+        btnLink: './public/pages/booking.html',
+        image: './assets/img/hero.jpg'
       },
       {
-        boldTitle: 'PRECISION DRIVEN',
-        lightTitle: 'TRACK READY',
-        desc: 'Factory-trained superbike technicians equipped with dealership-grade motorcycle diagnostic scan tools. From Öhlins fork rebuilds to Brembo brake overhauls, zero compromise on two wheels.',
-        btnText: 'VIEW SERVICES',
-        btnLink: './public/pages/services.html',
+        boldTitle: 'REAL-TIME JOB',
+        lightTitle: 'LIVE TELEMETRY',
+        desc: 'Track your assigned technician in real time, view diagnostic inspection reports, and approve digital estimates with full pricing transparency before repair begins.',
+        btnText: 'TRACK REPAIR JOB',
+        btnLink: './public/auth/login.html',
         image: './assets/img/bays-occupancy.jpg'
       },
       {
-        boldTitle: 'DYNO TUNED',
-        lightTitle: 'SUPREMACY',
-        desc: 'Extract maximum horsepower and razor-sharp throttle response with real-time AFR wideband telemetry, quickshifter calibration, and trackday pre-ride inspections.',
-        btnText: 'BOOK A TUNE',
-        btnLink: './public/pages/booking.html',
-        image: './assets/img/hero-bg.jpg'
+        boldTitle: 'CERTIFIED OEM',
+        lightTitle: 'GENUINE SPARES',
+        desc: 'Specialized tooling for Samsung, LG, Whirlpool, Bosch, Daikin, and Panasonic appliances. We stock authentic replacement inverter compressors, motors, PCB boards, and sensors.',
+        btnText: 'VIEW SERVICES',
+        btnLink: './public/pages/services.html',
+        image: './assets/img/service1.jpg'
       }
     ];
 
@@ -452,170 +442,390 @@
     }
   }
 
-  function initCapabilitiesHub() {
-    var hub = document.getElementById('capabilitiesHub');
-    if (!hub) return;
+  function initDiagnosticAnalyzer() {
+    var section = document.getElementById('diagnostic-analyzer');
+    if (!section) return;
 
-    var navButtons = hub.querySelectorAll('.cap-nav-item');
-    var badgeEl = document.getElementById('capBadgeFloating');
-    var imgEl = document.getElementById('capDisplayImg');
-    var specStripEl = document.getElementById('capMediaSpecStrip');
-    var stageTagEl = document.getElementById('capStageTag');
-    var titleEl = document.getElementById('capDisplayTitle');
-    var descEl = document.getElementById('capDisplayDesc');
-    var featureListEl = document.getElementById('capFeatureList');
-    var priceEl = document.getElementById('capMetaPrice');
-    var detailsBtn = document.getElementById('capDetailsBtn');
-    var bookBtn = document.getElementById('capBookBtn');
+    var appBtns = section.querySelectorAll('.diag-app-btn');
+    var symptomsGrid = document.getElementById('diagSymptomsGrid');
+    var codeEl = document.getElementById('diagComponentCode');
+    var severityEl = document.getElementById('diagSeverityTag');
+    var titleEl = document.getElementById('diagResultTitle');
+    var descEl = document.getElementById('diagResultDesc');
+    var fixTimeEl = document.getElementById('diagFixTime');
+    var partNeededEl = document.getElementById('diagPartNeeded');
+    var warrantyEl = document.getElementById('diagWarranty');
+    var testEl = document.getElementById('diagTest');
+    var priceEl = document.getElementById('diagPrice');
+    var visualImg = document.getElementById('diagVisualImg');
+    var badgeFloat = document.getElementById('diagBadgeFloat');
 
-    var disciplines = [
-      {
-        stage: 'ENGINE & FLUID DYNAMICS',
-        code: 'SVC / 01 · ROUTINE SPEC',
-        title: '4T Synthetic Oil & Filter Service',
-        desc: 'Protect your engine, transmission, and wet clutch with factory-approved JASO MA2 high-performance 4T synthetic oils tailored to high-revving motorcycle engines.',
-        image: './assets/img/service1.jpg',
-        specs: ['Est. 45 Mins', 'Factory Warranty Intact', 'Motul 300V / Liqui Moly'],
-        features: [
-          'Motul 300V / Liqui Moly 4T Synthetic Racing Fluid',
-          'OEM Oil Filter & Crush Washer Replacement',
-          'Clutch & Throttle Cable Free-Play Calibration',
-          'Chain Slack Check, Lube & 30-Point Safety Docket'
-        ],
-        price: '$69',
-        priceNote: 'Starting price / street spec',
-        detailsLink: './public/pages/service-details.html?id=oil-filter'
-      },
-      {
-        stage: 'BRAKING & CHASSIS DAMPING',
-        code: 'SVC / 02 · SAFETY SPEC',
-        title: 'Brembo Brakes & Fork Tuning',
-        desc: 'Comprehensive brake and suspension servicing for track and street bikes. Ensures razor-sharp stopping power, zero brake fade, and supple chassis damping.',
-        image: './assets/img/service2.jpg',
-        specs: ['Est. 60-90 Mins', 'Brembo Authorized Techs', 'Laser Sag Measured'],
-        features: [
-          'Brembo Sintered / Organic Brake Pads Overhaul',
-          'High-Temp DOT 5.1 / 4 Hydraulic Fluid Flush',
-          'Fork Oil, Seals & Bushing Inspection & Rebuild',
-          'Front & Rear Rider Sag, Preload & Rebound Tuning'
-        ],
-        price: '$129',
-        priceNote: 'Starting price / flush & pads',
-        detailsLink: './public/pages/service-details.html?id=brake-suspension'
-      },
-      {
-        stage: 'ELECTRONICS & TELEMETRY',
-        code: 'SVC / 04 · DIAGNOSTIC SPEC',
-        title: 'ECU Dyno & Computer Diagnostics',
-        desc: 'Using dedicated motorcycle diagnostic scanners and digital vacuum gauges, we scan fault codes, calibrate ride-by-wire throttles, and optimize fuel mapping across all cylinders.',
-        image: './assets/img/service4.jpg',
-        specs: ['Est. 45 Mins', 'Dealership-Grade OBD-II', 'Full System Health Report'],
-        features: [
-          'Motorcycle OBD Fault Code Scan & Service Light Reset',
-          'Digital Throttle Body Vacuum Synchronization',
-          'Quickshifter, Traction Control & ABS Sensor Calibration',
-          'Live Air-Fuel Ratio (AFR) & Lambda Sensor Telemetry'
-        ],
-        price: '$79',
-        priceNote: 'Starting price / health scan',
-        detailsLink: './public/pages/service-details.html?id=computer-diagnostics'
-      },
-      {
-        stage: 'DRIVETRAIN & AXLE PRECISION',
-        code: 'SVC / 03 · DRIVELINE SPEC',
-        title: 'Laser Chain & Sprockets Drive Care',
-        desc: 'Keep your motorcycle drivetrain silky smooth and quiet with precision laser alignment, ultrasonic chain cleaning, high-adhesion lubrication, and heavy-duty X-ring chain replacement.',
-        image: './assets/img/service3.jpg',
-        specs: ['Est. 30-60 Mins', 'Laser 0.01mm Alignment', 'DID / RK Gold Kits In Stock'],
-        features: [
-          'Laser Alignment of Rear Axle & Sprocket Carrier',
-          'Deep Ultrasonic Degreasing & Solvent Tank Wash',
-          'DID / RK Gold X-Ring Heavy Duty Chain Installation',
-          'Hardened Steel or Lightweight CNC Alloy Sprockets'
-        ],
-        price: '$49',
-        priceNote: 'Starting price / clean & lube',
-        detailsLink: './public/pages/service-details.html?id=chain-sprocket'
-      },
-      {
-        stage: 'COSMETIC & CERAMIC ARMOR',
-        code: 'SVC / 05 · PRESERVATION SPEC',
-        title: 'Ceramic Shield & Race Detailing',
-        desc: 'Multi-stage paint correction, fairing removal, engine bay degrease, and hydrophobic 9H ceramic coating to protect your finish from UV rays, road salt, and chain splatter.',
-        image: './assets/img/service5.jpg',
-        specs: ['Same Day Turnaround', '9H Hydrophobic Armor', 'Full Fairing Teardown'],
-        features: [
-          'Complete Fairing & Tank Teardown For Deep Cleaning',
-          'High-Pressure Engine Bay & Swingarm Degreasing',
-          'Multi-Stage Paint Correction & Swirl Removal',
-          '9H Ceramic Coating on Tank, Fairings & Wheels'
-        ],
-        price: '$149',
-        priceNote: 'Starting price / express ceramic',
-        detailsLink: './public/pages/service-details.html?id=detailing-paint'
-      }
-    ];
-
-    function activateDiscipline(idx) {
-      var item = disciplines[idx];
-      if (!item) return;
-
-      navButtons.forEach(function(btn, i) {
-        if (i === idx) {
-          btn.classList.add('active');
-          btn.setAttribute('aria-selected', 'true');
-        } else {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-selected', 'false');
+    var diagnosticData = {
+      washer: [
+        {
+          id: 'w1',
+          title: 'Loud Spin Noise & Vibration',
+          code: 'COMPONENT SPEC: FLX-DRUM-01',
+          severity: 'HIGH PRIORITY FIX',
+          severityClass: 'severity-high',
+          problem: 'Drum Bearing & Spider Arm Wear',
+          desc: 'High vibration and grinding metal sounds during high-speed spin cycle indicate worn drum bearings or cracked spider bracket. Continued use risks motor stator damage.',
+          time: '45 – 60 Mins Doorstep',
+          part: 'Dual Sealed Bearings & Oil Ring',
+          warranty: '90-Day Parts & Labor',
+          test: '40-Point Electronic Scan',
+          price: '$119.00',
+          image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=1000&q=80',
+          badge: 'GENUINE OEM BEARINGS'
+        },
+        {
+          id: 'w2',
+          title: 'Water Not Draining / Error 4E/5E',
+          code: 'COMPONENT SPEC: FLX-PUMP-02',
+          severity: 'STANDARD REPAIR',
+          severityClass: 'severity-med',
+          problem: 'Drain Pump Motor Failure or Lint Clog',
+          desc: 'Standing water inside the drum with drain error codes. Resolved by clearing coin traps, testing solenoid impedance, and replacing worn drain pump motors.',
+          time: '30 – 45 Mins Doorstep',
+          part: 'OEM Magnetic Drain Pump',
+          warranty: '90-Day Parts Guarantee',
+          test: 'High-Pressure Flow Test',
+          price: '$79.00',
+          image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1000&q=80',
+          badge: 'OEM FACTORY SPARE'
+        },
+        {
+          id: 'w3',
+          title: 'PCB Logic Blink / No Power',
+          code: 'COMPONENT SPEC: FLX-PCB-03',
+          severity: 'CIRCUIT DIAGNOSTIC',
+          severityClass: 'severity-med',
+          problem: 'Digital PCB Logic Micro-Controller Fault',
+          desc: 'Intermittent power cutoffs or unresponsive digital dials caused by voltage surges. Our technicians test relays, swap damaged micro-fuses, or install programmed boards.',
+          time: '40 – 50 Mins Doorstep',
+          part: 'Programmed Main PCB Circuit',
+          warranty: '90-Day Circuit Protection',
+          test: 'Oscilloscope Voltage Check',
+          price: '$99.00',
+          image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
+          badge: 'DIRECT-DRIVE PCB'
+        },
+        {
+          id: 'w4',
+          title: 'Door Seal Leakage / Gasket Mold',
+          code: 'COMPONENT SPEC: FLX-SEAL-04',
+          severity: 'MAINTENANCE FIX',
+          severityClass: 'severity-med',
+          problem: 'Torn Door Bellow Seal & Solenoid',
+          desc: 'Water pooling on the floor during wash cycle. Replaced with heavy-duty antibacterial silicone door gasket and precision dual-inlet solenoid valve.',
+          time: '30 – 40 Mins Doorstep',
+          part: 'Antibacterial Bellow Gasket',
+          warranty: '90-Day Replacement',
+          test: 'Water Tightness Pressure Check',
+          price: '$69.00',
+          image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
+          badge: 'ANTIBACTERIAL SEAL'
         }
+      ],
+      fridge: [
+        {
+          id: 'f1',
+          title: 'Cooling Loss / Clicking Compressor',
+          code: 'COMPONENT SPEC: FLX-COMP-01',
+          severity: 'HIGH PRIORITY FIX',
+          severityClass: 'severity-high',
+          problem: 'Linear Inverter Compressor & R600a Gas Leak',
+          desc: 'Refrigerator compartments warm while freezer is weak. Indicates inverter compressor lockup or low eco refrigerant pressure. Full nitrogen leak test and recharge included.',
+          time: '60 – 90 Mins Doorstep',
+          part: 'Inverter Compressor & Eco R600a',
+          warranty: '90-Day Gas & Compressor',
+          test: 'Nitrogen Micro-Leak Scan',
+          price: '$189.00',
+          image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
+          badge: 'EPA CERTIFIED GAS'
+        },
+        {
+          id: 'f2',
+          title: 'Excessive Frost in Freezer / No Defrost',
+          code: 'COMPONENT SPEC: FLX-FROST-02',
+          severity: 'THERMAL DIAGNOSTIC',
+          severityClass: 'severity-med',
+          problem: 'Defrost Heater & Bi-Metal Sensor Failure',
+          desc: 'Thick frost blocking airflow ducts to fresh food chamber. Techs replace the quartz defrost heater element and digital thermal fuse sensor.',
+          time: '35 – 50 Mins Doorstep',
+          part: 'Quartz Defrost Heater & Sensor',
+          warranty: '90-Day Parts & Labor',
+          test: 'Thermal Defrost Cycle Test',
+          price: '$89.00',
+          image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=1000&q=80',
+          badge: 'OEM THERMAL FUSE'
+        },
+        {
+          id: 'f3',
+          title: 'Loud Fan Noise in Fresh Food Section',
+          code: 'COMPONENT SPEC: FLX-FAN-03',
+          severity: 'STANDARD REPAIR',
+          severityClass: 'severity-med',
+          problem: 'Evaporator BLDC Fan Motor Overhaul',
+          desc: 'High-pitch buzzing or clicking behind rear panel. Resolved by replacing the brushless DC evaporator circulation fan motor and rubber dampers.',
+          time: '30 – 40 Mins Doorstep',
+          part: 'BLDC Evaporator Fan Motor',
+          warranty: '90-Day Warranty',
+          test: 'Acoustic Decibel Check',
+          price: '$79.00',
+          image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?auto=format&fit=crop&w=1000&q=80',
+          badge: 'BRUSHLESS DC MOTOR'
+        }
+      ],
+      ac: [
+        {
+          id: 'a1',
+          title: 'Warm Air Blowing / Low Cooling Output',
+          code: 'COMPONENT SPEC: FLX-HVAC-01',
+          severity: 'HIGH PRIORITY FIX',
+          severityClass: 'severity-high',
+          problem: 'Deep Foam Jet Wash & R32 Refrigerant Recharge',
+          desc: 'Clogged cooling fins and depleted refrigerant pressure. High-pressure antibacterial foam jet cleaning flushes mold and restores ice-cold airflow.',
+          time: '45 – 60 Mins Doorstep',
+          part: 'Eco R32 / R410A Refill & Foam Jet',
+          warranty: '90-Day Cooling Warranty',
+          test: 'Delta-T Airflow Temp Test',
+          price: '$49.00',
+          image: 'https://images.unsplash.com/photo-1614633833026-0820552978b6?auto=format&fit=crop&w=1000&q=80',
+          badge: 'DEEP FOAM JET'
+        },
+        {
+          id: 'a2',
+          title: 'Water Dripping from Indoor Unit',
+          code: 'COMPONENT SPEC: FLX-DRAIN-02',
+          severity: 'STANDARD REPAIR',
+          severityClass: 'severity-med',
+          problem: 'Condensate Drain Tray & U-Trap Blockage',
+          desc: 'Water overflowing from the indoor plastic casing. Pressurized vacuum flush clears algae buildup and realigns drain pipe pitch.',
+          time: '30 – 40 Mins Doorstep',
+          part: 'Drain Pipe & Anti-Algae Treatment',
+          warranty: '90-Day Leak Protection',
+          test: 'Continuous Gravity Drain Test',
+          price: '$39.00',
+          image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&w=1000&q=80',
+          badge: 'VACUUM FLUSH'
+        },
+        {
+          id: 'a3',
+          title: 'Outdoor Unit Not Starting / Fan Humming',
+          code: 'COMPONENT SPEC: FLX-CAP-03',
+          severity: 'ELECTRICAL REPAIR',
+          severityClass: 'severity-med',
+          problem: 'Dual Run Capacitor & Inverter Relay Swap',
+          desc: 'Compressor humming without starting. Technician swaps the heavy-duty start/run dual capacitor and cleans outdoor condenser coil.',
+          time: '30 – 45 Mins Doorstep',
+          part: 'OEM 45/5 uF Dual Run Capacitor',
+          warranty: '90-Day Electrical Guarantee',
+          test: 'Microfarad Capacitance Meter',
+          price: '$59.00',
+          image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80',
+          badge: 'HEAVY-DUTY CAPACITOR'
+        }
+      ]
+    };
+
+    var currentApp = 'washer';
+    var currentSymptomIdx = 0;
+
+    function renderSymptoms(appKey) {
+      currentApp = appKey;
+      currentSymptomIdx = 0;
+      var items = diagnosticData[appKey] || [];
+      symptomsGrid.innerHTML = items.map(function(item, idx) {
+        return '<button type="button" class="diag-symptom-chip ' + (idx === 0 ? 'active' : '') + '" data-idx="' + idx + '">' +
+          '<span class="chip-dot"></span>' +
+          '<span>' + item.title + '</span>' +
+        '</button>';
+      }).join('');
+
+      var chips = symptomsGrid.querySelectorAll('.diag-symptom-chip');
+      chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+          chips.forEach(function(c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          var idx = parseInt(chip.getAttribute('data-idx'), 10);
+          showDiagnosticResult(items[idx]);
+        });
       });
 
-      if (imgEl) {
-        imgEl.style.opacity = '0.3';
-        imgEl.style.transform = 'scale(0.98)';
-        setTimeout(function() {
-          imgEl.src = item.image;
-          imgEl.style.opacity = '1';
-          imgEl.style.transform = 'scale(1)';
-        }, 120);
-      }
-
-      if (badgeEl) badgeEl.textContent = item.code;
-      if (stageTagEl) stageTagEl.textContent = item.stage;
-      if (titleEl) titleEl.textContent = item.title;
-      if (descEl) descEl.textContent = item.desc;
-      if (priceEl) priceEl.innerHTML = item.price + ' <span>' + item.priceNote + '</span>';
-      if (detailsBtn) detailsBtn.href = item.detailsLink;
-
-      if (specStripEl) {
-        specStripEl.innerHTML = item.specs.map(function(s) {
-          return '<span class="cap-media-chip">' + s + '</span>';
-        }).join('');
-      }
-
-      if (featureListEl) {
-        featureListEl.innerHTML = item.features.map(function(f) {
-          return '<div class="cap-feature-item">' +
-            '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>' +
-            '<span>' + f + '</span>' +
-          '</div>';
-        }).join('');
+      if (items.length > 0) {
+        showDiagnosticResult(items[0]);
       }
     }
 
-    navButtons.forEach(function(btn, i) {
+    function showDiagnosticResult(item) {
+      if (!item) return;
+      if (codeEl) codeEl.textContent = item.code;
+      if (severityEl) {
+        severityEl.textContent = item.severity;
+        severityEl.className = 'diag-severity-tag ' + item.severityClass;
+      }
+      if (titleEl) titleEl.textContent = item.problem;
+      if (descEl) descEl.textContent = item.desc;
+      if (fixTimeEl) fixTimeEl.textContent = item.time;
+      if (partNeededEl) partNeededEl.textContent = item.part;
+      if (warrantyEl) warrantyEl.textContent = item.warranty;
+      if (testEl) testEl.textContent = item.test;
+      if (priceEl) priceEl.textContent = item.price;
+      if (badgeFloat) badgeFloat.textContent = item.badge;
+
+      if (visualImg) {
+        visualImg.style.opacity = '0.3';
+        visualImg.style.transform = 'scale(0.98)';
+        setTimeout(function() {
+          visualImg.src = item.image;
+          visualImg.style.opacity = '1';
+          visualImg.style.transform = 'scale(1)';
+        }, 120);
+      }
+    }
+
+    appBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
-        activateDiscipline(i);
+        appBtns.forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        var appKey = btn.getAttribute('data-app');
+        renderSymptoms(appKey);
       });
-      btn.addEventListener('mouseenter', function() {
-        // Subtle hover responsiveness
+    });
+
+    renderSymptoms('washer');
+  }
+
+  function initDispatchRadar() {
+    var section = document.getElementById('dispatch-radar');
+    if (!section) return;
+
+    var zoneBtns = section.querySelectorAll('.radar-zone-btn');
+    var techAvatar = document.getElementById('radarTechAvatar');
+    var techName = document.getElementById('radarTechName');
+    var techCert = document.getElementById('radarTechCert');
+    var invTags = document.getElementById('radarInvTags');
+    var tickerText = document.getElementById('radarTickerText');
+    var etaVal = document.getElementById('radarEtaVal');
+    var mapImg = document.getElementById('radarMapImg');
+
+    var radarData = {
+      downtown: {
+        name: 'David Miller',
+        avatar: 'DM',
+        cert: 'EPA Universal Master Lead • 4.96 ★ (540+ Repairs)',
+        eta: '12 – 16 MINS',
+        inventory: ['Washing Machine Drain Pumps', 'Inverter Compressors', 'R32 / R410A Refrigerant', 'Electronic PCB Testers'],
+        ticker: '<strong>Job FLUX-7492:</strong> Samsung Washer repaired in 38 mins at 742 Evergreen Terr.',
+        image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80'
+      },
+      north: {
+        name: 'Marcus Vance',
+        avatar: 'MV',
+        cert: 'Certified Refrigeration Specialist • 4.94 ★ (480+ Repairs)',
+        eta: '15 – 18 MINS',
+        inventory: ['R600a Gas Charging Manifold', 'Defrost Bimetals', 'Thermostat Sensors', 'Condenser Fan Motors'],
+        ticker: '<strong>Job FLUX-7493:</strong> LG French-Door Fridge compressor swapped in Lincoln Park.',
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80'
+      },
+      west: {
+        name: 'Elena Rostova',
+        avatar: 'ER',
+        cert: 'Master HVAC & Foam Jet Lead • 4.98 ★ (420+ Repairs)',
+        eta: '14 – 18 MINS',
+        inventory: ['High-Pressure Foam Jet Kit', 'Eco R32 Cylinders', 'Capacitor Banks', 'Brazing Torches'],
+        ticker: '<strong>Job FLUX-7494:</strong> Daikin Inverter Split AC restored to 18°C in West Loop.',
+        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80'
+      },
+      south: {
+        name: 'Tim Jenkins',
+        avatar: 'SJ',
+        cert: 'Laundry & Dishwasher Specialist • 4.92 ★ (390+ Repairs)',
+        eta: '20 – 24 MINS',
+        inventory: ['Direct-Drive Motors', 'Inlet Solenoid Valves', 'Dryer Heating Coils', 'Door Gaskets'],
+        ticker: '<strong>Job FLUX-7495:</strong> Whirlpool Top-Load Washer bearing replaced in Oak Park.',
+        image: './assets/img/worker.png'
+      }
+    };
+
+    function selectZone(zoneKey) {
+      var item = radarData[zoneKey];
+      if (!item) return;
+
+      zoneBtns.forEach(function(btn) {
+        if (btn.getAttribute('data-zone') === zoneKey) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      if (techAvatar) techAvatar.textContent = item.avatar;
+      if (techName) techName.textContent = item.name;
+      if (techCert) techCert.textContent = item.cert;
+      if (etaVal) etaVal.textContent = item.eta;
+      if (tickerText) tickerText.innerHTML = item.ticker;
+
+      if (invTags) {
+        invTags.innerHTML = item.inventory.map(function(tag) {
+          return '<span class="radar-inv-tag">' + tag + '</span>';
+        }).join('');
+      }
+
+      if (mapImg) {
+        mapImg.style.opacity = '0.3';
+        setTimeout(function() {
+          mapImg.src = item.image;
+          mapImg.style.opacity = '1';
+        }, 120);
+      }
+    }
+
+    zoneBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var zoneKey = btn.getAttribute('data-zone');
+        selectZone(zoneKey);
+      });
+    });
+  }
+
+  function initContactPage() {
+    var pillContainer = document.getElementById('contactTypePills');
+    if (!pillContainer) return;
+    var pills = pillContainer.querySelectorAll('.contact-type-pill');
+    var selectCategory = document.getElementById('applianceCategorySelect');
+
+    pills.forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        pills.forEach(function(p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        var req = pill.getAttribute('data-req');
+        if (selectCategory) {
+          if (req === 'emergency') {
+            var timingSelect = document.querySelector('.contact-form-group select:not(#applianceCategorySelect)');
+            if (timingSelect) timingSelect.selectedIndex = 0;
+          } else if (req === 'amc') {
+            for (var i = 0; i < selectCategory.options.length; i++) {
+              if (selectCategory.options[i].text.indexOf('AMC') !== -1) {
+                selectCategory.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
       });
     });
   }
 
   function initAll() {
     initHeroSlider();
-    initCapabilitiesHub();
+    initDiagnosticAnalyzer();
+    initDispatchRadar();
     initFAQ();
     initPricing();
     initCountdown();
@@ -624,6 +834,7 @@
     initNewsletter();
     initServiceGrid();
     initTeamGrid();
+    initContactPage();
     setTimeout(initScrollAnimations, 200);
   }
 

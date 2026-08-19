@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Rider Account — Precision Motorcycle Service</title>
+  <title>Create Customer Account — Flux Inc</title>
   <link rel="icon" href="../../assets/img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../src/css/styles.css">
 </head>
 <body>
@@ -14,19 +14,27 @@
 <section class="auth-page">
   <div class="auth-card">
     <div class="auth-header">
-      <a href="../../index.html" class="logo" style="justify-content:center;margin-bottom:12px;"><img src="../../assets/img/logo.png" alt="Riderz Logo" class="logo-img" style="height:32px;width:auto;"><span class="logo-text-group"><span class="logo-brand-title">Riderz</span></span></a>
-      <h2>Create Account</h2>
-      <p>Join the rider community today</p>
+      <a href="../../index.html" class="logo" style="justify-content:center;margin-bottom:12px;">
+        <img src="../../assets/img/logo.png" alt="Flux Inc Logo" class="logo-img" style="height:32px;width:auto;">
+        <span class="logo-text-group"><span class="logo-brand-title">Flux Inc</span></span>
+      </a>
+      <h2>Create Customer Account</h2>
+      <p>Register to manage home appliances, book fast visits, and track live jobs</p>
     </div>
     <form class="auth-form" data-type="signup">
       <div class="form-group">
         <label class="form-label">Full Name</label>
-        <input type="text" class="form-input" placeholder="John Doe" required>
+        <input type="text" class="form-input" placeholder="Sarah Miller" required>
         <span class="form-error"></span>
       </div>
       <div class="form-group">
         <label class="form-label">Email Address</label>
-        <input type="email" class="form-input" placeholder="you@example.com" required>
+        <input type="email" class="form-input" placeholder="sarah@example.com" required>
+        <span class="form-error"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" placeholder="+1 (800) 555-0199" required>
         <span class="form-error"></span>
       </div>
       <div class="form-group">
@@ -34,16 +42,11 @@
         <input type="password" class="form-input" placeholder="Min 8 characters" required data-minlength="8">
         <span class="form-error"></span>
       </div>
-      <div class="form-group">
-        <label class="form-label">Confirm Password</label>
-        <input type="password" class="form-input" placeholder="Confirm password" required>
-        <span class="form-error"></span>
-      </div>
       <div class="checkbox-group" style="margin-bottom:24px;">
-        <input type="checkbox" id="terms" required>
+        <input type="checkbox" id="terms" required checked>
         <label for="terms" style="font-size:13px;color:var(--steel);">I agree to the <a href="../pages/terms-of-service.html" style="color:var(--amber);">Terms of Service</a> and <a href="../pages/privacy-policy.html" style="color:var(--amber);">Privacy Policy</a></label>
       </div>
-      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;">Create Account</button>
+      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;">Create Customer Account</button>
     </form>
     <div class="auth-divider">OR</div>
     <button class="auth-social-btn">Continue with Google</button>

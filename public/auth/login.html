@@ -3,46 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rider Login — Precision Motorcycle Service</title>
+  <title>Customer Login &amp; Live Job Tracker — Flux Inc</title>
   <link rel="icon" href="../../assets/img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Inter:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../src/css/styles.css">
 </head>
 <body>
 
 <section class="auth-page">
-  <div class="auth-card">
+  <div class="auth-card" id="authCard">
     <div class="auth-header">
-      <a href="../../index.html" class="logo" style="justify-content:center;margin-bottom:12px;"><img src="../../assets/img/logo.png" alt="Riderz Logo" class="logo-img" style="height:32px;width:auto;"><span class="logo-text-group"><span class="logo-brand-title">Riderz</span></span></a>
-      <h2>Welcome Back</h2>
-      <p>Sign in to your rider account</p>
+      <a href="../../index.html" class="logo" style="justify-content:center;margin-bottom:12px;">
+        <img src="../../assets/img/logo.png" alt="Flux Inc Logo" class="logo-img" style="height:32px;width:auto;">
+        <span class="logo-text-group"><span class="logo-brand-title">Flux Inc</span></span>
+      </a>
+      <h2>Customer Portal</h2>
+      <p>Sign in to track your technician visit in real time</p>
     </div>
-    <form class="auth-form" data-type="login">
+
+    <!-- Login / Track Switch Tabs -->
+    <div style="display: flex; background: var(--panel-2); border-radius: 999px; padding: 4px; margin-bottom: 24px; border: 1px solid var(--line);">
+      <button type="button" id="tabLogin" class="btn btn-solid" style="flex: 1; padding: 8px 12px; font-size: 13px; border-radius: 999px;">Account Login</button>
+    </div>
+
+    <!-- Form 1: Account Login -->
+    <form class="auth-form" id="loginForm" data-type="login">
       <div class="form-group">
         <label class="form-label">Email Address</label>
-        <input type="email" class="form-input" placeholder="you@example.com" required>
+        <input type="email" class="form-input" id="loginEmail" placeholder="you@example.com" value="sarah@example.com" required>
         <span class="form-error"></span>
       </div>
       <div class="form-group">
         <label class="form-label">Password</label>
-        <input type="password" class="form-input" placeholder="Enter your password" required>
+        <input type="password" class="form-input" id="loginPass" placeholder="Enter your password" value="password123" required>
         <span class="form-error"></span>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
-        <div class="checkbox-group"><input type="checkbox" id="remember"><label for="remember">Remember me</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="remember" checked><label for="remember">Remember me</label></div>
         <a href="#" style="color:var(--amber);font-size:13px;">Forgot Password?</a>
       </div>
-      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;">Sign In</button>
+      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;">Sign In to Dashboard</button>
+      <div style="margin-top: 14px; display: flex; gap: 8px;">
+        <a href="../pages/user-dashboard.html" class="btn" style="flex: 1; padding: 6px 10px; font-size: 11px; text-align: center; border-radius: 6px;">Demo Customer</a>
+        <a href="../pages/admin-dashboard.html" class="btn" style="flex: 1; padding: 6px 10px; font-size: 11px; text-align: center; border-radius: 6px;">Demo Admin</a>
+      </div>
+    </form>
+
+    <!-- Form 2: Direct Job Track -->
+    <form class="auth-form" id="trackForm" style="display: none;">
+      <div class="form-group">
+        <label class="form-label">Job Reference #</label>
+        <input type="text" class="form-input" id="trackRef" placeholder="e.g. FLUX-749201" value="FLUX-749201" required>
+        <span class="form-error"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Registered Phone Number</label>
+        <input type="tel" class="form-input" id="trackPhone" placeholder="+1 (800) 555-0199" value="+1 (800) 555-0199" required>
+        <span class="form-error"></span>
+      </div>
+      <button type="submit" class="btn btn-solid" style="width:100%;text-align:center;margin-top:12px;">Track Technician Live</button>
     </form>
     
-    <div class="auth-switch">Don't have an account? <a href="signup.html">Sign Up</a></div>
+    <div class="auth-switch" id="authFooterSwitch">Don't have an account? <a href="signup.html">Sign Up</a></div>
+  </div>
+
+  <!-- Real-Time Job Tracking Dashboard (Displayed on Auth/Track) -->
+  <div class="auth-card" id="trackingDashboard" style="display: none; max-width: 580px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 20px;">
+      <div>
+        <span class="sec-tag" style="font-size: 10px;">ACTIVE DISPATCH TELEMETRY</span>
+        <h3 style="margin: 4px 0 0; font-size: 20px;" id="dashJobId">Job #FLUX-749201</h3>
+      </div>
+      <span class="bay-tag occ" style="display: inline-flex; align-items: center; gap: 6px;">
+        <span class="dot green" style="width: 6px; height: 6px; border-radius: 50%; background: #2ecc71;"></span> TECH EN ROUTE
+      </span>
+    </div>
+
+    <!-- Live ETA Banner -->
+    <div style="background: rgba(0, 130, 251, 0.1); border: 1px solid var(--amber); border-radius: 16px; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <div>
+        <span style="font-size: 12px; color: var(--steel); text-transform: uppercase; font-family: 'Raleway', sans-serif;">Estimated Doorstep Arrival</span>
+        <div style="font-size: 24px; font-weight: 700; color: var(--bone); margin-top: 4px;">12 - 18 Minutes</div>
+      </div>
+      <div style="text-align: right;">
+        <span style="font-size: 12px; color: var(--steel);">Assigned Master Tech</span>
+        <div style="font-weight: 600; color: var(--amber); margin-top: 4px;">David Miller (EPA Master)</div>
+      </div>
+    </div>
+
+    <!-- Live Job Timeline -->
+    <div style="margin-bottom: 24px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 16px; padding: 20px;">
+      <h4 style="font-size: 14px; text-transform: uppercase; margin-bottom: 16px; color: var(--steel);">Service Progress Tracker</h4>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: #2ecc71; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+          <div><strong style="font-size: 14px;">Booking Confirmed &amp; Spares Allocated</strong><div style="font-size: 12px; color: var(--steel);">OEM Drum Bearing &amp; Solenoid In Stock</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 24px; height: 24px; border-radius: 50%; background: var(--amber); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; animation: pulse 1.5s infinite;">●</div>
+          <div><strong style="font-size: 14px; color: var(--amber);">Technician Dispatched (14 Mins Away)</strong><div style="font-size: 12px; color: var(--steel);">Equipped with factory diagnostic tools</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; opacity: 0.6;">
+          <div style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); color: var(--steel); display: flex; align-items: center; justify-content: center; font-size: 12px;">3</div>
+          <div><strong style="font-size: 14px;">Doorstep Diagnostics &amp; Estimate</strong><div style="font-size: 12px; color: var(--steel);">$29 Inspection fee included in repair</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; opacity: 0.6;">
+          <div style="width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); color: var(--steel); display: flex; align-items: center; justify-content: center; font-size: 12px;">4</div>
+          <div><strong style="font-size: 14px;">Fixed with 90-Day Warranty</strong><div style="font-size: 12px; color: var(--steel);">Digital certificate &amp; invoice generated</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appliance Details -->
+    <div style="background: var(--panel-2); border-radius: 12px; padding: 14px; margin-bottom: 20px; font-size: 13px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+        <span style="color: var(--steel);">Appliance:</span>
+        <strong>Samsung EcoBubble Front-Load Washer</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+        <span style="color: var(--steel);">Reported Issue:</span>
+        <span>Loud Spin Vibration &amp; Drum Noise</span>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <span style="color: var(--steel);">Doorstep Address:</span>
+        <span>742 Evergreen Terrace, Apt 4B</span>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 10px;">
+      <a href="../pages/user-dashboard.html" class="btn btn-solid" style="flex: 1; text-align: center; font-size: 13px;">Open Full Dashboard ↗</a>
+      <button type="button" class="btn" id="btnBackToPortal" style="padding: 10px 16px; font-size: 12px;">Back</button>
+    </div>
   </div>
 </section>
 
 <script src="../../src/js/theme.js"></script>
 <script src="../../src/js/data.js"></script>
 <script src="../../src/js/form-validation.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabLogin = document.getElementById('tabLogin');
+    const tabTrack = document.getElementById('tabTrack');
+    const loginForm = document.getElementById('loginForm');
+    const trackForm = document.getElementById('trackForm');
+    const authCard = document.getElementById('authCard');
+    const trackingDashboard = document.getElementById('trackingDashboard');
+    const btnBackToPortal = document.getElementById('btnBackToPortal');
+
+    tabLogin.addEventListener('click', () => {
+      tabLogin.classList.add('btn-solid');
+      tabLogin.style.background = '';
+      tabLogin.style.color = '';
+      tabTrack.classList.remove('btn-solid');
+      tabTrack.style.background = 'transparent';
+      tabTrack.style.color = 'var(--steel)';
+      loginForm.style.display = 'block';
+      trackForm.style.display = 'none';
+    });
+
+    tabTrack.addEventListener('click', () => {
+      tabTrack.classList.add('btn-solid');
+      tabTrack.style.background = '';
+      tabTrack.style.color = '';
+      tabLogin.classList.remove('btn-solid');
+      tabLogin.style.background = 'transparent';
+      tabLogin.style.color = 'var(--steel)';
+      trackForm.style.display = 'block';
+      loginForm.style.display = 'none';
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.toLowerCase();
+      if (email.indexOf('admin') !== -1) {
+        window.location.href = '../pages/admin-dashboard.html';
+      } else {
+        window.location.href = '../pages/user-dashboard.html';
+      }
+    });
+
+    trackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const refVal = document.getElementById('trackRef').value.trim() || 'FLUX-749201';
+      document.getElementById('dashJobId').textContent = 'Job #' + refVal;
+      authCard.style.display = 'none';
+      trackingDashboard.style.display = 'block';
+    });
+
+    if (btnBackToPortal) {
+      btnBackToPortal.addEventListener('click', () => {
+        trackingDashboard.style.display = 'none';
+        authCard.style.display = 'block';
+      });
+    }
+  });
+</script>
 <script src="../../src/js/main.js"></script>
 </body>
 </html>

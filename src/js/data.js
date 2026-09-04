@@ -6,28 +6,28 @@
       id: 'marcus-vance',
       name: 'Marcus Vance',
       role: 'Master HVAC & Dual-Inverter AC Specialist',
-      bio: 'EPA Section 608 certified with 15+ years experience in inverter AC diagnostics, PCB board micro-soldering, and zero-leak R32/R410A refrigeration systems.',
+      bio: 'EPA Section 608 certified with 15+ years experience in inverter AC diagnostics.',
       image: 'assets/img/men3.jpg'
     },
     {
       id: 'elena-rostova',
       name: 'Elena Rostova',
       role: 'Lead Refrigerator & Smart Cooling Engineer',
-      bio: 'Specialist in Samsung, LG, and Whirlpool smart French-door refrigerators, linear inverter compressors, defrost sensors, and electronic ice maker units.',
+      bio: 'Specialist in Samsung, LG, and Whirlpool smart French-door refrigerators.',
       image: 'assets/img/woman1.jpg'
     },
     {
       id: 'david-miller',
       name: 'David Miller',
       role: 'Washing Machine & Drive Motor Technician',
-      bio: 'Certified expert in Bosch, IFB, and Whirlpool front-load & top-load washing machines, direct-drive brushless motors, drum spider bearings, and drain valves.',
+      bio: 'Certified expert in Bosch, IFB, and Whirlpool front-load & top-load washing machines.',
       image: 'assets/img/men2.jpg'
     },
     {
       id: 'sarah-jenkins',
       name: 'Sarah Jenkins',
       role: 'On-Demand Dispatch & Quality Assurance Lead',
-      bio: 'Oversees real-time technician telemetry routing, emergency 45-minute breakdown dispatches, genuine OEM spare verification, and 90-day warranty compliance.',
+      bio: 'Oversees real-time technician telemetry routing and 90-day warranty compliance.',
       image: 'assets/img/woman2.jpg'
     }
   ];

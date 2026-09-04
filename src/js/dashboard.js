@@ -500,20 +500,22 @@
         '</div>' +
         '<div class="vehicle-cards-grid">' +
         data.userVehicles.map(function(v) {
-          return '<div class="dashboard-widget" style="border-top:3px solid var(--amber);">' +
-            '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
-              '<h3 style="margin:0;">' + v.year + ' ' + v.make + ' ' + v.model + '</h3>' +
-              '<span style="font-family:\'Raleway\',monospace;font-size:11px;background:var(--panel-2);padding:4px 8px;color:var(--amber);border-radius:6px;">' + v.plate + '</span>' +
+          return '<div class="dashboard-widget" style="border-top:3px solid var(--amber); display:flex; flex-direction:column; justify-content:space-between; height:100%;">' +
+            '<div>' +
+              '<div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px; gap:12px;">' +
+                '<h3 style="margin:0; font-size:18px; line-height:1.25;">' + v.year + ' ' + v.make + ' ' + v.model + '</h3>' +
+                '<span style="font-family:\'Raleway\',monospace; font-size:11px; background:var(--panel-2); padding:4px 10px; color:var(--amber); border-radius:6px; font-weight:700; white-space:nowrap; flex-shrink:0;">' + v.plate + '</span>' +
+              '</div>' +
+              '<div style="font-size:13px; color:var(--steel); line-height:1.8; margin-bottom:20px; display:grid; grid-template-columns: 95px 1fr; gap:6px 12px; background:var(--panel-2); padding:14px 16px; border-radius:12px; border:1px solid var(--line);">' +
+                '<span style="font-weight:600; color:var(--bone);">Serial:</span><span style="font-family:monospace; color:var(--steel);">' + v.vin + '</span>' +
+                '<span style="font-weight:600; color:var(--bone);">Lifespan:</span><span>' + v.mileage + '</span>' +
+                '<span style="font-weight:600; color:var(--bone);">Last Service:</span><span>' + v.lastService + '</span>' +
+                '<span style="font-weight:600; color:var(--bone);">Next Due:</span><span style="color:var(--amber); font-weight:700;">' + v.nextService + '</span>' +
+              '</div>' +
             '</div>' +
-            '<div style="font-size:13px;color:var(--steel);line-height:1.7;margin-bottom:20px;">' +
-              '<div><strong>Serial:</strong> ' + v.vin + '</div>' +
-              '<div><strong>Age / Lifespan:</strong> ' + v.mileage + '</div>' +
-              '<div><strong>Last Service:</strong> ' + v.lastService + '</div>' +
-              '<div><strong>Next Due:</strong> <span style="color:var(--amber);">' + v.nextService + '</span></div>' +
-            '</div>' +
-            '<div style="display:flex;gap:10px;">' +
-              '<button class="btn btn-solid btn-book-for-app" data-name="' + v.make + ' ' + v.model + '" style="padding:6px 14px;font-size:12px;">Request Service</button>' +
-              '<button class="btn btn-delete-appliance" data-id="' + v.id + '" style="padding:6px 14px;font-size:12px;color:var(--error);border-color:var(--error);">Remove</button>' +
+            '<div style="display:flex; gap:10px; margin-top:auto; padding-top:16px; border-top:1px solid var(--line); align-items:center;">' +
+              '<button class="btn btn-solid btn-book-for-app" data-name="' + v.make + ' ' + v.model + '" style="padding:8px 16px; font-size:12px; flex:1;">Request Service</button>' +
+              '<button class="btn btn-delete-appliance" data-id="' + v.id + '" style="padding:8px 16px; font-size:12px; color:var(--error); border-color:var(--error);">Remove</button>' +
             '</div>' +
           '</div>';
         }).join('') +
@@ -681,6 +683,15 @@
           renderAdminDashboard(main, sec, data);
         } else {
           renderUserDashboard(main, sec, data);
+        }
+      });
+    });
+
+    // Logout button handler
+    document.querySelectorAll('.logout-link, #userLogoutBtn, #adminLogoutBtn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        if (window.MotorWorks && window.MotorWorks.showToast) {
+          window.MotorWorks.showToast('You have been logged out successfully.', 'info');
         }
       });
     });

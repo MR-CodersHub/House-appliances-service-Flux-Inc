@@ -53,7 +53,6 @@
       '<a href="' + basePath + 'public/pages/contact.html">Contact</a>' +
       '</nav>' +
       '<div class="navcta">' +
-      '<a href="' + basePath + 'public/pages/booking.html" class="btn btn-nav-signup">Book Now</a>' +
       '<div class="nav-toggles">' +
       '<button class="toggle-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">' + themeSvg + '</button>' +
       '<button class="toggle-btn" id="rtlToggle" title="Toggle RTL" aria-label="Toggle RTL">' + rtlSvg + '</button>' +
@@ -70,6 +69,7 @@
       '</div>' +
       '</div>' +
       '</div>' +
+      '<a href="' + basePath + 'public/pages/booking.html" class="btn btn-nav-signup">Book Now</a>' +
       '<button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>' +
       '</div>' +
       '</div>' +
@@ -154,11 +154,16 @@
       }
     }
 
-    var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    var currentFile = window.location.pathname.split('/').pop();
+    if (!currentFile || currentFile === '' || currentFile === '/') currentFile = 'index.html';
     document.querySelectorAll('.navlinks a').forEach(function (link) {
+      link.classList.remove('active');
       var href = link.getAttribute('href');
-      if (href && href.indexOf(currentPage) !== -1) {
-        link.classList.add('active');
+      if (href) {
+        var linkFile = href.split('/').pop();
+        if (linkFile === currentFile) {
+          link.classList.add('active');
+        }
       }
     });
 

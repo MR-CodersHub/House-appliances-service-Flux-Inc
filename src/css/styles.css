@@ -293,7 +293,7 @@ input, select, textarea {
   font-size: 13px;
 }
 
-/* ── 6. Header / Navigation (Consistent High-Contrast Dark-Glass Navbar across Light & Dark Modes) ─ */
+/* ── 6. Header / Navigation ────────────────────────────── */
 .site-header {
   position: fixed;
   top: 0;
@@ -317,6 +317,23 @@ input, select, textarea {
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Light mode transparent navbar */
+[data-theme="light"] .site-header {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .site-header.is-scrolled {
+  background: rgba(241, 245, 248, 0.92) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(28, 43, 51, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(28, 43, 51, 0.06) !important;
 }
 
 .nav {
@@ -356,7 +373,11 @@ input, select, textarea {
 }
 
 .site-header .logo-brand-title {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .site-header .logo-brand-title {
+  color: #1C2B33 !important;
 }
 
 .foot-brand .logo-brand-title,
@@ -380,12 +401,12 @@ input, select, textarea {
   transition: all 0.2s ease;
   position: relative;
   letter-spacing: 0.01em;
-  color: #94A7B5 !important;
+  color: #94A7B5;
   padding: 6px 2px;
 }
 
 .navlinks a:hover {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 .navlinks a.active {
@@ -394,16 +415,23 @@ input, select, textarea {
   text-shadow: 0 0 16px rgba(0, 130, 251, 0.4);
 }
 
+/* No underline for active navlink */
 .navlinks a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #0082FB;
-  border-radius: 2px;
-  box-shadow: 0 0 8px rgba(0, 130, 251, 0.8);
+  display: none !important;
+}
+
+[data-theme="light"] .navlinks a {
+  color: #536979 !important;
+}
+
+[data-theme="light"] .navlinks a:hover {
+  color: #1C2B33 !important;
+}
+
+[data-theme="light"] .navlinks a.active {
+  color: #0082FB !important;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .navcta {
@@ -441,6 +469,22 @@ input, select, textarea {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
 }
 
+[data-theme="light"] .btn-nav-signup,
+[data-theme="light"] .nav-book-btn {
+  background: #FFFFFF !important;
+  color: #1C2B33 !important;
+  border: 1px solid #D0DEE7 !important;
+  box-shadow: 0 2px 8px rgba(28, 43, 51, 0.08) !important;
+}
+
+[data-theme="light"] .btn-nav-signup:hover,
+[data-theme="light"] .nav-book-btn:hover {
+  background: #0082FB !important;
+  color: #FFFFFF !important;
+  border-color: #0082FB !important;
+  box-shadow: 0 4px 16px rgba(0, 130, 251, 0.35) !important;
+}
+
 .nav-toggles {
   display: flex;
   align-items: center;
@@ -476,6 +520,21 @@ input, select, textarea {
   background: rgba(0, 130, 251, 0.2);
 }
 
+[data-theme="light"] .profile-icon,
+[data-theme="light"] .toggle-btn {
+  background: #FFFFFF !important;
+  border: 1px solid #D0DEE7 !important;
+  color: #1C2B33 !important;
+  box-shadow: 0 2px 6px rgba(28, 43, 51, 0.06);
+}
+
+[data-theme="light"] .profile-icon:hover,
+[data-theme="light"] .toggle-btn:hover {
+  border-color: #0082FB !important;
+  color: #0082FB !important;
+  background: #EBF5FF !important;
+}
+
 .profile-icon svg,
 .toggle-btn svg {
   width: 20px;
@@ -503,6 +562,25 @@ input, select, textarea {
   transition: all 0.2s;
   z-index: 100;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .dropdown-menu {
+  background: #FFFFFF !important;
+  border-color: #D0DEE7 !important;
+  box-shadow: 0 16px 36px rgba(28, 43, 51, 0.12) !important;
+}
+
+[data-theme="light"] .dropdown-menu a {
+  color: #1C2B33 !important;
+}
+
+[data-theme="light"] .dropdown-menu a:hover {
+  background: #F1F5F8 !important;
+  color: #0082FB !important;
+}
+
+[data-theme="light"] .dropdown-divider {
+  border-top-color: #E2E8F0 !important;
 }
 
 .dropdown-menu.active {
@@ -554,6 +632,10 @@ input, select, textarea {
   height: 2px;
   background: #FFFFFF;
   transition: all 0.3s;
+}
+
+[data-theme="light"] .mobile-toggle span {
+  background: #1C2B33;
 }
 
 .mobile-menu {

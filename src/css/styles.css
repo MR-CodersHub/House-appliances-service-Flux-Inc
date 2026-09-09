@@ -434,6 +434,42 @@ input, select, textarea {
   text-shadow: none;
 }
 
+/* ── NAVBAR CONTRAST FIX: Dark Hero Page (home-2) in Light Mode ── */
+body:has(.perf-stage-hero) .site-header:not(.is-scrolled),
+body.page-home-2 .site-header:not(.is-scrolled) {
+  background: linear-gradient(180deg, rgba(14, 23, 28, 0.8) 0%, rgba(14, 23, 28, 0.3) 70%, transparent 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] body:has(.perf-stage-hero) .site-header:not(.is-scrolled) .logo-brand-title,
+[data-theme="light"] body.page-home-2 .site-header:not(.is-scrolled) .logo-brand-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] body:has(.perf-stage-hero) .site-header:not(.is-scrolled) .navlinks a,
+[data-theme="light"] body.page-home-2 .site-header:not(.is-scrolled) .navlinks a {
+  color: rgba(241, 245, 248, 0.88) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] body:has(.perf-stage-hero) .site-header:not(.is-scrolled) .navlinks a:hover,
+[data-theme="light"] body.page-home-2 .site-header:not(.is-scrolled) .navlinks a:hover {
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] body:has(.perf-stage-hero) .site-header:not(.is-scrolled) .navlinks a.active,
+[data-theme="light"] body.page-home-2 .site-header:not(.is-scrolled) .navlinks a.active {
+  color: #0082FB !important;
+  text-shadow: 0 0 16px rgba(0, 130, 251, 0.6);
+}
+
+[data-theme="light"] body:has(.perf-stage-hero) .site-header:not(.is-scrolled) .mobile-toggle span,
+[data-theme="light"] body.page-home-2 .site-header:not(.is-scrolled) .mobile-toggle span {
+  background: #FFFFFF !important;
+}
+
 .navcta {
   display: flex;
   align-items: center;
@@ -464,7 +500,7 @@ input, select, textarea {
 .btn-nav-signup:hover,
 .nav-book-btn:hover {
   background: #FFFFFF !important;
-  color: #000000 !important;
+  color: #0064E0 !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
 }
@@ -3364,12 +3400,38 @@ select.form-input {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 36px;
-  gap: 12px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.dashboard-header .nav-toggles {
+.dashboard-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   margin-left: auto;
-  margin-right: 4px;
+}
+
+.dashboard-header .nav-toggles,
+.sidebar-toggles-wrap .nav-toggles {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[dir="rtl"] .dashboard-sidebar {
+  border-left: 1px solid var(--line);
+  border-right: none;
+}
+
+[dir="rtl"] .sidebar-nav a {
+  border-right: 3px solid transparent;
+  border-left: none;
+}
+
+[dir="rtl"] .sidebar-nav a:hover,
+[dir="rtl"] .sidebar-nav a.active {
+  border-right-color: var(--amber);
+  border-left-color: transparent;
 }
 
 .dashboard-header h1 {
@@ -6779,11 +6841,13 @@ select.form-input {
   margin-left: 16px;
 }
 
+/* ── Auth Social Buttons & Icons ── */
 .auth-social-btn {
   width: 100%;
-  padding: 12px;
+  padding: 12px 18px;
   background: var(--panel-2);
   border: 1px solid var(--line);
+  border-radius: 999px;
   color: var(--bone);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -6791,12 +6855,87 @@ select.form-input {
   cursor: pointer;
   margin-bottom: 12px;
   transition: all 0.2s ease;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
 .auth-social-btn:hover {
   border-color: var(--amber);
+  background: rgba(0, 130, 251, 0.08);
   color: var(--amber);
+  transform: translateY(-1px);
+}
+
+.auth-social-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+}
+
+[data-theme="light"] .auth-social-btn {
+  background: #FFFFFF;
+  border-color: #D0DEE7;
+  color: #1C2B33;
+}
+
+[data-theme="light"] .auth-social-btn:hover {
+  border-color: var(--amber);
+  background: #F4F9FF;
+  color: #0082FB;
+}
+
+/* ── Password Input with Eye Visibility Toggle ── */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-wrapper .form-input {
+  width: 100%;
+  padding-right: 46px !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--steel);
+  cursor: pointer;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+  line-height: 1;
+  z-index: 2;
+}
+
+.password-toggle-btn:hover {
+  color: var(--bone);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .password-toggle-btn:hover {
+  color: #1C2B33;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.password-toggle-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  pointer-events: none;
+  display: block;
 }
 
 .auth-switch {

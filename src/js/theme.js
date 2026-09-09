@@ -23,13 +23,13 @@
   }
 
   function updateThemeIcon() {
-    var btn = document.getElementById('themeToggle');
-    if (!btn) return;
     var isDark = html.getAttribute('data-theme') === 'dark';
-    btn.innerHTML = isDark
-      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    var sunSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+    var moonSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    document.querySelectorAll('#themeToggle, .theme-toggle-btn').forEach(function(btn) {
+      btn.innerHTML = isDark ? sunSvg : moonSvg;
+      btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    });
   }
 
   function initRTL() {
@@ -49,21 +49,21 @@
   }
 
   function updateRTLIcon() {
-    var btn = document.getElementById('rtlToggle');
-    if (!btn) return;
     var isRTL = html.getAttribute('dir') === 'rtl';
-    btn.innerHTML = isRTL ? 'LTR' : 'RTL';
-    btn.setAttribute('title', isRTL ? 'Switch to LTR' : 'Switch to RTL');
+    document.querySelectorAll('#rtlToggle, .rtl-toggle-btn').forEach(function(btn) {
+      btn.innerHTML = isRTL ? 'LTR' : 'RTL';
+      btn.setAttribute('title', isRTL ? 'Switch to LTR' : 'Switch to RTL');
+    });
   }
 
   document.addEventListener('click', function(e) {
-    var themeBtn = e.target.closest('#themeToggle');
+    var themeBtn = e.target.closest('#themeToggle, .theme-toggle-btn');
     if (themeBtn) {
       e.preventDefault();
       toggleTheme();
       return;
     }
-    var rtlBtn = e.target.closest('#rtlToggle');
+    var rtlBtn = e.target.closest('#rtlToggle, .rtl-toggle-btn');
     if (rtlBtn) {
       e.preventDefault();
       toggleRTL();

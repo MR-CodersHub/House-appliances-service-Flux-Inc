@@ -19,13 +19,13 @@
         isValid = false;
         message = 'Please enter a valid phone number';
       }
-    } else if (input.type === 'password' && input.dataset.minlength) {
+    } else if ((input.type === 'password' || input.dataset.minlength) && input.dataset.minlength) {
       if (input.value.length < parseInt(input.dataset.minlength)) {
         isValid = false;
         message = 'Password must be at least ' + input.dataset.minlength + ' characters';
       }
     } else if (input.placeholder && input.placeholder.toLowerCase().indexOf('confirm') !== -1) {
-      var pwdInput = input.form ? input.form.querySelector('input[type="password"]:not([placeholder*="Confirm"])') : null;
+      var pwdInput = input.form ? input.form.querySelector('input[type="password"]:not([placeholder*="Confirm"]), .password-wrapper input:not([placeholder*="Confirm"])') : null;
       if (pwdInput && pwdInput.value !== input.value) {
         isValid = false;
         message = 'Passwords do not match';
@@ -134,6 +134,36 @@
         setTimeout(function() {
           window.location.href = homeUrl;
         }, 1000);
+      });
+    });
+
+    initPasswordToggles();
+  }
+
+  function initPasswordToggles() {
+    document.querySelectorAll('.password-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var wrapper = btn.closest('.password-wrapper');
+        if (!wrapper) return;
+        var input = wrapper.querySelector('input');
+        if (!input) return;
+        var openIcon = btn.querySelector('.eye-open');
+        var closedIcon = btn.querySelector('.eye-closed');
+
+        if (input.type === 'password') {
+          input.type = 'text';
+          if (openIcon) openIcon.style.display = 'none';
+          if (closedIcon) closedIcon.style.display = 'block';
+          btn.setAttribute('aria-label', 'Hide password');
+        } else {
+          input.type = 'password';
+          if (openIcon) openIcon.style.display = 'block';
+          if (closedIcon) closedIcon.style.display = 'none';
+          btn.setAttribute('aria-label', 'Show password');
+        }
+        input.focus();
       });
     });
   }

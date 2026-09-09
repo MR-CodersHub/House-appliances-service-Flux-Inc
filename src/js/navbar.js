@@ -11,21 +11,6 @@
     var basePath = getBasePath();
 
     if (document.querySelector('.dashboard-layout')) {
-      var dashHeader = document.querySelector('.dashboard-header');
-      if (dashHeader && !dashHeader.querySelector('.nav-toggles')) {
-        var themeSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-        var rtlSvg = 'RTL';
-        var profileDropdown = dashHeader.querySelector('.profile-dropdown');
-        if (profileDropdown) {
-          profileDropdown.insertAdjacentHTML('beforebegin',
-            '<div class="nav-toggles">' +
-            '<button class="toggle-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">' + themeSvg + '</button>' +
-            '<button class="toggle-btn" id="rtlToggle" title="Toggle RTL" aria-label="Toggle RTL">' + rtlSvg + '</button>' +
-            '</div>'
-          );
-        }
-      }
-      initNavbarEvents();
       if (window.MotorWorks && window.MotorWorks.initTheme && window.MotorWorks.initRTL) {
         window.MotorWorks.initTheme();
         window.MotorWorks.initRTL();

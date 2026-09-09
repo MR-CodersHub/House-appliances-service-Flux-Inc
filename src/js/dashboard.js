@@ -76,9 +76,6 @@
       container.innerHTML =
         '<div class="dashboard-header">' +
           '<div><h1>Admin Operations Center</h1><p style="color:var(--steel);font-size:14px;">Fleet dispatch, technician routes, and service telemetry overview.</p></div>' +
-          '<div style="display:flex;gap:10px;align-items:center;">' +
-            '<button class="btn btn-solid" id="adminRefreshBtn" style="padding:8px 16px;font-size:12px;">Refresh Fleet Data</button>' +
-          '</div>' +
         '</div>' +
         '<div class="dashboard-stats">' +
           '<div class="stat-card"><div class="stat-label">REGISTERED CUSTOMERS</div><div class="stat-value">' + data.users.length + '</div><div class="stat-change">+14% this month</div></div>' +
@@ -308,9 +305,6 @@
       container.innerHTML =
         '<div class="dashboard-header">' +
           '<div><h1>Customer Portal</h1><p style="color:var(--steel);font-size:14px;">Welcome back, ' + data.currentUser.name + '. Manage your home appliances and live repair requests.</p></div>' +
-          '<div style="display:flex;gap:10px;">' +
-            '<a href="#new-request" class="btn btn-solid user-nav-cta" data-target="new-request" style="padding:9px 20px;font-size:13px;">+ Request New Repair</a>' +
-          '</div>' +
         '</div>' +
         '<div class="dashboard-stats">' +
           '<div class="stat-card"><div class="stat-label">REGISTERED APPLIANCES</div><div class="stat-value">' + data.userVehicles.length + '</div><div class="stat-change">All under active warranty</div></div>' +
